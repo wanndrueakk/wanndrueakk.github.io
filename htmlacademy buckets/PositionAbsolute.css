@@ -1,0 +1,18 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+.parent-relative {
+    position:relative;
+    width: 300px;
+    min-height: 150px;
+    background-color: rgba(0,0,0,0.1);
+    opacity: 80%;
+}
+.block-absolute {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0,0,0,0.1);
+    opacity: 80%;
+}
