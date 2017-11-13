@@ -4,6 +4,9 @@ html,body {
 }
 .parent-relative {
     position:relative;
+    top: 100px;
+    left: 200px;
+    margin-top: 10px;
     width: 300px;
     min-height: 150px;
     background-color: rgba(0,0,0,0.1);
@@ -15,4 +18,10 @@ html,body {
     height: 50%;
     background-color: rgba(0,0,0,0.1);
     opacity: 80%;
+}
+
+.parent {
+    min-height: 90px;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
 }
