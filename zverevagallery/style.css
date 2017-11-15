@@ -1,0 +1,21 @@
+body {
+    background:  url("img/bckg.jpg");
+    background-color: #3d2b1f;
+    color: antiquewhite;
+    background-repeat: round;
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: contain;
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.poem {
+    position: absolute;
+    background-color: olive;
+    opacity: 100%;
+    bottom: 10%;
+    left: 10%;
+    padding: 40px;
+}

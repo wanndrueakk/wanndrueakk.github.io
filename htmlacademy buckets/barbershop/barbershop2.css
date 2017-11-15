@@ -1,14 +1,37 @@
-html, body {
-    margin: 0;
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/ptsansnarrow.woff2") format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/ptsansnarrowbold.woff2") format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+body {
+    margin: 0 auto;
     padding: 0;
-    width: 960px;
+    min-width: 960px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif; 
+    text-transform: uppercase;
+    background: black url("img/tint.png") no-repeat center top;
+    color: white;
 }
 .c {
     background: rgba(0,0,0,0.1);
 }
 .main-header {
-    margin-top: 3px;
-    margin-bottom: 61px;
+    margin-bottom: 62px;
+    background-color: black;
+
 }
 .container {
     width: 940px;
@@ -23,11 +46,40 @@ html, body {
     width: 780px;
     float: left;
     height: 70px;
+    color: white;   
+}
+
+.main-navigation a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 25px 20px;
+}
+.main-navigation a:hover {
+    background-color: #242424;
+}
+.main-navigation ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    font-size: 0px;
+}
+.main-navigation li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
 }
 .user-block {
-    min-height: 70px;
-    width: 140px;
     float: right;
+    max-width: 140px;
+}
+.login {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    text-decoration: none;
+    padding: 25px 20px;    
 }
 .index-logo {
     width: 368px;

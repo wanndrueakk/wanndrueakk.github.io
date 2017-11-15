@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="utf-8">
-   <!--     <link href="css/normalize.css" rel="stylesheet"> -->
-        <link href="barbershop2.css" rel="stylesheet">
-        <title>Barbershop "Borodinski"</title>
+    <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="barbershop2.css" rel="stylesheet">
+    <title>Barbershop "Borodinski"</title>
     </head>
     <body>
         <header class="c main-header">
@@ -18,7 +18,7 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="c user-block"><a href="#">Вход</a></div>
+                <div class="c user-block"><a class="login" href="#">Вход</a></div>
             </div>
         </header>
         <main class="c container">
@@ -26,24 +26,81 @@
                 <img src="BORODINSKI%20Logo.png"  alt="Barbershop Borodinsky">
             </div>
             <section class="c features clearfix">
-                <div class="c features-item"></div>
-                <div class="c features-item"></div>
-                <div class="c features-item"></div>
+                <div class="c features-item">
+                <b>Быстро</b>
+                <p>Мы делаем свою работу быстро! Два часа пролетят незаметно, и вы - счастливый обладатель стильной стрижки-минутки.</p>
+                </div>
+                <div class="c features-item">
+                <b>Круто</b>
+                <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p></div>
+                <div class="c features-item">
+                <b>Дорого</b>
+                <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?</p></div>
             </section>
             <div class="index-content clearfix">
-                <div class="c index-content-left"></div>
-                <div class="c index-content-right"></div>
+                <div class="c index-content-left">
+                <h2>Новости</h2>
+                <div class="news-block">
+                <p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+                <date>11 января</date>
+                    </div>
+                <div class="news-block">
+                <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множества титулов и наград пополнил наши стройные ряды</p>
+                <date>18 января</date>
+                    </div>
+                <a href="#">Все новости</a>
+                </div>
+                <div class="c index-content-right">
+                <h2 class="gallery-header">Фотогалерея</h2>
+                <img class="gallery-image" src="img/galleri-img.jpg" width="286" height="164" alt="Gallery image">
+                    <button class="btn-left">Назад</button>
+                    <button class="btn-right">Вперед</button>
+                </div>
+                
             </div>
             <div class="c index-content clearfix">
-                <div class="c index-content-left"></div>
-                <div class="c index-content-right"></div>
+                <div class="c index-content-left">
+                <h2>Контактная информация</h2>
+                <section>
+                    Бабершоп Бородинский
+                    Адрес: г.Санкт-Петербург, Б.Конюшенная, д19/8
+                    телефон: +7 (495) 666-02-66
+                    
+                    Время работы:
+                    ПН-ПТ: с 10:00 до 22:00
+                    СБ-ВС: с 10:00 до 19:00
+                    </section>
+                <a href="#">Как проехать</a>
+                <a href="#">Обратная связь</a>
+                </div>
+                <div class="c index-content-right">
+                <h2>Записаться</h2>
+                <p>Укажите желаемую дату и врем и мы свяжемся с Вами для подтверждения брони</p>
+                <label name="input-date"><input type="text"></label>
+                <label name="input-time"><input type="text"></label>
+                <label name="input-name"><input type="text"></label>
+                <label name="input-tel"><input type="text"></label>
+                    <button type="submit">Отправить</button>
+                       
+                       </div>
             </div>
         </main>
         <footer class="c main-footer">
             <div class="c container clearfix">
-                <section class="c contact-info"></section>
-                <section class="c social"></section>
-                <section class="c copyright"></section>
+                <section class="c contact-info">
+                Бабершоп Бородинский
+                Адрес: г.Санкт-Петербург, Б.Конюшенная, д19/8
+                    Как нас найти?
+                телефон: +7 (495) 666-02-66
+                </section>
+                <section class="c social">
+                <h2>Давайте дружить!</h2>
+                    
+                </section>
+                <section class="c copyright">
+                <h2>Разработано:</h2>
+                    <p>HTMLAcademy.ru</p>
+                </section>
             </div>
         </footer>
     </body>
