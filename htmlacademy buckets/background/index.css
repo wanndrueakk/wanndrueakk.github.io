@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    background-image: url("icon-login.png");
+    background-repeat: no-repeat;
+    background-position: 50% 100px;
+    background-attachment: scroll;
+}

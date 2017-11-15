@@ -75,11 +75,29 @@ body {
     max-width: 140px;
 }
 .login {
+    position:relative;
     display: inline-block;
     vertical-align: top;
     color: white;
     text-decoration: none;
-    padding: 25px 20px;    
+    padding: 25px 20px; 
+    padding-left: 50px;
+}
+.login:hover {
+    background-color: #242424;
+}
+.login::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    background: transparent url("img/icon-login.png") no-repeat;
+    opacity: 0.3;
+}
+.login:hover::before {
+    opacity: 1;
 }
 .index-logo {
     width: 368px;
@@ -97,9 +115,30 @@ body {
     min-height: 170px;
     width: 300px;
     margin-right: 20px;
+    text-align: center;
 }
 .features-item:last-child {
     margin-right: 0;
+}
+.features-name {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 30px;
+    padding-bottom: 35px;
+}
+.features-name::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+    transform: rotate(45deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
 }
 .index-content:nth-of-type(2) {
     padding-bottom: 50px;
