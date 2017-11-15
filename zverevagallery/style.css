@@ -7,15 +7,14 @@ body {
     background-attachment: fixed;
     background-size: contain;
     font-family: 'Caveat', cursive;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 26px;
+    line-height: 38px;
 }
 
 .poem {
     position: absolute;
-    background-color: olive;
-    opacity: 100%;
-    bottom: 10%;
-    left: 10%;
+    background-color: rgba(0,0,0,0.2);
+    bottom: 5%;
+    left: 5%;
     padding: 40px;
 }
