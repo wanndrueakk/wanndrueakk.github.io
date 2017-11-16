@@ -10,6 +10,7 @@ body {
     top: 10px;
     left: 20px;
     display: flex;
+    flex-basis: auto;
     width: 600px;
     min-height: 250px;
     flex-direction: row; /*column, row-reverse, column-reverse; */
@@ -21,7 +22,4 @@ body {
 .flex-container div {
     border: 1px dashed;
     background:yellow;
-}
-.flex-container div:nth-child(2) {
-    align-self:flex-start;
 }
