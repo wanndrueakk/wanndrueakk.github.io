@@ -23,7 +23,7 @@ body {
     line-height: 24px;
     font-family: "PT Sans Narrow", "Arial", sans-serif; 
     text-transform: uppercase;
-    background: black url("img/tint.png") no-repeat center top;
+    background: black /* url("img/tint.png")*/ no-repeat center top;
     color: white;
 }
 .main-header {
