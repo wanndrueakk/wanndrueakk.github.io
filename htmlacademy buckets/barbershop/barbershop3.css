@@ -86,10 +86,10 @@ body {
 
 .main-footer {
     margin-top: 65px;
-    width: 960px;
 }
 .main-footer-layout {
     margin: 0 auto;
+    width: 960px;
     display: flex;
     justify-content: flex-start;
 }
