@@ -1,4 +1,4 @@
-body {
+ body {
     margin: 0;
     background:  url("img/bckg.jpg");
     background-color: #3d2b1f;
@@ -18,7 +18,7 @@ body {
     border: 1px solid white;
     background: rgba(0,0,0,0.1);
 }
-.poem {
+.poem: {
     position: absolute;
     background-color: rgba(0,0,0,0.2);
     bottom: 10px;

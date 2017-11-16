@@ -26,7 +26,6 @@ body {
     color: white;
 }
 .c {
-    background: rgba(0,0,0,0.1);
 }
 .main-header {
     margin-bottom: 62px;
@@ -142,13 +141,11 @@ body {
 }
 .index-content:nth-of-type(2) {
     padding-bottom: 50px;
-    background-color: olive;
     margin-bottom: 33px;
 }
 
 .index-content:nth-of-type(3) {
     padding-bottom: 25px;
-    background-color: olive;
 }
 
 .index-content-left {
@@ -165,6 +162,45 @@ body {
     min-height: 315px;
     margin-right: 80px;
     margin-top:57px;
+}
+.btn {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-transform: inherit;
+
+}
+.btn:hover,
+.btn.active {
+    background-color: #663d15 ;
+    color: wheat;
+}
+.btn:disabled,
+.btn.disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+.btn.disabled:hover {
+    background-color: #663d15;
+}
+.appointment-form input {
+    font: inherit;
+    color: inherit;
+    text-transform: inherit;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    width: 130px;
+    margin-bottom: 10px;
+}
+.appointment-form input:nth-child(2n) {
+    margin-right: 0px;
+}
+.appointment-form .btn {
+    width: 100%
 }
 
 .main-footer {
@@ -188,4 +224,8 @@ body {
     float:right;
     min-height: 193px;
     width: 140px;
+}
+
+.index-content-title {
+    
 }

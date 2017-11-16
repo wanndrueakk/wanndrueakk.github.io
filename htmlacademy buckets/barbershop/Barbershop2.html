@@ -39,7 +39,7 @@
             </section>
             <div class="index-content clearfix">
                 <div class="c index-content-left">
-                <h2>Новости</h2>
+                <h2 class="index-content-title">Новости</h2>
                 <div class="news-block">
                 <p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
                 <date>11 января</date>
@@ -48,13 +48,13 @@
                 <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множества титулов и наград пополнил наши стройные ряды</p>
                 <date>18 января</date>
                     </div>
-                <a href="#">Все новости</a>
+                <a class="btn" href="#">Все новости</a>
                 </div>
                 <div class="c index-content-right">
                 <h2 class="gallery-header">Фотогалерея</h2>
                 <img class="gallery-image" src="img/galleri-img.jpg" width="286" height="164" alt="Gallery image">
-                    <button class="btn-left">Назад</button>
-                    <button class="btn-right">Вперед</button>
+                    <button class="btn disabled">Назад</button>
+                    <button class="btn">Вперед</button>
                 </div>
                 
             </div>
@@ -70,19 +70,20 @@
                     ПН-ПТ: с 10:00 до 22:00
                     СБ-ВС: с 10:00 до 19:00
                     </section>
-                <a href="#">Как проехать</a>
-                <a href="#">Обратная связь</a>
+                <a class="btn" href="#">Как проехать</a>
+                <a class="btn" href="#">Обратная связь</a>
                 </div>
                 <div class="c index-content-right">
-                <h2>Записаться</h2>
-                <p>Укажите желаемую дату и врем и мы свяжемся с Вами для подтверждения брони</p>
-                <label name="input-date"><input type="text"></label>
-                <label name="input-time"><input type="text"></label>
-                <label name="input-name"><input type="text"></label>
-                <label name="input-tel"><input type="text"></label>
-                    <button type="submit">Отправить</button>
-                       
-                       </div>
+                <h2 class="index-content-title">Записаться</h2>
+                <p>Укажите желаемую дату и время и мы свяжемся с Вами для подтверждения брони</p>
+                <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+                <input type="text" name="date" value="" placeholder="Дата">
+                <input type="text" name="time" value="" placeholder="Время">
+                <input type="text" name="name" value="" placeholder="Ваше имя">
+                <input type="tel" name="phone" value="" placeholder="Телефон">
+                <button class="btn" type="submit">Отправить</button>
+                </form>       
+                </div>
             </div>
         </main>
         <footer class="c main-footer">
