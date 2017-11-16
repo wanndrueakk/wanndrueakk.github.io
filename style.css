@@ -82,12 +82,13 @@
 }
 
 .main-text {
-    max-width: 450px;
+    max-width: 680px;
     color: white;
 }
 
 .main-photo {
     width: 550px;
+    margin: 0 auto;
     height:10px;
     padding: 190px 20px;
     border-radius: 40px;
