@@ -1,13 +1,14 @@
  body {
     margin: 0;
+     position:relative;
     background:  url("img/bckg.jpg");
     background-color: #3d2b1f;
     color: antiquewhite;
-    background-repeat: round;
-    background-position: left top;
+    background-repeat: no-repeat;
+    background-position: right top;
     background-attachment: fixed;
     background-size: contain;
-    font-family: 'Caveat', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 14px;
     line-height: 26px;
 }
@@ -18,11 +19,63 @@
     border: 1px solid white;
     background: rgba(0,0,0,0.1);
 }
-.poem: {
+.poem {
+    display:flex;
     position: absolute;
-    background-color: rgba(0,0,0,0.2);
-    bottom: 10px;
-    left: 5%;
-    padding: 40px;
+    width: 340px;
+    flex-direction: row;
+    flex-basis: auto;
+    align-items:center;
+    margin-top: 0px;
+    padding:20px;
 }
 
+
+.main-menu {
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-menu a {
+    font:inherit;
+    text-decoration: inherit;
+}
+.main-menu > li {
+    margin-bottom: -1px;
+    border: 1px solid #e5e5e5;
+}
+
+.main-menu a {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: wheat;
+}
+
+.main-menu a:hover {
+    background: #f5f5f5;
+}
+
+.main-menu > .active > a {
+    color: white;
+    background: #0088cc;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 5px 0;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.main-menu li li a {
+    padding: 3px 0;
+    color: black;
+}
+
+.main-menu li li a:hover {
+    text-decoration: underline;
+    background: none;
+}
