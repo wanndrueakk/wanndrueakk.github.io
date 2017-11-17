@@ -1,0 +1,57 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: gray url("");
+    display:flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.sprite {
+    background-image: url("sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite:hover {
+    opacity: 0.5;
+}
+.sprite-github {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.sprite-gmail {
+    width: 30px;
+    height: 30px;
+    background-position: -45px -5px;
+}
+
+.sprite-linkedin {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -45px;
+}
+
+.sprite-stackoverflow {
+    width: 30px;
+    height: 30px;
+    background-position: -45px -45px;
+}
+
+.sprite-tumblr {
+    width: 30px;
+    height: 30px;
+    background-position: -85px -5px;
+}
+
+.sprite-twitter {
+    width: 30px;
+    height: 30px;
+    background-position: -85px -45px;
+}
