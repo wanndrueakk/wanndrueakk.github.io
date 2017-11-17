@@ -1,0 +1,38 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: block;
+    margin: 10px 0px;
+    line-height: 20px;
+    padding-left: 45px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    backface-visibility: #f9f6f3;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
