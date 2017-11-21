@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkviolet;
+    background-image: url(fabric.png);
+    background-repeat: repeat;
+    background-position: 50% 100px;
+    background-attachment: scroll;
+}
+.sample1 {
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    margin: 60px;
+    padding: 10px;
+    background: darkgreen url(fabric.png);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.2);
+}
+.sample2 {
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    margin: 60px;
+    padding: 10px;
+    background: darkblue url(fabric.png);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.2);
+}
+.sample3 {
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    margin: 60px;
+    padding: 10px;
+    background: darkslategrey url(fabric.png);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.2);
+}
+.sample4 {
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    margin: 60px;
+    padding: 10px;
+    background: darkslateblue url(fabric.png);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.2);
+}
+.sample5 {
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    margin: 60px;
+    padding: 10px;
+    background: darkgoldenrod url(fabric.png);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.2);
+}
+.sample6 {
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    margin: 60px;
+    padding: 10px;
+    background: darkolivegreen url(fabric.png);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.2);
+}
