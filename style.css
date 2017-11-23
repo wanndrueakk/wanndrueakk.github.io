@@ -103,3 +103,22 @@
     border: 1px dashed;
 
 }
+.portrait {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 40px solid rgba(0, 0, 0, 0.4);
+    background: 
+        url("img/Title_Photo.jpg") no-repeat 75px 125px, 
+        url("img/purty_wood.jpg") repeat center olive;
+    background-clip: padding-box;
+    background-origin: border-box;
+    background-size: 
+        150px,
+        cover;
+    border-image-source: url("img/frame.png");
+    border-image-slice: 100 fill;
+    border-image-outset: 10px;
+}
