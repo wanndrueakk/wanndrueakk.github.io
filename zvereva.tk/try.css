@@ -1,0 +1,20 @@
+div {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    left:50%;
+    top:50%;
+    background: rgba(0,0,0,0.3);
+    color: azure;
+    line-height: 10em;
+    transition: all 0.5s ease;
+}
+div:hover{
+    background:rgba(0,0,0,0.5);
+    line-height: 1em;
+    transition: all 0.5s ease;
+}
+div span {
+    border-bottom: 1px dotted white;
+    transition: all 0.5s ease;
+}

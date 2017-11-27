@@ -1,0 +1,54 @@
+/* Start:/bitrix/templates/slidegallery_default/template_styles.css*/
+html, body, div, span, p, img, li, ul {margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit}
+
+html, body {height: 100%}
+body {background: #fff; min-width: 1025px; position: relative}
+header, section, nav, article, aside, footer {display: block}
+
+
+body {font-size: 14px; line-height: 22px; color: #333333; font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif}
+.logo a, .logo span {font-family: Georgia, 'Century Schoolbook L', Serif}
+
+
+/* structure
+----------------------------------------------------------------------------------------*/
+.wrapper {margin: 0 auto -36px; min-height:100%; height:auto !important; height:100%;}
+.container {overflow: hidden; width: 100%; padding: 22px 0 59px}
+header .in, section, footer .in {padding: 0 0 0 8.08%}
+
+/* header
+----------------------------------------------------------------------------------------*/
+header {position: absolute; left: 0; top: 0; width: 100%; z-index: 10;}
+header .in {background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.4); height: 83px; margin: 0 0 3px 0 }
+.logo {float: left; display: inline; width: 31.66%; padding: 14px 0 0; line-height: 18px}
+.logo a, .logo span {font-size: 20px; color: #fff; font-weight: bold; font-style: italic}
+.logo p {color: #e5e4e2; font-size: 13px}
+header nav {padding: 0 0 0 40.58%; font-size: 12px}
+header nav ul li {float: left; height: 83px; overflow:hidden;
+transition: all 0.5s ease;
+}
+header nav ul li a {display:; padding: 0 10px; line-height: 80px; color: #fff; text-decoration: none;
+transition: all 0.5s ease;
+}
+header nav ul li a span {border-bottom: 1px dotted #fff;
+transition: all 0.5s ease;
+}
+header nav ul li:hover, header nav ul li.active {background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.15);
+transition: all 0.5s ease;
+}
+header nav ul li:hover a {line-height: 126px; color: #ccc9bf;
+transition: all 0.5s ease;
+}
+header nav ul li:hover a span {border-bottom: 1px dotted transparent;
+transition: all 0.5s ease;
+}
+header nav ul li.active {height: 17px; overflow: visible;
+transition: all 0.5s ease;
+}
+header nav ul li.active a {margin: 19px 0 0; cursor: default;
+transition: all 0.5s ease;
+}
+header nav ul li.active a, header nav ul li.active a:hover {line-height: 22px; color: #b4b3ad;
+transition: all 0.5s ease;
+}
+header nav ul li.active a span {border: 0!important}

@@ -9,12 +9,12 @@ body {
     background-size: contain;
     font-family: 'Caveat', cursive;
     font-size: 14px;
-    line-height: 26px;
+    line-height: 25px;
 }
 .poem,
 .frame,
 .text {
-    padding: 20px;
+    padding: 10px;
     border: 1px solid white;
     background: rgba(0,0,0,0.1);
 }
