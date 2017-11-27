@@ -28,5 +28,5 @@ header nav ul .active {position:relative; line-height: 3em;cursor:default;color:
 header nav ul .active::before {
     content:"";
     position:absolute; top:0;left:0;
-    width:100%;height:14px;}
+    width:100%;height:12px;}
 header nav ul .active::before, header nav ul li:hover a[href] {background: rgba(0,0,0,0.3);}
