@@ -1,0 +1,62 @@
+/* Start:/bitrix/templates/slidegallery_default/template_styles.css*/
+html, body, div, span, p, img, li, ul {margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit}
+
+html, body {height: 100%}
+body {background: #fff; min-width: 1025px; position: relative}
+header, section, nav, article, aside, footer {display: block}
+
+
+body {font-size: 14px; line-height: 22px; color: #333333; font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif}
+.logo a, .logo span {font-family: Georgia, 'Century Schoolbook L', Serif}
+
+
+/* structure
+----------------------------------------------------------------------------------------*/
+.wrapper {margin: 0 auto -36px; min-height:100%; height:auto !important; height:100%;}
+.container {overflow: hidden; width: 100%; padding: 22px 0 59px}
+header .in, section, footer .in {padding: 0 0 0 8.08%}
+
+/*slider*/
+.slider_place {overflow: hidden; padding: 0px; position: relative; z-index: 1}
+.slider_place .big_img {width: 100%; overflow: hidden; margin: 0 0 3px;}
+.slider_place .big_img ul {list-style: none}
+.slider_place .big_img ul li {float: left; display: inline; position:relative; text-align:center; background:url('img/bigloader.gif') center center no-repeat #000; overflow:hidden; cursor:-moz-grab}
+.slider_place .big_img ul li:active {cursor:-moz-grabbing}
+.slider_place .big_img ul li img {position:absolute; left:0}
+.slider_place .thumbs { background: grey; overflow: hidden; margin: 0 -3px; position: relative; height: 60px}
+.slider_place .thumbs ul {list-style: none}
+.slider_place .thumbs ul li {float: left; display: inline; margin: 0 3px 0 0; width: 90px; height: 60px; cursor: pointer; position:relative;}
+.slider_place .thumbs .frame {position: absolute; left: 0; top: 0; width: 84px; height: 54px; border: 3px solid #cd4144; background: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.4)}
+.slider_place .prev, .slider_place .next {display:block; position: absolute; width: 20px; height: 30px; background: url('img/slider_navig.png') no-repeat 0 0; text-indent: -9999px; top: 370px}
+.slider_place .prev {background:url('img/slider_navig.png'); left: 27px}
+.slider_place .next {right: 27px; background-position: right 0}
+.slider_place .like {position: absolute; left: 97px; top: 470px; text-align: center; font-size: 10px; line-height: 12px; opacity: 0.7;  cursor:pointer; width:32px}
+ .slider_place .like span {display: block; color: #fff; text-shadow: 1px 1px 0px #000000; text-align:center;}
+.slider_place .like:hover { transform: scale(1.2);}
+.slider_place .title {position: absolute; left: 97px; top: 470px; color: #FFFFFF; font-size: 14px; left: 137px; padding: 6px; text-shadow: 1px 1px 0px #000000; }
+/* dragdealer
+----------------------------------------------------------------------------------------*/
+.dragdealer {
+	position: relative;
+}
+.dragdealer .handle {
+	position: absolute;
+	cursor: pointer;
+}
+.loader {
+	position:absolute;
+	top:0;
+	left:0;
+	width:90px;
+	height:60px;
+	background:url('/bitrix/templates/slidegallery_default/images/loader.gif') center center no-repeat #ffffff;
+	filter:alpha(opacity=50); opacity: 0.5; -moz-opacity: 0.5; -khtml-opacity: 0.5
+}
+.slider_place .like img {
+	
+}
+#panel {
+	position:relative;
+	height:100px;
+}
+

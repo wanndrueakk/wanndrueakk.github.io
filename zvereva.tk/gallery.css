@@ -31,7 +31,10 @@ header nav ul .active::before {
     width:100%;height:12px;}
 header nav ul .active::before, header nav ul li:hover a[href] {background: rgba(0,0,0,0.3);}
 main{position:absolute; width:100%; height: 100%;background:gray url(img/%D0%BF%D0%B8%D0%BE%D0%BD%D1%8B.png) no-repeat 50% 50%;z-index:1;top:0;left:0;}
-.like{position:absolute;width:32px; font-size:24px;text-align: center; color:white; bottom:6%;left:5%;cursor:pointer;}
-.like span {font-size:14px;}
-.like:hover div {transition-delay: .1s; transform: scale(1.5);color:#b4b3ad;}
-.name {position:absolute; bottom:10%; left:12%; color:white; font-size:16px;}
+main .like{position:absolute;width:32px; font-size:24px;text-align: center; color:white; bottom:6%;left:5%;cursor:pointer;text-shadow: 1px 1px 0px #000;}
+main .like span {font-size:14px;}
+main .like:hover div {transition-delay: .1s; transform: scale(1.5);color:#b4b3ad;}
+main .name {position:absolute; bottom:10%; left:12%; color:white; font-size:16px; text-shadow: 1px 1px 0 #000;}
+main .prev, main .next {display:block; position: absolute; width: 20px; height: 30px; background: url('img/slider_navig.png') no-repeat 0 0; text-indent: -9999px; top: 370px}
+main .prev {background:url('img/slider_navig.png'); left: 27px}
+main .next {right: 27px; background-position: right 0}
