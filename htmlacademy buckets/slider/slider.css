@@ -19,7 +19,7 @@ body input[type="radio"] {display: none;}
     z-index: 20;
     font-size: 0;
 }
-.slide {display: none;}
+.slide {display: none; transition: all 0.5s ease;}
 
 #btn-1:checked ~ .slider .slide1,
 #btn-2:checked ~ .slider .slide2,
@@ -29,4 +29,6 @@ body input[type="radio"] {display: none;}
 #btn-2:checked ~ .slider label[for="btn-2"],
 #btn-3:checked ~ .slider label[for="btn-3"] {background:white;}
 
-#btn-1:checked ~ .slider {background:linear-gradient (to bottom, grey, olive)  url("img/slide1.png") no-repeat 50% 50%;}
+#btn-1:checked ~ .slider {background: url("slide1.png") no-repeat 10% 10%;}
+#btn-2:checked ~ .slider {background: url("slide2.png") no-repeat 10% 10%;}
+#btn-3:checked ~ .slider {background: url("slide3.png") no-repeat 10% 10%;}
