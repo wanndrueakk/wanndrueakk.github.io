@@ -107,7 +107,7 @@ aside label:hover {cursor:pointer;}
 
 /* content
 ----------------------------------------------------------------------------------------*/
-section {width: 100%; padding: 0px  22px;}
+section {width: 100%; padding: 0px  22px;background: Ivory url("img/fabric.png")}
 section nav {padding: 9px 0 20px}
 section nav ul {list-style: none;}
 section nav ul li {float: left; margin: 0 20px 0 0; }
@@ -116,4 +116,16 @@ section nav ul li a:hover {border-bottom: 1px dotted transparent}
 section nav ul li.active {background: url("img/arrow_down.gif") no-repeat 0 0;}
 section nav ul li.active a {color: #000; border: 0; font-weight: bold; cursor: default}
 
-
+article {float: left; width: 63%;}
+article .block {padding: 0 10% 22px 0}
+article .block p {padding: 0 0 22px;}
+article .title {    font-size: 26px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #010101;
+padding: 26px 0 22px;}
+.right-block {padding: 59px 0 40px;}
+.right-block .title {    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #010101; }
