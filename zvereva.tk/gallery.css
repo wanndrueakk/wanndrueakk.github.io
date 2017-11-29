@@ -77,13 +77,20 @@ section {position:absolute; top:100%;}
 
 .new {position: absolute; width: 100%; height: 100%; background:yellow;color:white;display: block; z-index: 1;}
 
-aside {position:fixed;width:20px;height: 100px;right:10px;top:90px;z-index: 2;}
-aside label {float:left; width:20px;height:20px;cursor:pointer;border-radius:50%;}
+aside {position:fixed;width:20px;height: 220px;right:10px;top:90px;z-index:2;}
+aside label {float:left; width:20px;height:20px;cursor:pointer;border-radius:50%; box-shadow: inset 1px 1px 1px 0 white;}
+aside label[for^="fabric"]{width:20px;height:20px;}
 aside label:nth-child(1){background:radial-gradient(circle at 7px 8px,white,purple);}
 aside label:nth-child(2){background:radial-gradient(circle at 7px 8px,white,crimson);}
 aside label:nth-child(3){background:radial-gradient(circle at 7px 8px,white,maroon);}
 aside label:nth-child(4){background:radial-gradient(circle at 7px 8px,white,darkslategrey);}
 aside label:nth-child(5){background:radial-gradient(circle at 7px 8px,white,darkgreen);}
+aside label:nth-child(6){background:darkgreen url(fabric.png);}
+aside label:nth-child(7){background:darkviolet url("fabric.png");}
+aside label:nth-child(8){background:darkblue url("fabric.png");}
+aside label:nth-child(9){background:darkslategray url("fabric.png");}
+aside label:nth-child(10){background:darkgoldenrod url("fabric.png");}
+aside label:nth-child(11){background:darkolivegreen url("fabric.png");}
 
 aside label:hover {cursor:pointer;}
 #color-1:checked ~ .new {background: radial-gradient(circle at 200px 0px, fuchsia,purple);}
@@ -91,4 +98,22 @@ aside label:hover {cursor:pointer;}
 #color-3:checked ~ .new {background: radial-gradient(circle at 200px 0px, sandybrown,maroon);}
 #color-4:checked ~ .new {background: radial-gradient(circle at 200px 0px, darkslategrey,black);}
 #color-5:checked ~ .new {background: radial-gradient(circle at 200px 0px, yellowgreen,darkgreen);}
+#fabric-1:checked ~ .new {background:  darkgreen url("fabric.png");}
+#fabric-2:checked ~ .new {background:  darkviolet url("fabric.png");}
+#fabric-3:checked ~ .new {background:  darkblue url("fabric.png");}
+#fabric-4:checked ~ .new {background:  darkslategray url("fabric.png");}
+#fabric-5:checked ~ .new {background:  darkgoldenrod url("fabric.png");}
+#fabric-6:checked ~ .new {background:  darkolivegreen url("fabric.png");}
+
+/* content
+----------------------------------------------------------------------------------------*/
+section {width: 100%; padding: 0px  22px;}
+section nav {padding: 9px 0 20px}
+section nav ul {list-style: none;}
+section nav ul li {float: left; margin: 0 20px 0 0; }
+section nav ul li a {color: #46a2c9; border-bottom: 1px dotted #46a2c9; text-decoration: none;}
+section nav ul li a:hover {border-bottom: 1px dotted transparent}
+section nav ul li.active {background: url("img/arrow_down.gif") no-repeat 0 0;}
+section nav ul li.active a {color: #000; border: 0; font-weight: bold; cursor: default}
+
 
