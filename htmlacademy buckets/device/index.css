@@ -10,7 +10,7 @@ body {
 header {
     display: block;
     width: 1160px;
-    height: 300px;
+    height: 500px;
     margin-top:40px;
     margin-left:auto;
     margin-right: auto;
@@ -20,7 +20,7 @@ header {
 .header-left {
     float:left;
     margin-left:58px;
-    margin-top:48px;
+    margin-top:35px;
     width:540px;
     height:86px;
 }
@@ -31,39 +31,35 @@ header {
     width:500px;
     height:86px;
 }
-
-.header-left .links {
+.menu-line-1, .menu-line-2 {
     display: block;
 }
-.header-left .menu {
-    display: block;
+.header-left .menu-line-2 {
     margin-top:44px;
 }
-.header-right .links {
-    display: block;
+.header-right .menu-line-1 {
     padding-top: 4px;
 }
-.header-right .menu {
-    display: block;
+.header-right .menu-line-2 {
     margin-top: 47px;
     margin-left: 1px;
 }
-header nav ul {
+header ul {
     list-style: none;
 }
-header nav ul li a {
-  float:left;
-  display:inline-block;
-  text-decoration: none;
-  color:black;
+header a {
+    font-family: "Open Sans";
+    font-size: 15px;
+    text-decoration: none;
+    color:black;
 }
-header .links ul li a {    
+.menu-line-1 a {    
   font-size: 15px;
   font-family: "Open Sans";
   line-height: 15px;
   letter-spacing: -0.4px;
 }
-header .menu ul li a {
+.menu-line-2 > a {
   font-size: 18px;
   font-family: "Gilroy";
   font-weight: bold;
@@ -71,59 +67,82 @@ header .menu ul li a {
   line-height: 1.2;
   letter-spacing: 3.6px;
 }
-header nav::after {
+.clearfix::after {
     content:"";
     display: table;
     clear:both;
 }
-
-header nav ul .links-search input {
-    width:200px;
-    height: 15px;
-    background: transparent;
-    font-size: 15px;
-    font-family: "Open Sans";
-    line-height: 15px;
-    letter-spacing: -0.0px;
-    color:rgba(0,0,0,0.3);
-    padding-left:36px;
-    padding-right:120px;
-    padding-bottom: 13px;
-    border: 2px solid transparent;
-}
-header nav ul .links-search {
-    position: relative;
-}
-header nav ul .links-search .links-search-icon  {
-    position:absolute;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    top:4px;
-    left:4px;
-    background: url("img/search.svg.png");
-    
-}
-header nav ul .menu-catalog a {
+.catalog {
     position:relative;
-    margin-top:-12px;
+    border: 5px solid red;
 }
-.menu-catalog-icon {
+.catalog-icon {
     position: absolute;
     display:inline-block;
     width: 16px;
     height: 16px;
-    bottom:2px;
-    right:-28px;
-    background:  url("img/plus.svg.png");
+    top:2px;
+    left:228px;
+    background:  red url("img/plus.svg.png");
+}
+.sub-menu {
+    position:absolute;
+    display: block;
+    left:-3px;
+    top:20px;
+    border:1px solid;
+    width:600px;
+}
+.sub-menu-column-1,.sub-menu-column-2,
+.sub-menu-column-3 {
+    float:left;
+    margin: 39px 0 0 0;
+    border: 1px solid blue;
+}
+.catalog:hover .sub-menu {
+    display:block;
 }
 
-header nav ul .login a {
+.sub-menu a {
+    display: block;
+    padding-bottom: 22px;
+}
+/*
+.menu a:hover, .links a:hover {opacity:0.6;}
+.menu a:active, .links a:active {opacity:0.3;}
+.menu-catalog:hover .sub-menu a {display: block;}
+*/
+button {
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 50px;
+    bottom:0px;
+    left:-10px;
+    border: 2px solid transparent;
+    background: transparent;
+    color:transparent;
+}
+button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    left:-360px;
+    bottom:-2px;
+    background: transparent;
+    width:370px;
+}
+input:focus + button {border-color:black; color:black;}
+input:focus + button::after {background:black;}
+button:hover { background:black; color: white;}
+button:active { background:black; color: grey;}
+.login a {
     position: relative;
     float:left;
     padding-left: 27px;
 }
-header nav ul .login a .login-icon {
+.login .login-icon {
     position:absolute;
     display: inline-block;
     width: 12px;
@@ -132,15 +151,15 @@ header nav ul .login a .login-icon {
     left:2px;
     background: url("img/user.svg.png");
 }
-header nav ul .delivery a {
+.delivery a {
     float:left;
 }
-header nav ul .cart a {
+.cart a {
     float:right;
     position: relative;
     margin-left:65px;
 }
-header nav ul .cart a .cart-icon {
+.cart .cart-icon {
     position:absolute;
     display: inline-block;
     width: 12px;
@@ -150,11 +169,11 @@ header nav ul .cart a .cart-icon {
     background: url("/img/cart.svg.png");   
 }
 
-header nav ul .compare a {
+.compare a {
     float: right;
     position: relative;
 }
-header nav ul .compare a .compare-icon {
+.compare .compare-icon {
     position:absolute;
     display: inline-block;
     width: 12px;
@@ -163,11 +182,37 @@ header nav ul .compare a .compare-icon {
     left:-21px;
     background: url("/img/compare.svg.png");   
 }
-header nav ul .menu-contacts a {
+.menu-contacts a {
     float:right;
     margin-right:-5px;
     margin-left:109px;
 }
-header nav ul .menu-warranty a {
+.menu-warranty a {
     float:right;
+}
+.links-search input {
+    width:200px;
+    height: auto;
+    padding:0;
+    background: transparent;
+    font-size: 15px;
+    font-family: "Open Sans";
+    color:black;
+    padding-left:40px;
+    padding-right:120px;
+    border: none;
+    
+}
+.links-search {
+    position: relative;
+}
+.links-search-icon  {
+    position:absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    top:15px;
+    left:4px;
+    background: url("img/search.svg.png");
+    
 }
