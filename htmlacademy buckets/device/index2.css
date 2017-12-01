@@ -1,0 +1,355 @@
+html,body,ul {
+    margin:0;
+    padding: 0;
+}
+body {
+    min-width: 1200px;
+}
+header {
+    position: relative;
+    display: block;
+    width: 1160px;
+    height: 299px;
+    margin-top:40px;
+    margin-left:auto;
+    margin-right: auto;
+    padding:0;
+    background:rgba(240,197,46,0.5);
+}
+.logo {
+    position: absolute;
+    width: 169px;
+    height: 54px;
+    background: url("img/logo.png") no-repeat;
+    top: -17px;
+    left: 56px;
+}
+.white-line {
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    background: white;
+    top: 225px;
+    left: 600px;
+}
+.menu-1 {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    margin: 53px 0 51px 98px;
+    width: 1000px;
+    height:15px;
+    background:red;
+}
+.menu-1 li {
+    float:left;
+    position: relative;
+}
+.menu-1 a {
+    padding-left: 20px;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 15px;
+    text-decoration: none;
+    color:black;
+}
+.menu-1 .input {
+    display: inline-block;
+    position: relative;
+    width: 198px;
+    height: 15px;
+    top:-2px;
+}
+.menu-1 input {
+    position:absolute;
+    border: 0;
+    padding: 0;
+    margin:0;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 15px;
+    color:black;
+    background-color: transparent;
+}
+.menu-1 button {
+    position: absolute;
+    width: 85px;
+    height: 50px;
+    top:-18px;
+    left:317px;
+    background: none;
+    border:2px solid black;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 15px;
+    color:black;
+}
+.menu-1 button::before {
+    content: "";
+    position: absolute;
+    height:2px;
+    width:355px;
+    bottom:-2px;
+    left:-357px;
+    background: black;
+}
+.menu-1 li:nth-child(1) {
+    margin-right:307px;
+}
+.menu-1 li:nth-child(2) {
+    width:198px;
+    margin-right:83px;
+}
+.menu-1 li:nth-child(3) {
+    width: 91px;
+}
+.menu-1 li:last-child {
+    float: right;
+}
+.menu-1 li:nth-child(1)::after {
+    content: "";
+    position:absolute;
+    width: 16px;
+    height: 16px;
+    background: url("img/search.svg.png");
+    bottom:3px;
+    left:-36px;
+}
+.menu-1 li:nth-child(2) a::after {
+    content: "";
+    position:absolute;
+    width: 16px;
+    height: 16px;
+    background: url("img/user.svg.png") no-repeat;
+    bottom:1px;
+    left:-4px;
+}
+.menu-1 li:nth-child(3) a::after {
+    content: "";
+    position:absolute;
+    width: 16px;
+    height: 16px;
+    background: url("img/compare.svg.png") no-repeat;
+    bottom:-1px;
+    left:0px;
+}
+.menu-1 li:nth-child(4) a::after {
+    content: "";
+    position:absolute;
+    width: 16px;
+    height: 16px;
+    background: url("img/cart.svg.png") no-repeat;
+    bottom:1px;
+    left:0px;    
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu-2 {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    margin: 0 61px 0px 58px;
+    width: 1043px;
+    height:15px;
+    background:red;
+}
+.menu-2 li {
+    float:left;
+    margin-top:-4px;
+}
+.menu-2 > li > a {
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    text-decoration: none;
+    color:black;
+}
+.catalog > a {
+    padding-right:30px;
+}
+.menu-2>li:nth-child(1) > a {
+    margin-right:290px;
+    position:relative;
+}
+.menu-2 li:nth-child(2) {
+    margin-right:34px;
+}
+.menu-2 li:nth-child(4) {
+    float:right;
+}
+.catalog {
+    position:relative;
+}
+.catalog > a::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("img/plus.svg.png") no-repeat;
+    bottom:0px;
+    left:231px;
+}
+.sub-menu {
+    position:absolute;
+    display: block;
+    left:-58px;
+    bottom:-126px;
+    width:1160px;
+    height: 129px;
+    background: #f7e296;
+}
+[class^="sub-menu-column"] {
+    float:left;
+    margin-top: 39px;
+}
+.sub-menu-column-1 {
+    margin-left:59px;
+    margin-right:39px;
+    width:198px;
+    height:129px;
+    background:red
+}
+.sub-menu-column-2 {
+    width:198px;
+    height:129px;
+}
+.sub-menu-column-3 {
+    background:red
+}
+.sub-menu a {
+    display: block;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 15px;
+    text-decoration: none;
+    color:black;
+    margin-bottom: 23px;
+}
+/*   Анимации   */
+/*
+.menu-2>li:nth-child(1):hov er .sub-menu {
+    display:block;
+}
+*/
+.menu-1 a:hover, .menu-2 a:hover {
+    opacity:0.6;
+}
+.menu-1 a:active, .menu-2 a:active {
+    opacity:0.3;
+}
+
+/*
+.catalog:hover .sub-menu {
+    display:block;
+}
+.sub-menu a {
+    display: block;
+    padding-bottom: 22px;
+}
+.menu a:hover, .links a:hover {opacity:0.6;}
+.menu a:active, .links a:active {opacity:0.3;}
+.menu-catalog:hover .sub-menu a {display: block;}
+button {
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 50px;
+    bottom:0px;
+    left:-10px;
+    border: 2px solid transparent;
+    background: transparent;
+    color:transparent;
+}
+button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    left:-360px;
+    bottom:-2px;
+    background: transparent;
+    width:370px;
+}
+.login a {
+    position: relative;
+    float:left;
+    padding-left: 27px;
+}
+.login .login-icon {
+    position:absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    top:0px;
+    left:2px;
+    background: url("img/user.svg.png");
+}
+.delivery a {
+    float:left;
+}
+.cart a {
+    float:right;
+    position: relative;
+    margin-left:65px;
+}
+.cart .cart-icon {
+    position:absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    top:0px;
+    left:-22px;
+    background: url("/img/cart.svg.png");   
+}
+.compare a {
+    float: right;
+    position: relative;
+}
+.compare .compare-icon {
+    position:absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    top:3px;
+    left:-21px;
+    background: url("/img/compare.svg.png");   
+}
+.menu-contacts a {
+    float:right;
+    margin-right:-5px;
+    margin-left:109px;
+}
+.menu-warranty a {
+    float:right;
+}
+.links-search input {
+    width:200px;
+    height: auto;
+    padding:0;
+    background: transparent;
+    font-size: 15px;
+    font-family: "Open Sans";
+    color:black;
+    padding-left:40px;
+    padding-right:120px;
+    border: none;
+    
+}
+.links-search {
+    position: relative;
+}
+.links-search-icon  {
+    position:absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    top:15px;
+    left:4px;
+    background: url("img/search.svg.png");
+    
+}*/

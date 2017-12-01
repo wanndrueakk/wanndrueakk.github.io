@@ -1,6 +1,4 @@
-html,
-body,
-ul {
+html,body,ul {
     margin:0;
     padding: 0;
 }
@@ -8,14 +6,31 @@ body {
     min-width: 1200px;
 }
 header {
+    position: relative;
     display: block;
     width: 1160px;
-    height: 500px;
+    height: 299px;
     margin-top:40px;
     margin-left:auto;
     margin-right: auto;
     padding:0;
-    background:#f7e296;
+    background:rgba(240,197,46,0.5);
+}
+.logo {
+    position: absolute;
+    width: 169px;
+    height: 54px;
+    background: url("img/logo.png") no-repeat;
+    top: -17px;
+    left: 56px;
+}
+.white-line {
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    background: white;
+    top: 225px;
+    left: 600px;
 }
 .header-left {
     float:left;
@@ -91,10 +106,9 @@ header a {
     left:-3px;
     top:20px;
     border:1px solid;
-    width:600px;
+    width:700px;
 }
-.sub-menu-column-1,.sub-menu-column-2,
-.sub-menu-column-3 {
+[class^="sub-menu-column"] {
     float:left;
     margin: 39px 0 0 0;
     border: 1px solid blue;
@@ -102,7 +116,6 @@ header a {
 .catalog:hover .sub-menu {
     display:block;
 }
-
 .sub-menu a {
     display: block;
     padding-bottom: 22px;
@@ -133,10 +146,6 @@ button::after {
     background: transparent;
     width:370px;
 }
-input:focus + button {border-color:black; color:black;}
-input:focus + button::after {background:black;}
-button:hover { background:black; color: white;}
-button:active { background:black; color: grey;}
 .login a {
     position: relative;
     float:left;
@@ -168,7 +177,6 @@ button:active { background:black; color: grey;}
     left:-22px;
     background: url("/img/cart.svg.png");   
 }
-
 .compare a {
     float: right;
     position: relative;
