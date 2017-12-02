@@ -17,11 +17,18 @@ header {
     background:rgba(240,197,46,0.5);
 }
 .logo {
+    font-size: 48px;
+    font-family: "Gilroy";
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: 0.2px;
+    color:black;
     position: absolute;
     width: 169px;
     height: 54px;
-    background: url("img/logo.png") no-repeat;
-    top: -17px;
+    top: -28px;
     left: 56px;
 }
 .white-line {
@@ -231,8 +238,14 @@ header {
 .menu-1 a:hover, .menu-2 a:hover {
     opacity:0.6;
 }
+.logo:hover {
+    color:#464646;
+}
 .menu-1 a:active, .menu-2 a:active {
     opacity:0.3;
+}
+.logo:active {
+    color:#666666;
 }
 .menu-1 .input:focus-within + button {
     border-color:black;
@@ -251,4 +264,110 @@ header {
 }
 .menu-2 .catalog:hover .sub-menu {
     display: block;
+}
+.slider-container {
+    position: relative;  
+    display: block;
+    width: 1160px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: -110px;
+    background: red;
+}
+.slide-number {
+    position:absolute;
+    display: inline-block;
+    top:-35px;
+    right:50px;
+    font-size: 181px;
+    font-family: "Gilroy";
+    color: white;
+    font-weight: bold;
+    height:147px;
+    overflow: hidden;
+}
+.slider-left {
+    float:left;
+    margin-left:31px;
+    margin-right: 0;
+    width:529px;
+    height:485px;
+    background:green;
+}
+.slider-right {
+    float:right;
+    margin-right: 53px;
+    width:512px;
+    height:485px;
+}
+.slider-right h1 {
+    font-size: 47px;
+    font-family: "Gilroy";
+    color: black;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    text-align: left;
+    margin-top: 80px;
+    margin-bottom: 19px;
+}
+.slider-right p {
+    margin-left:2px;
+    font-size: 15px;
+    font-family: "Open Sans";
+    color: rgb(70, 70, 70);
+    line-height: 2;
+    letter-spacing: -0.16px;
+    text-align: left;
+    margin-top: 0px;
+}
+.container-small {
+    display: block;
+    width:508px;
+    height: 15px;
+    background:yellow;
+    margin-top:58px;
+}
+.slider-right .button {
+    position:relative;
+    float:left;
+    margin-left:6px;
+    margin-top:1px;
+    height: 8px;
+    width:220px;
+    background:#f0c52e;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    text-decoration: none;
+    color:black;
+}
+.button span {
+    position:absolute;
+    top:-7px;
+    left:40px;
+}
+.slider-controls {
+    float:right;
+    width: 133px;
+    height: 10px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 0;
+}
+.slider-controls label {
+    display: inline-block;
+    vertical-align: top;
+    width:10px;
+    height: 10px;
+    margin: 0 12px 0 11px;
+    border: 3px solid rgba(0,0,0,0.3) inset;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+.slider-controls label .checked {
+    border-color:black;
 }
