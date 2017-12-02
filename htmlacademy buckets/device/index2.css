@@ -207,6 +207,7 @@ header {
     width:1160px;
     height: 129px;
     background: #f7e296;
+    z-index: 2;
 }
 [class^="sub-menu-column"] {
     float:left;
@@ -265,6 +266,9 @@ header {
 .menu-2 .catalog:hover .sub-menu {
     display: block;
 }
+input[type="radio"] {
+    display: none;
+}
 .slider-container {
     position: relative;  
     display: block;
@@ -272,7 +276,6 @@ header {
     margin-left:auto;
     margin-right: auto;
     margin-top: -110px;
-    background: red;
 }
 .slide-number {
     position:absolute;
@@ -292,7 +295,7 @@ header {
     margin-right: 0;
     width:529px;
     height:485px;
-    background:green;
+    background:transparent url("img/slider-1.png") no-repeat 57px 0px;
 }
 .slider-right {
     float:right;
@@ -321,11 +324,9 @@ header {
     text-align: left;
     margin-top: 0px;
 }
-.container-small {
+.container-small:first-of-type {
     display: block;
     width:508px;
-    height: 15px;
-    background:yellow;
     margin-top:58px;
 }
 .slider-right .button {
@@ -333,9 +334,6 @@ header {
     float:left;
     margin-left:6px;
     margin-top:1px;
-    height: 8px;
-    width:220px;
-    background:#f0c52e;
     text-align: center;
     font-size: 18px;
     font-family: "Gilroy";
@@ -344,14 +342,21 @@ header {
     letter-spacing: 3.6px;
     text-decoration: none;
     color:black;
+    z-index: 2;
 }
-.button span {
+.button::after {
+    content:"";
     position:absolute;
-    top:-7px;
-    left:40px;
+    top:0px;
+    left:0px;
+    height: 8px;
+    width:220px;
+    background:#f0c52e;
+    z-index: 1;
 }
 .slider-controls {
     float:right;
+    display: block;
     width: 133px;
     height: 10px;
     vertical-align: top;
@@ -361,13 +366,78 @@ header {
 .slider-controls label {
     display: inline-block;
     vertical-align: top;
-    width:10px;
-    height: 10px;
+    width:4px;
+    height: 4px;
     margin: 0 12px 0 11px;
-    border: 3px solid rgba(0,0,0,0.3) inset;
+    border: 3px solid rgba(0,0,0,0.3);
     border-radius: 50%;
-    opacity: 0.3;
+    cursor: pointer;
 }
-.slider-controls label .checked {
+.slider-controls .checked {
     border-color:black;
+}
+.container-small:nth-of-type(2) {
+    display: block;
+    width:508px;
+    margin-top: 68px;
+    margin-left: 3px;
+}
+.characteristic {
+    float:left;
+    width:160px;
+}
+ .characteristic:nth-of-type(2) {
+    width:140px;
+}
+.characteristic b {
+    font-size: 36px;
+    margin:0;
+    font-family: "Gilroy";
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+}
+.characteristic span {
+    display: block;
+    font-size: 13px;
+    font-family: "Open Sans";
+    color: rgb(70, 70, 70);
+    margin-top:0.8em ;
+    text-align: left;
+}
+/*  Анимация кнопок слайдера  */
+.button:hover {
+    height: 40px;
+    margin-top:;
+}
+.slide-1 {
+    display: block;
+}
+.slide-2 {
+    display:none;
+}
+.slide-3 {
+    display:none;
+}
+#btn-1:checked ~ .slider-container label:nth-of-type(1), 
+#btn-2:checked ~ .slider-container label:nth-of-type(2), 
+#btn-3:checked ~ .slider-container label:nth-of-type(3) {border: 3px solid black;}
+
+#btn-1:checked ~ .slider-container .slide-1 {display:block;}
+#btn-2:checked ~ .slider-container .slide-1 {display:none;}
+#btn-3:checked ~ .slider-container .slide-1 {display:none;}
+
+#btn-1:checked ~ .slider-container .slide-2 {display:none;}
+#btn-2:checked ~ .slider-container .slide-2 {display:block;}
+#btn-3:checked ~ .slider-container .slide-2 {display:none;}
+
+#btn-1:checked ~ .slider-container .slide-3 {display:none;}
+#btn-2:checked ~ .slider-container .slide-3 {display:none;}
+#btn-3:checked ~ .slider-container .slide-3 {display:block;}
+#btn-1:checked ~ .slider-container .slide-left {background:transparent url("img/slider-1.png") no-repeat 57px 0px;
+;}
+#btn-2:checked ~ .slider-container .slider-left {background:transparent url("img/slider-2.png") no-repeat 57px 0px;
+}
+#btn-3:checked ~ .slider-container .slider-left {background:transparent url("img/slider-3.png") no-repeat 57px 0px;
 }

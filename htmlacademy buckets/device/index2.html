@@ -39,34 +39,67 @@
         <li><a href="#">Контакты</a></li>
     </ul>
 </header>
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
+    
 <div class="slider-container clearfix">
-    <div class="slide-number">01</div>
+    <div class="slide-number slide-1">01</div>
+    <div class="slide-number slide-2">02</div>
+    <div class="slide-number slide-3">03</div>
     <div class="slider-left"></div>
-    <div class="slider-right">
-        <h1>Делай селфи,<br> как Бен Стиллер!</h1>
-        <p>Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+    <div class="slider-right clearfix">
+        <h1 class="slide-1">Делай селфи,<br> как Бен Стиллер!</h1>
+        <p class="slide-1">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+        <h1 class="slide-2">Худеем<br>правильно!</h1>
+        <p class="slide-2">Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+        <h1 class="slide-3">Порхает как бабочка,<br>жалит как пчела!</h1>
+        <p class="slide-3">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
         <div class="container-small clearfix">
-            <a class="button" href="#"><span>Подробнее</span></a>
+            <a class="button" href="#">Подробнее</a>
             <div class="slider-controls">
                 <label for="btn-1"></label>
                 <label for="btn-2"></label>
                 <label for="btn-3"></label>
             </div>
         </div>
-        <div class="characteristic">
+        <div class="container-small clearfix">
+        <div class="characteristic slide-1">
             <b>8,5 м</b>
             <span>Длина палки</span>
         </div>
-        <div class="characteristic">
+        <div class="characteristic slide-1">
             <b>5 кг</b>
             <span>Вес палки</span>
         </div>
-        <div class="characteristic">
+        <div class="characteristic slide-1">
             <b>Карбон</b>
             <span>Материал</span>
         </div>
+        <div class="characteristic slide-2">
+            <b>48 часов</b>
+            <span>Без подзарядки</span>
+        </div>
+        <div class="characteristic slide-3">
+            <b>800 метров</b>
+            <span>Дальность полета</span>
+        </div>
+        <div class="characteristic slide-3">
+            <b>50 метров</b>
+            <span>Радиус поражения</span>
+        </div>
+        </div>
     </div>
 
+<!--
+    
+---- При переключении слайдов:
+    1.Поменять картинку в блоке слайд-левая колонка
+    2.Поменять номер слайда в блоке номер слайда в правом верхнем углу
+    3.Поменять заголовок
+    4.Поменять текст описания
+    5.Поменять видимость блоков.
+-->
 </div>
 <!--
         
