@@ -203,11 +203,11 @@ header {
     position:absolute;
     display: none;
     left:-58px;
-    bottom:-126px;
+    top:18px;
     width:1160px;
-    height: 129px;
+    height: 166px;
     background: #f7e296;
-    z-index: 2;
+    z-index: 1;
 }
 [class^="sub-menu-column"] {
     float:left;
@@ -227,10 +227,9 @@ header {
     display: inline-block;
     font-family: "Open Sans";
     font-size: 15px;
-    line-height: 15px;
     text-decoration: none;
     color:black;
-    margin-bottom: 23px;
+    margin-bottom: 16px;
 }
 .sub-menu-column-1 a:first-child {
     margin-top:-10px;
@@ -276,6 +275,7 @@ input[type="radio"] {
     margin-left:auto;
     margin-right: auto;
     margin-top: -110px;
+    z-index: 0;
 }
 .slide-number {
     position:absolute;
@@ -286,22 +286,23 @@ input[type="radio"] {
     font-family: "Gilroy";
     color: white;
     font-weight: bold;
-    height:147px;
+    min-height: 147px;
     overflow: hidden;
+    z-index: -1;
 }
 .slider-left {
     float:left;
     margin-left:31px;
     margin-right: 0;
     width:529px;
-    height:485px;
+    height:495px;
     background:transparent url("img/slider-1.png") no-repeat 57px 0px;
 }
 .slider-right {
     float:right;
     margin-right: 53px;
     width:512px;
-    height:485px;
+    height:495px;
 }
 .slider-right h1 {
     font-size: 47px;
@@ -326,14 +327,18 @@ input[type="radio"] {
 }
 .container-small:first-of-type {
     display: block;
+    position:relative;
     width:508px;
     margin-top:58px;
 }
-.slider-right .button {
-    position:relative;
+.container-small button {
     float:left;
-    margin-left:6px;
-    margin-top:1px;
+    display: block;
+    height: 40px;
+    width:220px;
+    padding: 0px;
+    margin-left:3px;
+    margin-top:-14px;
     text-align: center;
     font-size: 18px;
     font-family: "Gilroy";
@@ -342,24 +347,23 @@ input[type="radio"] {
     letter-spacing: 3.6px;
     text-decoration: none;
     color:black;
-    z-index: 2;
+    background: transparent url("img/button-line.png") no-repeat 0px 15px;
+    border: none;
 }
-.button::after {
-    content:"";
-    position:absolute;
-    top:0px;
-    left:0px;
-    height: 8px;
-    width:220px;
+.container-small button:hover {
     background:#f0c52e;
-    z-index: 1;
+}
+.container-small button:active {
+    color:rgba(0,0,0,0.3);
+    background:#f0c52e;
 }
 .slider-controls {
     float:right;
     display: block;
+    vertical-align: top;
     width: 133px;
     height: 10px;
-    vertical-align: top;
+    margin-top:0px;
     text-align: center;
     font-size: 0;
 }
@@ -373,13 +377,10 @@ input[type="radio"] {
     border-radius: 50%;
     cursor: pointer;
 }
-.slider-controls .checked {
-    border-color:black;
-}
 .container-small:nth-of-type(2) {
     display: block;
     width:508px;
-    margin-top: 68px;
+    margin-top: 52px;
     margin-left: 3px;
 }
 .characteristic {
@@ -403,11 +404,11 @@ input[type="radio"] {
     font-size: 13px;
     font-family: "Open Sans";
     color: rgb(70, 70, 70);
-    margin-top:0.8em ;
+    margin-top:0.9em;
     text-align: left;
 }
 /*  Анимация кнопок слайдера  */
-.button:hover {
+.button:hover::after {
     height: 40px;
     margin-top:;
 }
@@ -424,11 +425,11 @@ input[type="radio"] {
 #btn-2:checked ~ .slider-container label:nth-of-type(2), 
 #btn-3:checked ~ .slider-container label:nth-of-type(3) {border: 3px solid black;}
 
-#btn-1:checked ~ .slider-container .slide-1 {display:block;}
-#btn-2:checked ~ .slider-container .slide-1 {display:none;}
-#btn-3:checked ~ .slider-container .slide-1 {display:none;}
+#btn-1:checked ~ .slider-container .slide-1 {display:block;z-index: 2;}
+#btn-2:checked ~ .slider-container .slide-1 {display:none;z-index: 2;}
+#btn-3:checked ~ .slider-container .slide-1 {display:none;z-index: 2;}
 
-#btn-1:checked ~ .slider-container .slide-2 {display:none;}
+#btn-1:checked ~ .slider-container .slide-2 {display:none;z-index: 2;}
 #btn-2:checked ~ .slider-container .slide-2 {display:block;}
 #btn-3:checked ~ .slider-container .slide-2 {display:none;}
 
@@ -437,7 +438,7 @@ input[type="radio"] {
 #btn-3:checked ~ .slider-container .slide-3 {display:block;}
 #btn-1:checked ~ .slider-container .slide-left {background:transparent url("img/slider-1.png") no-repeat 57px 0px;
 ;}
-#btn-2:checked ~ .slider-container .slider-left {background:transparent url("img/slider-2.png") no-repeat 57px 0px;
+#btn-2:checked ~ .slider-container .slider-left {background:transparent url("img/slider-2.png") no-repeat 82px 10px;
 }
-#btn-3:checked ~ .slider-container .slider-left {background:transparent url("img/slider-3.png") no-repeat 57px 0px;
+#btn-3:checked ~ .slider-container .slider-left {background:transparent url("img/slider-3.png") no-repeat -4px 65px;
 }

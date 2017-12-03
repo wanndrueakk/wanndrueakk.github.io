@@ -1,0 +1,48 @@
+.button {
+    float:left;
+    display: inline-block;
+    margin-left:00px;
+    margin-top:00px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    text-decoration: none;
+    color:black;
+    background: red;
+    z-index:1;
+}
+.line {
+    top:px;
+    left:px;
+    height: 8px;
+    width:220px;
+    background:#f0c52e;
+    z-index: 0;
+}
+div:hover + div {
+    height:40px;
+}
+.left {
+    float:left;
+    width:200px;
+    height: 400px;
+    background: cyan;
+    
+}
+
+.right {
+    float:left;
+    width:600px;
+    height:400px;
+    background: magenta;
+}
+
+.abs {
+    position:absolute;
+    width:100px;
+    height: 100px;
+    background: white;
+}
