@@ -688,11 +688,26 @@ input[id^="btn"] {
     margin-right: 0;
 }
 .columns-container {
+    position: relative;
     display: block;
     width: 1166px;
     margin-left:auto;
     margin-right: auto;
 }
+
+.map-modal {
+    position: absolute;
+    display: none;
+    width: 990px;
+    height: 589px;
+    left: 90px;
+    top: 30px;
+    background: url("img/map-big.jpg.png") no-repeat 0 0;
+}
+.map-modal-show {
+    display: block;
+}
+
 .column {
     position: relative;
     float:left;

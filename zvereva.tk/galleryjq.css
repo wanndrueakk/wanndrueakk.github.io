@@ -1,0 +1,120 @@
+/*header, nav, ul, li, a, a[href], span, .active, .like, div {transition: all 0.5s ease;}*/
+body,html,ul,p {margin:0;padding: 0;font-size: 14px; line-height: 22px; color: #333333; font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;}
+a {text-decoration:none; color:white;letter-spacing: 1px;font-family: Consolas,monospace;}
+.logo {float:left;margin: 0 20px;font-family: Georgia, 'Century Schoolbook L', Serif;padding-top:20px;}
+.logo span {font-size: 20px; color: #fff; font-weight: bold; font-style: italic;}
+.logo p {color: #e5e4e2; font-size: 13px}
+header {position:fixed; width:100%;height: 80px;z-index:1; background: rgba(0,0,0,0.5);}
+header nav {margin-left: 270px; z-index: 0;}
+header nav::after {content: "";display: table;clear:both;}
+header nav ul {list-style: none;}
+header nav ul li {float:left;}
+header nav ul li a {
+    display: block;
+    vertical-align: top;
+    height: 80px;
+    line-height: 5em;
+}
+header nav ul li a {padding: 0 10px;}
+header nav ul li a[href] span {border-bottom: 1px dotted white;}
+
+header nav ul li:hover a[href] span {border-bottom: 1px dotted transparent;}
+
+header nav ul li:hover a[href] {line-height: 8em;color: #ccc9bf;}
+
+header nav ul .active {position:relative; line-height: 3em;cursor:default;color:#b4b3ad;}
+
+header nav ul .active::before {
+    content:"";
+    position:absolute; top:0;left:0;
+    width:100%;height:12px;}
+header nav ul .active::before, header nav ul li:hover a[href] {background: rgba(0,0,0,0.3);}
+
+
+main{position:absolute; width:100%; height: 100%;z-index:1;top:0;left:0;}
+
+body input[type="radio"] {display: none;}
+
+main .like {position:absolute;width:32px;height:45px;background: url("img/like.png") no-repeat 0 0 ; bottom:12%;left:15%;cursor:pointer;text-shadow: 1px 1px 0px #000;padding:29px 0px 0px 0px;box-sizing: border-box;text-align: center;font-size: 12px;vertical-align: top;}
+main .slide .picture-title {position:absolute; bottom:15%; left:23%; color:white; font-size:16px; text-shadow: 1px 1px 0 #000;}
+main .prev, main .next {display:block; position: absolute; width: 20px; height: 30px; background: url('img/slider_navig.png') no-repeat 0 0; text-indent: -9999px; top: 370px}
+main .prev {background:url('img/slider_navig.png'); left: 27px}
+main .next {right: 27px; background-position: right 0}
+
+.slider-controls label {float:left; position:relative; width: 90px; height: 60px;outline: 1px solid white;cursor:pointer;
+}
+.slider-controls {position:absolute; width: 100%;top:100%;margin-top:-60px;z-index: 1; background:black;padding-left:1px;}
+
+.thumb .frame.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 84px;
+    height: 54px;
+    border: 3px solid #cd4144;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+section {position:absolute; top:100%;}
+
+.slide {display: none; transition: all 0.5s ease;}
+
+#btn-1:checked ~  main .slide1,
+#btn-2:checked ~  main .slide2,
+#btn-3:checked ~  main .slide3 {display: block;}
+
+#btn-1:checked ~ main div label[for="btn-1"],
+#btn-2:checked ~ main div label[for="btn-2"],
+#btn-3:checked ~ main div label[for="btn-3"] {background:white;}
+
+
+#btn-1:checked ~ main {background:  url("img/slide1.png") no-repeat 50% 50%;}
+#btn-2:checked ~ main {background:  url("img/slide2.png") no-repeat 50% 50%;}
+#btn-3:checked ~ main {background: url("img/slide3.jpg") no-repeat 50% 50%;}
+
+/*aside - color checker */
+
+.new {position: absolute; width: 100%; height: 100%; background:yellow;color:white;display: block; z-index: -1;}
+
+aside {position:fixed;width:20px;height: 220px;right:10px;top:90px;z-index:2;}
+aside label {float:left; width:20px;height:20px;cursor:pointer;border-radius:50%; box-shadow: inset 1px 1px 1px 0 white;}
+aside label[for^="fabric"]{width:20px;height:20px;}
+aside label:nth-child(1){background:radial-gradient(circle at 7px 8px,white,purple);}
+aside label:nth-child(2){background:radial-gradient(circle at 7px 8px,white,crimson);}
+aside label:nth-child(3){background:radial-gradient(circle at 7px 8px,white,maroon);}
+aside label:nth-child(4){background:radial-gradient(circle at 7px 8px,white,darkslategrey);}
+aside label:nth-child(5){background:radial-gradient(circle at 7px 8px,white,darkgreen);}
+aside label:nth-child(6){background:darkgreen url(fabric.png);}
+aside label:nth-child(7){background:darkviolet url("fabric.png");}
+aside label:nth-child(8){background:darkblue url("fabric.png");}
+aside label:nth-child(9){background:darkslategray url("fabric.png");}
+aside label:nth-child(10){background:darkgoldenrod url("fabric.png");}
+aside label:nth-child(11){background:darkolivegreen url("fabric.png");}
+
+aside label:hover {cursor:pointer;}
+#color-1:checked ~ .new {background: radial-gradient(circle at 200px 0px, fuchsia,purple);}
+#color-2:checked ~ .new {background: radial-gradient(circle at 200px 0px, salmon,crimson);}
+#color-3:checked ~ .new {background: radial-gradient(circle at 200px 0px, sandybrown,maroon);}
+#color-4:checked ~ .new {background: radial-gradient(circle at 200px 0px, darkslategrey,black);}
+#color-5:checked ~ .new {background: radial-gradient(circle at 200px 0px, yellowgreen,darkgreen);}
+#fabric-1:checked ~ .new {background:  darkgreen url("fabric.png");}
+#fabric-2:checked ~ .new {background:  darkviolet url("fabric.png");}
+#fabric-3:checked ~ .new {background:  darkblue url("fabric.png");}
+#fabric-4:checked ~ .new {background:  darkslategray url("fabric.png");}
+#fabric-5:checked ~ .new {background:  darkgoldenrod url("fabric.png");}
+#fabric-6:checked ~ .new {background:  darkolivegreen url("fabric.png");}
+
+/* content
+----------------------------------------------------------------------------------------*/
+section {width: 100%; padding: 20px 0 20px 22px; background:lightgrey}
+section nav ul {list-style: none;}
+section nav ul li {float: left; margin: 0 20px 0 0; }
+section nav ul li a {color: #46a2c9; border-bottom: 1px dotted #46a2c9; text-decoration: none;}
+section nav ul li a:hover {border-bottom: 1px dotted transparent}
+section nav ul li.active {background: url("img/arrow_down.gif") no-repeat 0 0;}
+section nav ul li.active a {color: #000; border: 0; font-weight: bold; cursor: default}
+
+article {float: left; width: 63%;}
+.content-block {margin-top: 60px;}
+.right-block {float:right; width:30%;margin: 50px 0 0 20px;}
