@@ -1,11 +1,21 @@
-header, nav, ul, li, a, a[href], span, .active, .like, div {transition: all 0.5s ease;}
+/*header, nav, ul, li, a, a[href], span, .active, .like, div {transition: all 0.5s ease;}*/
 body,html,ul,p {margin:0;padding: 0;font-size: 14px; line-height: 22px; color: #333333; font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;}
 a {text-decoration:none; color:white;letter-spacing: 1px;font-family: Consolas,monospace;}
 .logo {float:left;margin: 0 20px;font-family: Georgia, 'Century Schoolbook L', Serif;padding-top:20px;}
 .logo span {font-size: 20px; color: #fff; font-weight: bold; font-style: italic;}
 .logo p {color: #e5e4e2; font-size: 13px}
-header {position:fixed; width:100%;height: 80px;z-index: 3; background: rgba(0,0,0,0.5);}
-header nav {margin-left: 270px; z-index: 3;}
+header {position:fixed; width:100%;height: 80px;z-index:1; background: rgba(0,0,0,0.5);}
+label[for="cl1"] {
+    float: right;
+    width:20px;
+    height: 20px;
+    margin-top: 70px;
+    margin-right:10px;
+    background:red;
+    position: relative;
+}
+
+header nav {margin-left: 270px; z-index: 0;}
 header nav::after {content: "";display: table;clear:both;}
 header nav ul {list-style: none;}
 header nav ul li {float:left;}
@@ -33,8 +43,8 @@ header nav ul .active::before, header nav ul li:hover a[href] {background: rgba(
 
 main{position:absolute; width:100%; height: 100%;z-index:1;top:0;left:0;}
 
-body input[type="radio"] {display: none;}
-
+input[type="radio"] {display: none;}
+input[type="checkbox"] {display: none;}
 main .like {position:absolute;width:32px;height:45px;background: url("img/like.png") no-repeat 0 0 ; bottom:12%;left:15%;cursor:pointer;text-shadow: 1px 1px 0px #000;padding:29px 0px 0px 0px;box-sizing: border-box;text-align: center;font-size: 12px;vertical-align: top;}
 main .slide .picture-title {position:absolute; bottom:15%; left:23%; color:white; font-size:16px; text-shadow: 1px 1px 0 #000;}
 main .prev, main .next {display:block; position: absolute; width: 20px; height: 30px; background: url('img/slider_navig.png') no-repeat 0 0; text-indent: -9999px; top: 370px}
@@ -58,26 +68,12 @@ main .next {right: 27px; background-position: right 0}
 
 section {position:absolute; top:100%;}
 
-.slide {display: none; transition: all 0.5s ease;}
-
-#btn-1:checked ~  main .slide1,
-#btn-2:checked ~  main .slide2,
-#btn-3:checked ~  main .slide3 {display: block;}
-
-#btn-1:checked ~ main div label[for="btn-1"],
-#btn-2:checked ~ main div label[for="btn-2"],
-#btn-3:checked ~ main div label[for="btn-3"] {background:white;}
-
-
-#btn-1:checked ~ main {background:  url("img/slide1.png") no-repeat 50% 50%;}
-#btn-2:checked ~ main {background:  url("img/slide2.png") no-repeat 50% 50%;}
-#btn-3:checked ~ main {background: url("img/slide3.jpg") no-repeat 50% 50%;}
-
 /*aside - color checker */
 
-.new {position: absolute; width: 100%; height: 100%; background:yellow;color:white;display: block; z-index: 1;}
+.new {position: absolute; width: 100%; height: 100%; background:yellow;color:white;display: block; z-index: -1;}
 
-aside {position:fixed;width:20px;height: 220px;right:10px;top:90px;z-index:2;}
+aside {position:absolute; width:20px;height: 220px;right: 10px;top:30px;z-index:2;}
+
 aside label {float:left; width:20px;height:20px;cursor:pointer;border-radius:50%; box-shadow: inset 1px 1px 1px 0 white;}
 aside label[for^="fabric"]{width:20px;height:20px;}
 aside label:nth-child(1){background:radial-gradient(circle at 7px 8px,white,purple);}
@@ -105,8 +101,6 @@ aside label:hover {cursor:pointer;}
 #fabric-5:checked ~ .new {background:  darkgoldenrod url("fabric.png");}
 #fabric-6:checked ~ .new {background:  darkolivegreen url("fabric.png");}
 
-/* content
-----------------------------------------------------------------------------------------*/
 section {width: 100%; padding: 20px 0 20px 22px; background:lightgrey}
 section nav ul {list-style: none;}
 section nav ul li {float: left; margin: 0 20px 0 0; }
@@ -116,5 +110,13 @@ section nav ul li.active {background: url("img/arrow_down.gif") no-repeat 0 0;}
 section nav ul li.active a {color: #000; border: 0; font-weight: bold; cursor: default}
 
 article {float: left; width: 63%;}
-.content-block {margin-top: 60px;}
+.content-block {position:absolute; width: 65%; margin-top: 60px;}
 .right-block {float:right; width:30%;margin: 50px 0 0 20px;}
+
+/*   only for JS         */
+.hide {
+    display:none;
+}
+.show {
+    display: block;
+}

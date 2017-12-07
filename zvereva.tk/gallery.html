@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="social-likes_birman.css">
+    <link rel="stylesheet" href="fotorama.css">
     <link href="gallery.css" rel="stylesheet">
     <title>Сайт художницы Т.Зверевой</title>
 </head>
@@ -43,9 +45,13 @@
 <input type="radio" id="fabric-4" name="color-toggle">  
 <input type="radio" id="fabric-5" name="color-toggle">  
 <input type="radio" id="fabric-6" name="color-toggle">  
-<div class="new">
-</div>
-<aside>
+
+<input type="radio" id="about-1" name="about">  
+<input type="radio" id="about-2" name="about">  
+<input type="radio" id="about-3" name="about">  
+    
+<div class="new"></div>
+<aside class="hide">
     <label for="color-1"></label>
     <label for="color-2"></label>
     <label for="color-3"></label>
@@ -57,9 +63,8 @@
     <label for="fabric-4"></label>
     <label for="fabric-5"></label>
     <label for="fabric-6"></label>
-
 </aside>
-
+<!--
 <main>
 
     <div class="slide slide1">
@@ -92,6 +97,30 @@
     <a href="#" class="next">Вперёд</a>
 
 </main>
+-->
+    <div class="fotorama" data-nav="thumbs" data-width="100%"
+     data-ratio="16/9" data-maxheight="100%" data-transition="slide" data-hash="true" data-loop="true" data-keyboard="true">
+        <a href="img/Slide-2-01.JPG"><img src="img/slide1_small.png"></a>
+        <a href="img/Slide-2-02.JPG"><img src="img/slide2_small.png"></a>
+        <a href="img/Slide-1-02.JPG"><img src="img/slide3_small.jpg"></a>
+<!--
+
+        
+        <img src="img/Slide-2-01.JPG">
+      <img src="img/Slide-2-02.JPG" id="two">
+      <img src="img/Slide-2-03.png">
+      <img src="img/Slide-2-04.jpg">
+      <img src="img/Slide-1-01.JPG">
+      <img src="img/Slide-1-02.JPG">
+      <img src="img/Slide-1-03.png">
+      <img src="img/Slide-1-04.jpg">
+      <img src="img/Slide-1-05.jpg">
+      <img src="img/Slide-3-01.jpg">
+-->
+    </div>
+    
+    
+    
 <section class="about">
     <div class="main-text">
     <h1>Об авторе</h1>
@@ -105,18 +134,18 @@
 <article>
 <nav>
     <ul>
-    <li class="active"><a>Обо мне</a></li>
+    <li class="active"><a>Обо мне</a>    
+        <div class="content-block">
+        <h2>Об авторе</h2>
+        <p>Зверева Татьяна Ильинична родилась в России 27.01.1947.</p>
+        <p>Окончила механико-математический факультет Московского Государственного Университета (МГУ) им. Ломоносова. Большую часть своей жизни занимается геофизикой – создает математические модели магнитного поля Земли. Десять лет назад увлеклась живописью, окончила студию дизайна в наукограде Троицке, расположенном на окраине Москвы. Предпочитает работать акварелью, пастелью, тушью. Участвовала в многочисленных выставках в Троицке, Моск. области. Работы находятся в частных коллекциях Санкт-Петербурга, Москвы, Франции.</p>
+        </div>    
+    </li>
     <li><a href="#">Мой инструмент</a></li>
     <li><a href="#">Контакты</a></li>
     </ul>
 </nav>
-<div class="content-block">
-    <h2>Об авторе</h2>
-    <p>Зверева Татьяна Ильинична родилась в России 27.01.1947.</p>
-
-    <p>Окончила механико-математический факультет Московского Государственного Университета (МГУ) им. Ломоносова. Большую часть своей жизни занимается геофизикой – создает математические модели магнитного поля Земли. Десять лет назад увлеклась живописью, окончила студию дизайна в наукограде Троицке, расположенном на окраине Москвы. Предпочитает работать акварелью, пастелью, тушью. Участвовала в многочисленных выставках в Троицке, Моск. области. Работы находятся в частных коллекциях Санкт-Петербурга, Москвы, Франции.</p>
-</div>
-    </article>
+</article>
 
 <div class="right-block">
     <h3>Способы связи</h3>
@@ -132,5 +161,12 @@
 <footer>
 <span>©</span> Татьяна Зверева, 2013-2017
 </footer>
+
+<script src="jquery.js"></script>
+<script src="gallery.js"></script>
+<script src="social-likes.min.js"></script>
+<script src="fotorama.js"></script>
+<script src="script.js"></script>
+    
 </body>
 </html>

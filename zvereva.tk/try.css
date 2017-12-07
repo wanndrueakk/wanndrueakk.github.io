@@ -16,3 +16,9 @@
 .thumbs {overflow: hidden; margin: 0 -3px; position: relative; height: 60px}
 
 .big-img {width: 100%; overflow: hidden; margin: 0 0 3px;}
+label {
+    display: block;
+    width:200px;
+    height: 200px;
+    background: rgba(0,0,0,0.3);
+}
