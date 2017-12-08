@@ -700,7 +700,7 @@ input[id^="btn"] {
     display: none;
     width: 990px;
     height: 589px;
-    left: 90px;
+    right: 190px;
     top: 30px;
     background: url("img/map-big.jpg.png") no-repeat 0 0;
 }
@@ -1009,4 +1009,139 @@ footer {
 }
 .academy-logo:active {
     opacity:0.3;
+}
+
+.write-us {
+    position: absolute;
+    width: 1060px;
+    height: 383px;
+    top:1050px;
+    left: 175px;
+    padding: 102px 120px;
+    background: url("img/form_background.png") no-repeat 0 0;
+}
+.write-us label {
+    float: left;
+    display: block;
+    width:300px;
+    height: 115px;
+    width:400px;
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 22px;
+    color:black;    
+}
+.write-us input, textarea {
+    display: block;
+    border:0;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgba(70,70,70,0.5);;
+    text-align: left;
+    background: #f2f2f2;
+    padding:12px 18px 14px;
+    margin-top:10px;
+    width:322px;
+}
+.write-us label:nth-child(3) {
+    width:760px;
+}
+textarea {
+    width: 725px;
+    height: 120px;
+    display: block;
+}
+.write-us button {
+    position: absolute;
+    bottom:80px;
+    left:118px;
+    display: block;
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+    background: url("img/button-line.png") no-repeat 0px 16px;
+    padding:8px 8px 9px 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Gilroy";
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    color:black;
+    margin-bottom:25px;
+    border: 0;
+    
+}
+.write-us button:hover {
+    background:#f0c52e;
+}
+.write-us button:active {
+    color:rgba(0,0,0,0.3);
+    background:#f0c52e;
+}
+
+
+.write-us .close {
+    position: absolute;
+    left:902px;
+    top:22px;
+    width:55px;
+    height: 55px;
+    background: rgba(240,197,46,0.5);
+    border-radius: 50%;
+}
+.cross {
+    position: absolute;
+    width:30px;
+    height:30px;
+    left:13px;
+    top:13px;
+}
+.cross::before {
+    content: "";
+    position: absolute;
+    width:3px;
+    height:30px;
+    left:13px;
+    background:white;
+    transform: rotate(45deg);
+}
+.cross::after {
+    content: "";
+    position: absolute;
+    width:3px;
+    height:30px;
+    left:13px;
+    background:white;
+    transform: rotate(-45deg)
+}
+.close:hover {
+    background: rgba(240,197,46,1);
+}
+.close:active {
+    background: rgba(240,197,46,1);    
+}
+.close:active .cross::before, .close:active .cross::after {
+    background:#f2f2f2;
+}
+.write-us input:hover, textarea:hover {
+    background:#eaeaea;
+}
+.write-us input:focus, textarea:focus {
+    background:white;
+    color:#464646;
+}
+.write-us input:invalid, textarea:invalid {
+    background:rgba(237,181,181,0.5);
+}
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%,40%,60%,80% {transform: translateX(10px);}
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }

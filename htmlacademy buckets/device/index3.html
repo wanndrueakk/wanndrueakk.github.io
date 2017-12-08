@@ -141,7 +141,6 @@
     <div class="client"></div>
 </div>
     <div class="columns-container clearfix">
-    <div class="map-modal"></div>
 
     <div class="column">
         <h1>О нас</h1>
@@ -158,10 +157,21 @@
         <h1>Контакты</h1>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <div class="map"></div>
+        <div class="map-modal"></div>
+
         <button type="button">Напишите нам</button>
         </div>
     </div>
-
+<form class="write-us" action="sss">
+    <label for="name">Ваше имя:
+    <input type="text" value="Представьтесь, пожалуйста" id="name"></label>
+    <label for="email">Ваш e-mail:
+    <input type="text" value="Для отправки ответа" id="email"></label>
+    <label for="text">Текст письма:
+    <textarea rows="10" id="text">В свободной форме</textarea></label>
+    <button type="submit">Отправить</button> 
+    <button type="button" class="close"><div class="cross"></div></button>
+</form>
 <footer>
     <div class="footer-container-1">
         <a  class="footer-logo" href="#">Device</a >
@@ -189,6 +199,6 @@
     </div>
     
 </footer>
-
+<script src="index3.js"></script>
 </body>
 </html>
