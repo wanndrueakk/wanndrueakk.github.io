@@ -191,3 +191,54 @@ main h1 {
 .catalog-item-modal a:last-child:active {
   color:rgba(0,0,0,0.2);
 }
+.sorting-background {
+  display: block;
+  width: 100%;
+  height: 70px;
+  background: rgba(0,0,0,0.08);
+}
+
+.sorting {
+  display: block;
+  width: 760px;
+  height: 70px;
+  line-height: 70px;
+}
+
+.sorting-caption {
+  float: left;
+  padding:25px 26px 26px 30px;
+  font-size: 16px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  text-decoration: none;
+  letter-spacing: 0.2em;  
+}
+.sorting a {
+  float:left;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+  line-height: 1.286;
+  text-align: left;
+  text-decoration: none;
+}
+.sorting a[href] {
+  color:rgba(0,0,0,0.3);
+}
+
+
+.triangle-up {
+  float:right;
+  display: inline-block;
+  width:0px;
+  height:1px;
+  border:17px solid rgba(0,0,0,0.2);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+}
