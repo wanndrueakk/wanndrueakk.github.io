@@ -92,8 +92,31 @@
           <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
         </div>
       </div>
-      
-      <button class="btn-transparent" type="submit">Показать</button>
+      <div class="filter-range">
+        <div class="filter-range-title">Цвет</div>
+        <input type="checkbox" id="color-1" checked>
+        <input type="checkbox" id="color-2">
+        <input type="checkbox" id="color-3" checked>
+        <input type="checkbox" id="color-4" checked>
+        <input type="checkbox" id="color-5">
+        <div class="checkboxes">
+          <label for="color-1">Черный</label>
+          <label for="color-2">Белый</label>
+          <label for="color-3">Синий</label>
+          <label for="color-4">Красный</label>
+          <label for="color-5">Розовый</label>
+        </div>
+      </div>
+      <div class="filter-range">
+        <div class="filter-range-title">Bluetooth</div>
+        <input type="radio" id="bt-1" name="bluetooth" checked>
+        <input type="radio" id="bt-2" name="bluetooth">
+        <div class="radio-buttons">
+          <label for="bt-1">Есть</label>
+          <label for="bt-2">Нет</label>
+        </div>
+      </div>
+      <button type="submit">Показать</button>
     </form>
   </div>
 </body>
