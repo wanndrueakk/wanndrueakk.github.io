@@ -1,4 +1,4 @@
-main h1 {
+h1 {
   font-size: 47px;
   font-family: "Gilroy";
   color: black;
@@ -41,6 +41,7 @@ main h1 {
   width: 760px;
   min-height: 1486px;
   font-size: 0;
+  margin-top: 69px;
 }
 .catalog-item {
   display:inline-block;
@@ -207,14 +208,13 @@ main h1 {
 
 .sorting-caption {
   float: left;
-  padding:25px 26px 26px 30px;
   font-size: 16px;
   font-family: "Gilroy";
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
+  line-height: 70px;
+  margin-right: 52px;
   text-decoration: none;
   letter-spacing: 0.2em;  
 }
@@ -223,9 +223,11 @@ main h1 {
   font-size: 14px;
   font-family: "Open Sans";
   color: rgb(0, 0, 0);
-  line-height: 1.286;
+  line-height: 70px;
   text-align: left;
   text-decoration: none;
+  margin-right:30px;
+  
 }
 .sorting a[href] {
   color:rgba(0,0,0,0.3);
@@ -236,9 +238,132 @@ main h1 {
   float:right;
   display: inline-block;
   width:0px;
-  height:1px;
-  border:17px solid rgba(0,0,0,0.2);
-  border-top:0;
-  border-left:0;
-  border-right:0;
+  height:0px;
+  border:9px solid rgba(0,0,0,0.2);
+  border-top-width:0;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  margin-top: 31px;
+  margin-left: 26px;
+}
+.triangle-down {
+  float:right;
+  display: inline-block;
+  width:0px;
+  height:0px;
+  border:9px solid rgba(0,0,0,0.2);
+  border-top-color:rgba(0,0,0,0.2);
+  border-bottom-width:0;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  margin-top: 31px;
+  margin-left: 26px;
+}
+.active {
+  border-top-color: black;
+  border-bottom-color: black;
+}
+.triangle-up:hover, .triangle-down:hover {
+  border-top-color: rgba(0,0,0,0.4);
+  border-bottom-color: rgba(0,0,0,0.4);
+}
+.triangle-up:active, .triangle-down:active {
+  border-top-color: rgba(0,0,0,1);
+  border-bottom-color: rgba(0,0,0,1);
+  
+}
+
+.subform-caption {
+  font-size: 18px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.filter {
+  margin-top:80px;
+}
+
+.filter-title {
+  font-size: 16px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 70px;
+  margin-right: 52px;
+  text-decoration: none;
+  letter-spacing: 0.2em;   
+  margin-bottom: 99px;
+}
+
+.filter-range-title {
+  font-size: 18px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 37px;
+}
+
+.price-controls label {
+  font-size: 14px;
+  font-family: "Gilroy";
+  color: rgba(0, 0, 0, 0.2);
+  line-height: 1.591;
+  text-align: center;
+  cursor: pointer;
+/*
+  position: absolute;
+  left: 0px;
+  top: 0px;
+*/
+}
+.price-controls input {
+  background: none;
+  color:inherit;
+  font:inherit;
+  margin:0;
+  border:none;
+  outline:none;
+}
+
+.min-price, .max-price {
+  width:90px;
+  padding-left:65px;
+}
+  
+.range-controls {
+  position: relative;
+  margin-bottom:30px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: ;
+}
+.range-controls .bar {
+  width: 80%;
+  height:2px;
+  background:green;
+}
+.range-toggle {
+  position:absolute;
+  top:-9px;
+  width:4px;
+  height:4px;
+  background:grey;
+  border: 8px solid;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0,1,1,0.2);
+  
+}
+
+.filter-range {
+  width:200px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 16px 0px 39px 0px;
 }

@@ -16,12 +16,12 @@
   </div>
   <div class="sorting-background">
     <div class="sorting">
-      <div class="sorting-caption">Сортировка</div>
+      <div class="sorting-caption">Сортировка:</div>
       <a>По цене</a>
       <a href="#">По типу</a>
       <a href="#">По популярности</a>
-      <div class="triangle-up"></div>
       <div class="triangle-down active"></div>
+      <div class="triangle-up"></div>
     </div>
   </div>
   <div class="catalog-items">
@@ -74,6 +74,27 @@
       </div>
       <a href="#">Вперед</a>
     </div>
+    <br>
+    <br>
+    <form class="filter">
+      <div class="filter-title">Фильтр</div>
+      <div class="filter-range">
+        <div class="filter-range-title">Стоимость</div>
+        <div class="range-controls">
+          <div class="scale">
+            <div class="bar"></div>
+          </div>
+          <div class="range-toggle range-toggle-min"></div>
+          <div class="range-toggle range-toggle-max"></div>
+        </div>
+        <div class="price-controls">
+          <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+          <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+        </div>
+      </div>
+      
+      <button class="btn-transparent" type="submit">Показать</button>
+    </form>
   </div>
 </body>
 </html>
