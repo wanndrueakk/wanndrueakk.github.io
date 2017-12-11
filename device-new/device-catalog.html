@@ -6,6 +6,9 @@
     <title>Device магазин</title>
 </head>
 <body>
+<header></header>
+  
+<div class="container clearfix">
   <h1>Моноподы для селфи</h1>
   <div class="h1-menu">
     <div>Главная</div>
@@ -14,7 +17,11 @@
     <div class="arrow"></div>
     <div>Моноподы для селфи</div>
   </div>
-  <div class="sorting-background">
+</div>
+
+<section class="tittles-wr">
+  <div class="container">
+    <div class="filter-title">Фильтр</div>
     <div class="sorting">
       <div class="sorting-caption">Сортировка:</div>
       <a>По цене</a>
@@ -24,6 +31,116 @@
       <div class="triangle-up"></div>
     </div>
   </div>
+</section>
+
+  
+<section class="content-wr">
+  <div class="height-alignment container">
+    <div class="catalog-filter">
+      <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+      <div class="filter-range">
+      <div class="filter-range-title">Стоимость</div>
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="range-toggle range-toggle-min"></div>
+        <div class="range-toggle range-toggle-max"></div>
+      </div>
+      <div class="price-controls">
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+      </div>
+    </div>
+    <div class="filter-range">
+      <div class="filter-range-title">Цвет</div>
+      <input type="checkbox" id="color-1" name="black" checked>
+      <input type="checkbox" id="color-2" name="white">
+      <input type="checkbox" id="color-3" name="blue" checked>
+      <input type="checkbox" id="color-4" name="red" checked>
+      <input type="checkbox" id="color-5" name="rose">
+      <div class="checkboxes">
+        <label for="color-1">Черный</label>
+        <label for="color-2">Белый</label>
+        <label for="color-3">Синий</label>
+        <label for="color-4">Красный</label>
+        <label for="color-5">Розовый</label>
+      </div>
+    </div>
+    <div class="filter-range">
+      <div class="filter-range-title">Bluetooth</div>
+      <input type="radio" id="bt-1" name="bluetooth" value="yes" checked>
+      <input type="radio" id="bt-2" name="bluetooth" value="no">
+      <div class="radio-buttons">
+        <label for="bt-1">Есть</label>
+        <label for="bt-2">Нет</label>
+      </div>
+    </div>
+    <div class="button-container">
+      <button type="submit">Показать</button>
+    </div>
+    </form>
+    </div>    
+    <div class="catalog-items">
+    <div class="catalog-item">
+      <div class="catalog-item-img">
+        <div class="catalog-item-modal">
+          <a href="#">В корзину</a>
+          <a href="#">Добавить к сравнению</a>
+        </div>
+      </div>
+      <div class="catalog-item-caption">Любительская селфи-палка</div>
+      <div class="catalog-item-price">500 руб.</div>
+    </div>
+    <div class="catalog-item">
+      <div class="catalog-item-img">
+        <div class="catalog-item-modal">
+          <a href="#">В корзину</a>
+          <a href="#">Добавить к сравнению</a>
+        </div>
+      </div>
+      <div class="catalog-item-caption">Профессиональная селфи-палка</div>
+      <div class="catalog-item-price">1 500 руб.</div>
+    </div>
+    <div class="catalog-item">
+      <div class="catalog-item-img">
+        <div class="catalog-item-modal">
+          <a href="#">В корзину</a>
+          <a href="#">Добавить к сравнению</a>
+        </div>
+      </div>
+      <div class="catalog-item-caption">Непотопляемая селфи-палка</div>
+      <div class="catalog-item-price">2 500 руб.</div>
+    </div>
+    <div class="catalog-item">
+      <div class="catalog-item-img">
+        <div class="catalog-item-modal">
+          <a href="#">В корзину</a>
+          <a href="#">Добавить к сравнению</a>
+        </div>
+      </div>
+      <div class="catalog-item-caption">Селфи-палка «Следуй за мной»</div>
+      <div class ="catalog-item-price">4 900 руб.</div>
+    </div>
+      
+      <div class="pagination">
+        <a>Назад</a>
+        <div class="page-numbers">
+          <a>1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </div>
+        <a href="#">Вперед</a>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+  
+<!--
+
+  
   <div class="catalog-items">
     <div class="catalog-item">
       <div class="catalog-item-img">
@@ -63,9 +180,10 @@
         </div>
       </div>
       <div class="catalog-item-caption">Селфи-палка «Следуй за мной»</div>
-      <div class="catalog-item-price">4 900 руб.</div>
+      <div clas ="catalog-item-price">4 900 руб.</div>
     </div>
-    <div class="pagination">
+    </div>
+  <div class="pagination">
       <a>Назад</a>
       <div class="page-numbers">
         <a>1</a>
@@ -74,50 +192,10 @@
       </div>
       <a href="#">Вперед</a>
     </div>
-    <br>
-    <br>
-    <form class="filter">
-      <div class="filter-title">Фильтр</div>
-      <div class="filter-range">
-        <div class="filter-range-title">Стоимость</div>
-        <div class="range-controls">
-          <div class="scale">
-            <div class="bar"></div>
-          </div>
-          <div class="range-toggle range-toggle-min"></div>
-          <div class="range-toggle range-toggle-max"></div>
-        </div>
-        <div class="price-controls">
-          <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-          <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
-        </div>
-      </div>
-      <div class="filter-range">
-        <div class="filter-range-title">Цвет</div>
-        <input type="checkbox" id="color-1" checked>
-        <input type="checkbox" id="color-2">
-        <input type="checkbox" id="color-3" checked>
-        <input type="checkbox" id="color-4" checked>
-        <input type="checkbox" id="color-5">
-        <div class="checkboxes">
-          <label for="color-1">Черный</label>
-          <label for="color-2">Белый</label>
-          <label for="color-3">Синий</label>
-          <label for="color-4">Красный</label>
-          <label for="color-5">Розовый</label>
-        </div>
-      </div>
-      <div class="filter-range">
-        <div class="filter-range-title">Bluetooth</div>
-        <input type="radio" id="bt-1" name="bluetooth" checked>
-        <input type="radio" id="bt-2" name="bluetooth">
-        <div class="radio-buttons">
-          <label for="bt-1">Есть</label>
-          <label for="bt-2">Нет</label>
-        </div>
-      </div>
-      <button type="submit">Показать</button>
-    </form>
-  </div>
+    </div>
+  
+  
+
+-->
 </body>
 </html>

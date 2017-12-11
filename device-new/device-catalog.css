@@ -1,3 +1,44 @@
+@font-face {
+  font-weight: bold;
+  font-family: "Gilroy ExtraBold";
+  font-style: normal;
+
+  src: url("/fonts/gilroyextrabold.woff") format("woff"),
+  url("../fonts/gilroyextrabold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: lighter;
+  font-family: "Gilroy Light";
+  font-style: normal;
+
+  src: url("../fonts/gilroylight.woff") format("woff"),
+  url("../fonts/gilroylight.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  src: url("../fonts/opensans.woff") format("woff"),
+  url("../fonts/opensans.woff2") format("woff2");;
+}
+
+@font-face {
+  font-weight: lighter;
+  font-family: "Open Sans Light";
+  font-style: normal;
+
+  src: url("../fonts/opensanslight.woff") format("woff"),
+  url("../fonts/opensanslight.woff2") format("woff2");
+}
+
+
+body {
+  margin:0;
+  padding: 0;
+}
 h1 {
   font-size: 47px;
   font-family: "Gilroy";
@@ -39,7 +80,7 @@ h1 {
 .catalog-items {
   display:inline-block;
   width: 760px;
-  min-height: 1486px;
+  margin-left:70px;
   font-size: 0;
   margin-top: 69px;
 }
@@ -95,7 +136,8 @@ h1 {
   height: 70px;
   background: rgba(0,0,0,0.08);
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  margin-bottom: 76px;
 }
 .pagination a {
   padding:25px 26px 26px 30px;
@@ -152,7 +194,6 @@ h1 {
 .catalog-item-img:hover .catalog-item-modal {
   opacity: 1;
 }
-
 .catalog-item-modal a:first-child {
   display: block;
   font-size: 18px;
@@ -169,10 +210,12 @@ h1 {
   line-height: 9px;
   background-color:#f0c52e;
   letter-spacing: 0.2em;
+  transition: all 0.2s ease-in-out;
 }
 .catalog-item-modal a:first-child:hover {
   margin:0;
   padding: 15px 10px;
+  transition: all 0.2s ease-in-out;
 }
 .catalog-item-modal a:first-child:active {
   color:rgba(0,0,0,0.3);
@@ -192,22 +235,16 @@ h1 {
 .catalog-item-modal a:last-child:active {
   color:rgba(0,0,0,0.2);
 }
-.sorting-background {
-  display: block;
-  width: 100%;
-  height: 70px;
-  background: rgba(0,0,0,0.08);
-}
-
 .sorting {
-  display: block;
+  display: inline-block;
   width: 760px;
   height: 70px;
+  padding-left:70px;
   line-height: 70px;
+  background-color: #ebebeb;
 }
-
 .sorting-caption {
-  float: left;
+  display: inline-block;
   font-size: 16px;
   font-family: "Gilroy";
   color: rgb(0, 0, 0);
@@ -219,7 +256,7 @@ h1 {
   letter-spacing: 0.2em;  
 }
 .sorting a {
-  float:left;
+  display: inline-block;
   font-size: 14px;
   font-family: "Open Sans";
   color: rgb(0, 0, 0);
@@ -227,13 +264,16 @@ h1 {
   text-align: left;
   text-decoration: none;
   margin-right:30px;
-  
 }
 .sorting a[href] {
   color:rgba(0,0,0,0.3);
 }
-
-
+.sorting a[href]:hover {
+  color: rgba(0,0,0,0.6);
+}
+.sorting a[href]:active {
+  color: rgba(0,0,0,1);
+}
 .triangle-up {
   float:right;
   display: inline-block;
@@ -272,32 +312,27 @@ h1 {
   border-bottom-color: rgba(0,0,0,1);
   
 }
-
-.subform-caption {
-  font-size: 18px;
-  font-family: "Gilroy";
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: left;
-}
-
 .filter {
-  margin-top:80px;
-  background:#eeeeee;
+  display: inline-block;
+  margin-top:69px;
+  width: 200px;
+  height: 880px;
+  background: #eeeeee;
+  box-shadow:-9930px 9861px 0px 10000px #eeeeee;
 }
-
 .filter-title {
+  display: inline-block;
+  width:270px;
   font-size: 16px;
   font-family: "Gilroy";
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
   line-height: 70px;
-  letter-spacing: 0.2em;   
-  margin-bottom: 99px;
+  letter-spacing: 0.2em;
+  margin-left: 60px;
+  background: #dbdbdb;
 }
-
 .filter-range-title {
   font-size: 18px;
   font-family: "Gilroy";
@@ -307,7 +342,6 @@ h1 {
   text-align: left;
   margin-bottom: 37px;
 }
-
 .price-controls label {
   font-size: 14px;
   font-family: "Gilroy";
@@ -333,7 +367,6 @@ h1 {
   border:none;
   outline:none;
 }
-
 .min-price, .max-price {
   width:90px;
   font-size: 14px;
@@ -342,16 +375,16 @@ h1 {
   line-height: 1.591;
   text-align: left;
 }
-  
 .range-controls {
   position: relative;
   display: block;
-  width:100%;
+  width:200px;
   height: 14px;
   margin-bottom:10px;
 }
 .range-controls .scale {
   display: inline-block;
+  vertical-align: top;
   height: 2px;
   width:196px;
   margin-top:6px;
@@ -378,27 +411,22 @@ h1 {
   border-color:white;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);  
 }
-
 .filter-range {
   width:200px;
   border-top: 2px solid black;
   padding: 16px 0px 39px 0px;
 }
-
 .range-toggle-min {
   left:0px;
 }
-
 .range-toggle-max {
   left: 60%;
 }
-
 .price-controls {
   height: 16px;
   width: 200px;
   display: flex;
 }
-
 .checkboxes label {
   position: relative;
   padding-left: 40px;
@@ -410,7 +438,6 @@ h1 {
   text-align: left;
   cursor: pointer;
 }
-
 .checkboxes label::after {
   content: "";
   position: absolute;
@@ -470,7 +497,6 @@ h1 {
   background-repeat: no-repeat;
   background-position:50% 50%;
 }
-
 .filter-range input[type="radio"],
 .filter-range input[type="checkbox"] {
   display: none;
@@ -488,16 +514,63 @@ h1 {
   padding: 0;
   width: 200px;
   height: 8px;
-  margin: 15px 0;
   line-height: 9px;
   background-color:#f0c52e;
   letter-spacing: 0.2em;  
+  transition: all 0.2s ease-in-out;
 }
 .filter button:hover {
-  margin:0;
-  padding: 15px 10px;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
 }
 .filter button:active {
+  height: 40px;
   color:rgba(0,0,0,0.3);
+}
+
+.button-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display:block;
+  width:1160px;
+  height: 186px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(240, 197, 46, 0.5);
+}
+.container {
+  width: 1160px;
+  font-size: 0;
+  margin: 0 auto;
+}
+.content-wr {
+  overflow: hidden;
+
+  background: #efefef;
+  background: linear-gradient(to right, #efefef 0%,#efefef 29%,#ffffff 30%,#ffffff 100%);
+}
+
+.height-alignment {
+  display: flex;
+  align-content: stretch;
+}
+
+.catalog-filter {
+  width: 270px;
+  margin-left: 60px;
+  background-color: #efefef;
+}
+.tittles-wr {
+  width: 100%;
+  overflow: hidden;
+
+  background: #ebebeb;
+  background: linear-gradient(to right, #dbdbdb 0%,#dbdbdb 29%,#ebebeb 30%,#ebebeb 100%);
 }
 
