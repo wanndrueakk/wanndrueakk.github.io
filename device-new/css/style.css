@@ -330,3 +330,276 @@ h2 {
 .catalog-link:hover > .catalog-submenu {
   display: block;
 }
+
+
+/*        попрбуем добавить грязи           */
+.main-footer {
+  min-height: 209px;
+  padding-top: 54px;
+  padding-bottom: 60px;
+
+  background-color: #464646;
+}
+
+.footer-left {
+  position: relative;
+
+  float: left;
+  width: 340px;
+  min-height: 190px;
+  margin-right: 27px;
+}
+
+.footer-left a {
+  margin-left: -2px;
+
+  font-size: 48px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #f7e184;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+
+.footer-left a[href]:hover {
+  color: #f0c52e;
+}
+
+.footer-left a[href]:active {
+  opacity: 0.3;
+}
+
+.footer-left p {
+  margin-top: 17px;
+
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.footer-left::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #f7e184;
+}
+
+.footer-center {
+  float: left;
+  width: 439px;
+  margin-top: 83px;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:         flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 22px;
+  margin-bottom: 62px;
+
+  font-size: 0;
+}
+
+.footer-links a {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+
+.footer-links a:last-of-type {
+  padding-left: 8px;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-links a:active {
+  opacity: 0.3;
+}
+
+.footer-social {
+  width: 160px;
+  min-height: 38px;
+  margin: 0 auto;
+}
+
+.social-btn {
+  position: relative;
+
+  display: inline-block;
+  width: 39px;
+  height: 38px;
+
+  font-size: 0;
+  vertical-align: top;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-btn-fb {
+  margin-right: 11px;
+
+  background-position: -5px -131px;
+}
+
+.social-btn-inst {
+  margin-right: 11px;
+
+  background-position: -5px -267px;
+}
+
+.social-btn-tw {
+  background-position: -5px -420px;
+}
+
+.social-btn:hover {
+  opacity: 0.6;
+}
+
+.social-btn:active {
+  opacity: 0.1;
+}
+
+.footer-right {
+  float: right;
+  width: 340px;
+  padding-top: 10px;
+
+  line-height: 30px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.footer-user-block {
+  margin-bottom: 36px;
+}
+
+.footer-user-block a {
+  position: relative;
+
+  margin-left: 35px;
+  padding-left: 25px;
+
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.footer-user-block a:first-child {
+  margin-left: 0;
+}
+
+.footer-user-block a::before {
+  content: "";
+  position: absolute;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.footer-login::before {
+  top: 47%;
+  left: -3px;
+
+  width: 14px;
+  height: 13px;
+}
+
+.footer-compare::before {
+  top: 50%;
+  left: 4px;
+
+  width: 12px;
+  height: 10px;
+}
+
+.footer-basket::before {
+  top: 48%;
+  left: 2px;
+
+  width: 13px;
+  height: 12px;
+}
+
+.footer-login::before {
+  background-position: -4px -489px;
+}
+
+.footer-login:hover::before {
+  background-position: -4px -511px;
+}
+
+.footer-compare::before {
+  background-position: -4px -91px;
+}
+
+.footer-compare:hover::before {
+  background-position: -4px -111px;
+}
+
+.footer-basket::before {
+  background-position: -4px -27px;
+}
+
+.footer-basket:hover::before {
+  background-position: -4px -49px;
+}
+
+.footer-user-block a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-user-block a:active {
+  opacity: 0.3;
+}
+
+.telephone {
+  margin-bottom: 56px;
+
+  line-height: 30px;
+}
+
+.copyright a {
+  display: inline-block;
+  width: 27px;
+  height: 36px;
+
+  font-size: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -5px -178px;
+}
+
+.copyright a:hover {
+  background-position: -5px -222px;
+}
+
+.copyright a:active {
+  opacity: 0.3;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
