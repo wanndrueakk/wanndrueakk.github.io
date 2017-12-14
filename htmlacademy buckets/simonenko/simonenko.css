@@ -1,0 +1,211 @@
+.feedback {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden
+}
+
+.feedback .front,
+.feedback .back {
+  position: absolute;
+  width: 100%;
+  min-height: 400px;
+  padding: 30px 30px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out
+}
+
+.feedback .front {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  zoom: 1;
+  z-index: 900
+}
+
+.feedback .back {
+  padding-top: 130px;
+  -webkit-transform: translate(1000px, 0);
+  -ms-transform: translate(1000px, 0);
+  transform: translate(1000px, 0);
+  zoom: 1;
+  text-align: center;
+  z-index: 800
+}
+
+.feedback.success .front {
+  -webkit-transform: translate(-1000px, 0);
+  -ms-transform: translate(-1000px, 0);
+  transform: translate(-1000px, 0);
+  zoom: 1
+}
+
+.feedback.success .back {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  zoom: 1;
+  z-index: 1000
+}
+
+.feedback p.actions {
+  clear: left;
+  margin: 0;
+  padding-top: 20px
+}
+
+.feedback p.actions em {
+  padding-left: 20px;
+  color: #808080;
+  font-size: .85em
+}
+
+.feedback label {
+  clear: left;
+  display: block;
+  float: left;
+  width: 100px;
+  margin-bottom: 20px;
+  padding-top: 5px
+}
+
+.feedback label[for=message] {
+  margin-bottom: 5px;
+  padding-top: 0
+}
+
+.feedback .description {
+  margin-top: 0;
+  color: #ececec;
+  font-size: .85em
+}
+
+.feedback input[name=name] + .description {
+  padding-top: 5px
+}
+
+.feedback input[name=email] + .description {
+  padding-top: 8px
+}
+
+.feedback textarea + .description {
+  padding: 25px 0 0 485px
+}
+
+.feedback input[type=text] {
+  display: block;
+  float: left;
+  width: 350px;
+  margin: 0 35px 20px 0;
+  padding: 4px 6px;
+  color: #333
+}
+
+.feedback input[type=text]:after {
+  content: '';
+  display: block;
+  float: right;
+  margin-top: -14px;
+  margin-right: -33px;
+  line-height: 10px
+}
+
+.feedback input[type=text]:required {
+  -moz-box-shadow: none;
+  box-shadow: none
+}
+
+.feedback input[type=text]:invalid:after {
+  content: '✘';
+  color: #aa302b
+}
+
+.feedback input[type=text]:valid:after {
+  content: '✔';
+  color: #8fca47
+}
+
+.feedback textarea {
+  clear: left;
+  display: block;
+  float: left;
+  width: 450px;
+  padding: 4px 6px;
+  color: #333
+}
+
+.feedback textarea:after {
+  content: '';
+  position: absolute;
+  display: block;
+  margin-top: -20px;
+  margin-left: 455px
+}
+
+.feedback textarea:required {
+  -moz-box-shadow: none;
+  box-shadow: none
+}
+
+.feedback textarea:invalid:after {
+  content: '✘';
+  color: #aa302b
+}
+
+.feedback textarea:valid:after {
+  content: '✔';
+  color: #8fca47
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+  background-color: #ffffeb
+}
+
+.feedback input:focus + .description,
+.feedback textarea:focus + .description {
+  color: #333
+}
+
+@media only screen and (max-width:950px) {
+  .feedback .description span {
+    display: none
+  }
+  .feedback input[name=email] + .description {
+    padding-top: 18px
+  }
+  .feedback textarea + .description {
+    padding-top: 39px
+  }
+}
+
+@media only screen and (max-width:905px) {
+  .feedback textarea + .description {
+    padding-top: 25px
+  }
+}
+
+@media only screen and (max-width:790px) {
+  .feedback .description {
+    display: none
+  }
+  .feedback label {
+    display: inline-block;
+    float: left
+  }
+  .feedback input[type=text],
+  .feedback textarea {
+    display: inline-block
+  }
+}
+
+@media only screen and (max-width:650px) {
+  .feedback input[type=text] {
+    width: 320px
+  }
+  .feedback textarea {
+    width: 420px
+  }
+  .feedback textarea:after {
+    margin-left: 425px
+  }
+}
