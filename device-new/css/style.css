@@ -993,7 +993,7 @@ section h1 {
 }
 .checkboxes label {
   position: relative;
-  padding-left: 40px;
+  padding-left: 38px;
   display: block;
   font-size: 14px;
   font-family: "Open Sans";
@@ -1022,17 +1022,18 @@ section h1 {
 #color-3:checked ~ .checkboxes label:nth-child(3)::after,
 #color-4:checked ~ .checkboxes label:nth-child(4)::after,
 #color-5:checked ~ .checkboxes label:last-child::after {
-  background-image: url("img/tick.svg.png");
+  background-image: url("/img/tick.svg.png");
   background-repeat: no-repeat;
   background-position:50% 50%;
 }
 
 .radio-buttons {
   margin-top:-10px;
+  margin-bottom: -3px;
 }
 .radio-buttons label {
   position: relative;
-  padding-left: 40px;
+  padding-left: 38px;
   display: block;
   font-size: 14px;
   font-family: "Open Sans";
@@ -1044,7 +1045,7 @@ section h1 {
 .radio-buttons label::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 9px;
   left:-1px;
   width: 18px;
   height: 18px;
@@ -1059,7 +1060,7 @@ section h1 {
 }
 #bt-1:checked ~ .radio-buttons label:first-child::after,
 #bt-2:checked ~ .radio-buttons label:last-child::after {
-  background-image: url("img/circle.png");
+  background-image: url("/img/circle.png");
   background-repeat: no-repeat;
   background-position:50% 50%;
 }
@@ -1067,42 +1068,7 @@ section h1 {
 .filter-range input[type="checkbox"] {
   display: none;
 }
-.filter button {
-  display: block;
-  font-size: 18px;
-  font-family: "Gilroy";
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: center;
-  border: none;
-  padding: 0;
-  width: 200px;
-  height: 8px;
-  line-height: 8px;
-  margin-top:-7px;
-  margin-left:-1px;
-  background-color:#f0c52e;
-  letter-spacing: 0.2em;  
-  transition: all 0.2s ease-in-out;
-}
-.filter button:hover {
-  height: 40px;
-  transition: all 0.2s ease-in-out;
-}
-.filter button:active {
-  height: 40px;
-  color:rgba(0,0,0,0.3);
-}
 
-.button-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 header {
   display:block;
   width:1160px;
@@ -1419,5 +1385,56 @@ header {
   margin-top:-10px;
   margin-bottom: -5px;
 }
+.button-container {
+  position: relative;
+  display: block;
+  width:100%;
+  height: 40px;
+}
+.button-container::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 0;
 
+  width: 100%;
+  height: 20%;
 
+  background-color: #f0c52e;
+
+  transition: all 0.2s ease-in-out;
+  
+  z-index: 1;
+}
+
+.device-btn {
+  position: absolute;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  top: 27.5%;
+  left: 0px;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  text-align: center;
+  color: black;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.device-btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.button-container:hover::before {
+  top: 0;
+
+  height: 100%;
+}
