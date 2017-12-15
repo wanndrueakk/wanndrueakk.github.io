@@ -765,7 +765,7 @@ section h1 {
   margin-top:50px;
   width: 200px;
 }
-.catalog-item-img:hover .catalog-item-modal {
+[class^="catalog-item-img"]:hover .catalog-item-modal {
   opacity: 1;
 }
 /*
