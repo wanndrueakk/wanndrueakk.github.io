@@ -636,3 +636,430 @@ textarea {
   animation: shake 0.6s;
 }
 
+
+/*        Пагинация           */
+.pagination {
+  display: flex;
+  width: 760px;
+  height: 134px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+  margin-top:-10px;
+}
+.pagination a {
+  padding:25px 26px 26px 30px;
+  font-size: 16px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+.pagination>a[href]:hover {
+  background: rgba(0,0,0,0.08);
+}
+.pagination>a[href]:active {
+  color: rgba(0,0,0,0.3);
+}
+.pagination div {
+  width: 440px;
+  display: inline-block;
+  text-align:center;
+}
+.pagination div a {
+  margin: 0 12px;
+  padding:0;
+  color:black;
+}
+.pagination div a[href] {
+  color:rgba(0,0,0,0.3);
+}
+.pagination div a[href]:hover {
+  color: rgba(0,0,0,0.6);
+}
+.pagination div a[href]:active {
+  color: rgba(0,0,0,1);
+}
+/*        Пагинация конец           */
+
+/*        Сортировка           */
+.sorting {
+  float: left;
+  width: 760px;
+  height: 134px;
+  line-height: 134px;
+}
+.sorting-caption {
+  float: left;
+  display: inline-block;
+  width: 400px;
+  font-size: 18px;
+  font-family: "Roboto";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.sorting a {
+  float: left;
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-right:26px;
+}
+.sorting a[href] {
+  color:rgba(0,0,0,0.3);
+}
+.sorting a[href]:hover {
+  color: rgba(0,0,0,0.6);
+}
+.sorting a[href]:active {
+  color: rgba(0,0,0,1);
+}
+.triangle-up {
+  float:left;
+  vertical-align:top;
+  display: inline-block;
+  width:9px;
+  height:9px;
+  margin-top: 61px;
+  background: url("/img/sort-down.png") no-repeat 0 0;
+  opacity: 0.2;
+}
+.triangle-down {
+  float:left;
+  vertical-align: top;
+  display: inline-block;
+  width:9px;
+  height:9px;
+  margin-top: 61px;
+  background: url("/img/sort-up.png") no-repeat 0 0;
+  opacity: 0.2;
+}
+.active {
+  opacity: 1;
+}
+.triangle-up:hover, .triangle-down:hover {
+  border-top-color: rgba(0,0,0,0.4);
+  border-bottom-color: rgba(0,0,0,0.4);
+}
+.triangle-up:active, .triangle-down:active {
+  border-top-color: rgba(0,0,0,1);
+  border-bottom-color: rgba(0,0,0,1);
+  
+}
+/*        Сортировка конец           */
+
+/*        Боковой фильтр           */
+.catalog-filter {
+}
+
+.filter-title {
+  display: inline-block;
+  width:270px;
+  font-size: 16px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 70px;
+  letter-spacing: 0.23em;
+  margin-left: 60px;
+  background: #dbdbdb;
+}
+.filter-range-title {
+  font-size: 18px;
+  font-family: "Gilroy";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top:15px;
+  text-align: left;
+  margin-top:-5px;
+  margin-bottom: 30px;
+}
+.price-controls label {
+  font-size: 14px;
+  font-family: "Gilroy";
+  color: rgba(0, 0, 0, 0.2);
+  line-height: 1;
+  text-align: left;
+  cursor: pointer;
+}
+.price-controls input {
+  display: inline-block;
+  width:70%;
+  background: none;
+  color:inherit;
+  font:inherit;
+  margin:0;
+  padding:0;
+  border:none;
+  outline:none;
+}
+.min-price, .max-price {
+  width:90px;
+  font-size: 14px;
+  font-family: "Gilroy";
+  color: rgba(0, 0, 0, 0.2);
+  line-height: 1.591;
+  text-align: left;
+}
+.range-controls {
+  position: relative;
+  display: block;
+  width:200px;
+  height: 14px;
+  margin-bottom:10px;
+}
+.range-controls .scale {
+  display: inline-block;
+  vertical-align: top;
+  height: 2px;
+  width:196px;
+  margin-top:6px;
+  margin-left:4px;
+  background: #dbdbdb;
+}
+.range-controls .bar {
+  width: 60%;
+  height:2px;
+  background:#91c92f;
+}
+.range-toggle {
+  position:absolute;
+  top:0px;
+  width:10px;
+  height:10px;
+  background:white;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.range-toggle:active {
+  top:-1px;
+  background: #7eae29;
+  border-color:white;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);  
+}
+.filter-range {
+  padding: 16px 0px 35px 0px;
+}
+.range-toggle-min {
+  left:0px;
+}
+.range-toggle-max {
+  left: 60%;
+}
+.price-controls {
+  height: 16px;
+  width: 200px;
+  display: flex;
+}
+.checkboxes label {
+  position: relative;
+  padding-left: 38px;
+  display: block;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+  line-height: 2.9;
+  text-align: left;
+  cursor: pointer;
+}
+.checkboxes label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left:0px;
+  width: 23px;
+  height: 23px;
+  background: #dbdbdb;
+}
+.checkboxes label:hover::after {
+  background:#cecece;
+}
+.checkboxes label:active::after {
+  background:#c4c4c4;  
+}
+#color-1:checked ~ .checkboxes label:first-child::after,
+#color-2:checked ~ .checkboxes label:nth-child(2)::after,
+#color-3:checked ~ .checkboxes label:nth-child(3)::after,
+#color-4:checked ~ .checkboxes label:nth-child(4)::after,
+#color-5:checked ~ .checkboxes label:last-child::after {
+  background-image: url("/img/tick.svg.png");
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+}
+
+.radio-buttons {
+  margin-top:-10px;
+  margin-bottom: -3px;
+}
+.radio-buttons label {
+  position: relative;
+  padding-left: 38px;
+  display: block;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+  line-height: 2.857;
+  text-align: left;
+  cursor: pointer;
+}
+.radio-buttons label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left:-1px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #c6c6c6;
+  border-radius: 50%;
+}
+.radio-buttons label:hover::after {
+  border-color:#bcbcbc;
+}
+.radio-buttons label:active::after {
+  border-color: #acacac;
+}
+#bt-1:checked ~ .radio-buttons label:first-child::after,
+#bt-2:checked ~ .radio-buttons label:last-child::after {
+  background-image: url("/img/circle.png");
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+}
+.filter-range input[type="radio"],
+.filter-range input[type="checkbox"] {
+  display: none;
+}
+.checkboxes {
+  margin-top:-10px;
+  margin-bottom: -5px;
+}
+.catalog-btn {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #eee;
+  color: black;
+  width: 260px;
+  border: 0;
+  padding: 0;
+}
+.catalog-btn:hover {
+  background-color: #dfdfdf;
+}
+.catalog-btn:active {
+  background-color: #d5d5d5;  
+}
+/*        Фильтр конец           */
+
+
+.item {
+  float: left;
+  position: relative;
+  margin-right: 40px;
+  display: inline-block;
+  width: 358px;
+  height: 616px;
+  border: 1px solid rgba(0,1,1,0.1);
+}
+.item:hover::before {
+  opacity: 1;
+}
+.item:hover {
+  border-color: rgba(77,77,77,0.1);
+  box-shadow: 0px 6px 15px 0px rgba(0,1,1,0.25);
+}
+
+.item:nth-child(2n+1) {
+  margin-right: 0;
+  background: red;
+}
+
+.item-action {
+  position: absolute;
+  
+  bottom:0;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top:10px;
+  width: 360px;
+  height: 220px;
+  background-color: #eee; 
+}
+.item:hover .item-action {
+  display: flex;
+}
+.item-action p {
+  text-align: center;
+  line-height: 1.2em;
+}
+.item-action h3 {
+  font-size: 18px;
+  margin-top:15px;
+  margin-bottom: -15px;
+}
+.item-btn {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  width: 200px;
+  border: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.filter {
+  float: left;
+  display: inline-block;
+  width: 260px;
+  min-height: 300px;
+  background: #b4b9bb;
+}
+
+.items-catalog {
+  float: right;
+  width: 900px;
+  padding-left: 140px;
+  padding-right: 0px;
+  
+  
+  min-height: 1200px;
+  background: #00ca74;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 360px;
+  height: 40px;
+  background: url("/img/browser.png") no-repeat 0 0; 
+  opacity: 0.12;
+}
+
+.img {
+  position: absolute;
+  top: 41px;
+  left: 0px;
+}
+
+.filter-btn {
+  
+}
