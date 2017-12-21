@@ -958,6 +958,19 @@ textarea {
   background-position: -5px -38px;
 }
 
+#feature-1:disabled ~ .checkboxes label:first-child::after,
+#feature-2:disabled ~ .checkboxes label:nth-child(2)::after,
+#feature-3:disabled ~ .checkboxes label:nth-child(3)::after,
+#feature-4:disabled ~ .checkboxes label:nth-child(4)::after,
+#feature-5:disabled ~ .checkboxes label:last-child::after,
+#bt-1:disabled ~ .radio-buttons label:first-child::after,
+#bt-2:disabled ~ .radio-buttons label:nth-child(2)::after,
+#bt-3:disabled ~ .radio-buttons label:last-child::after {
+
+  opacity: 0.1;
+}
+
+
 .radio-buttons label::after {
   content: "";
   position: absolute;
@@ -988,8 +1001,6 @@ textarea {
 .filter input[type="radio"],
 .filter input[type="checkbox"] {
   display: none;
-}
-.checkboxes {
 }
 .filter-btn {
   font-family: "Roboto", "Arial", sans-serif;
