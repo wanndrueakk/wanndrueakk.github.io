@@ -17,16 +17,16 @@
         <a class="header-logo" href="index.html"></a>
         <ul class="main-menu clearfix">
           <li class="active">
-            <a href="studio.html">Студия</a>
+            <a href="#studio">Студия</a>
           </li>
           <li>
-            <a href="clients.html">Клиенты</a>
+            <a href="#clients">Клиенты</a>
           </li>
           <li>
-            <a href="shop.html">Магазин</a>
+            <a href="catalog.html">Магазин</a>
           </li>
           <li>
-            <a href="contacts.html">Контакты</a>
+            <a href="#feedback">Контакты</a>
           </li>
           <li class="cart">
             <a href="cart.html">Корзина</a>
@@ -82,7 +82,7 @@
     </div>
   </section>
   <div class="divider"></div>
-  <section class="main-about container clearfix">
+  <section class="main-about container clearfix" id="studio">
     <div class="column-left">
     <h2>Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</h2>
     <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше креатива. Работаем не покладая рук, как роботы.</p>
@@ -106,17 +106,19 @@
   </section>
   <div class="divider" style="margin-top:47px;margin-bottom: 20px;"></div>
 
-  <section class="clients clearfix">
+    <section class="clients clearfix" id="clients">
     <ul>
-      <li class="client htmlacademy"></li>
-      <li class="client borodinski"></li>
-      <li class="client pink"></li>
-      <li class="client mishka"></li>
+      <li class="client htmlacademy"><div></div></li>
+      <li class="client borodinski"><div></div></li>
+      <li class="client pink"><div></div></li>
+      <li class="client mishka"><div></div></li>
     </ul>
   </section>
   <div class="divider" style="margin-top:38px; margin-bottom: 73px;"></div>
+
 </main>
-  <section class="map">
+ 
+  <section class="map" id="feedback">
     <div class="container">
      <div class="address">
       <h4>NЁRDS DESIGN STUDIO</h4>
@@ -124,8 +126,10 @@
       <p class="tel">тел. +7 (812) 275-75-75</p>
       <a href="feedback.html" class="nerds-btn map-btn">Напишите нам</a>
     </div>
+    <a href="#" class="map-marker"></a>
     </div>
   </section>
+ 
   <footer class="main-footer container clearfix">
     <section class="social">
       <h3 class="visually-hidden">Присоединяйтесь к нам в соцсетях:</h3>
@@ -162,10 +166,11 @@
     <div class="close"></div>
     </form>
   </section>
-  <section class="map-modal">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1d1TeJ6hPt18gYwRviF3bQoW9FnsFKkk8"></iframe>
-    
+  <section class="map-modal-js">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043705196!2d30.320889251334346!3d59.9387941817873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1513838051578" width="900" height="530" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="close"></div>
   </section>
+
   <script src="/js/script.js"></script>
 </body>
 </html>

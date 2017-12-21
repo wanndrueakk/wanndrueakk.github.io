@@ -6,8 +6,9 @@ var email = form.querySelector("[name=email]");
 var letter = form.querySelector("[name=text]");
 var storage_name = localStorage.getItem("name");
 var storage_email = localStorage.getItem("email");
-var goo = document.querySelector(".map-modal");
-var mp = document.querySelector(".feedback");
+var goo = document.querySelector(".map-modal-js");
+var mp = document.querySelector(".map-marker");
+var clsm = goo.querySelector(".close");
 
 
 fb.addEventListener("click", function(event) {
@@ -42,6 +43,11 @@ cls.addEventListener("click", function(event) {
   event.preventDefault();
   form.classList.remove("modal-show");
   form.classList.remove("modal-error");  
+});
+clsm.addEventListener("click", function(event) {
+  event.preventDefault();
+  goo.classList.remove("modal-show");
+  goo.classList.remove("modal-error");  
 });
 
 
