@@ -8,7 +8,7 @@
   </head>
   <body>
 <header class="main-header clearfix">
-  <nav>
+  <nav class="main-nav">
     <a href="index.html" class="logo-container">
       <img src="img/logo.png" width="67" height="56" title="Sedona logo">
     </a>   
@@ -28,23 +28,25 @@
     </ul>
   </nav>
 </header>   
-   <main>
+   <main class="index-main">
     <h1 class="visually-hidden">Сайт по поиску гостиниц в Седоне</h1>
     <h2>СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
     <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-    <h3>Настоящий городок</h3>
-    <p>— №1 —</p>
-    <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-    
+    <h3 class="white">Настоящий городок</h3>
+    <p class="white">— №1 —</p>
+    <p class="white">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+    <img src="/img/house.png" width="75" height="72" title="Lodge">
     <h4>Жилье</h4>
     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+    <img src="/img/food.png" width="74" height="70" title="Food">
     <h4>Еда</h4>
     <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,<br>Вы НЕ разочаруетесь!</p>
+    <img src="/img/souvenirs.png" width="64" height="76" title="Souvenirs">
     <h4>Сувениры</h4>
     <p>Не только китайского, но и местного производства!</p>
-    <h3>Там есть мост дьявола</h3>
-    <p>— №2 —</p>
-    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+    <h3 class="white">Там есть мост дьявола</h3>
+    <p class="white">— №2 —</p>
+    <p class="white">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     <h3>Небольшая площадь</h3>
     <p>— №3 —</p>
     <p>ВСЕ достопримечательности<br>находятся очень близко</p>
@@ -57,7 +59,7 @@
     <h2>Заинтересовались?</h2>
     <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <button type="button">Поиск гостиницы в Седоне</button>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form action="https://echo.htmlacademy.ru" method="post" class="main-form">
       <label for="date-arrival">Дата заезда:</label>
       <input type="date" value="2017-03-24" id="date-arrival" name="date-arr">
       <label for="date-departure">Дата выезда:</label>
@@ -71,8 +73,20 @@
     </main>
     <footer>
     <h3>#visitSEDONA</h3>
+    <h3 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h3>
+    <ul class="social">
+      <li>
+        <a href="http://www.twitter.com/sedona/" class="twitter" alt="Твиттер">Твиттер<span></span></a>
+      </li>
+      <li>
+        <a href="http://www.facebook.com/sedona/" class="facebook" alt="Фейсбук">Фейсбук<span></span></a>
+      </li>
+      <li>
+        <a href="http://play.google.com/sedona/" class="play" alt="Скачать на Google Play">Скачать на Google Play<span></span></a>
+      </li>
+    </ul>
     <b>WEBSITE by</b>
-    <img>
+    <a href="#" class="ha-logo"><img src="/img/HA-logo.png" width="113" height="39" title="HTML Academy" ></a>
     </footer>
 <article>
   <header class="hotels-header">
@@ -104,9 +118,29 @@
         </div>
         <button type="button">Показать</button>
       </fieldset>
-      
     </form>
   </header>
+  <main class="hotels-main">
+    <div class="sorting">
+      <h3>Найдено: 3</h3>
+      <span>Сортировка:</span>
+      <ul class="sorting-types clearfix">
+        <li>
+          <label for="sort-price">По цене</label>
+        </li>
+        <li>
+          <label for="sort-type">По типу</label>
+        </li>
+        <li>
+          <label for="sort-rank">По рейтингу</label>
+        </li>
+      </ul>
+      <ul class="triangles">
+        <li class="up"></li>
+        <li class="down active"></li>
+      </ul>
+    </div>
+  </main>
 </article>
 <!--    Just sprite     -->
 <i class="sprite sprite-calendar"></i>

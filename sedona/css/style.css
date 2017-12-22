@@ -114,11 +114,6 @@
     background-position: -5px -333px;
 }
 
-.sprite-f {
-    width: 10px;
-    height: 19px;
-    background-position: -5px -353px;
-}
 
 .sprite-minus {
     width: 12px;
@@ -136,12 +131,6 @@
     width: 12px;
     height: 3px;
     background-position: -5px -408px;
-}
-
-.sprite-play {
-    width: 20px;
-    height: 16px;
-    background-position: -5px -421px;
 }
 
 .sprite-plus {
@@ -173,6 +162,17 @@
     height: 17px;
     background-position: -5px -543px;
 }
+.sprite-f {
+    width: 10px;
+    height: 19px;
+    background-position: -5px -353px;
+}
+
+.sprite-play {
+    width: 20px;
+    height: 16px;
+    background-position: -5px -421px;
+}
 
 .sprite-t {
     width: 17px;
@@ -203,6 +203,7 @@ body {
 h2 {
   font-size: 21px;
   font-weight: bold;
+  color: black;
   text-transform: uppercase;
   line-height: 26px;
   text-align: center;
@@ -226,10 +227,9 @@ button[type="button"] {
   text-align: center;
 }
 
-h2,
 h3 {
   font-size: 21px;
-  color: rgb(0, 0, 0);
+  color: black;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 26px;
@@ -248,6 +248,9 @@ header a {
 header a {
   text-decoration: none;
   display: block;
+}
+header a.active-link {
+  color: rgb(118, 99, 87);
 }
 header ul {
   list-style: none;
@@ -280,4 +283,265 @@ header li {
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
+}
+
+.sort-types {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sorting li {
+  display: inline-block;
+}
+.triangles {
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.triangles a {
+  display: block;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+}
+.triangles .up {
+  background-position: -5px -595px;
+}
+.triangles .down {
+  background-position: -5px -293px;
+}
+.triangles .active {
+  
+}
+.triangles .up:hover {
+  background-position: -5px -635px;
+}
+.triangles .up:active {
+  background-position: -5px -615px;
+}
+.triangles .down:hover {
+  background-position: -5px -333px;
+}
+.triangles .down:active {
+  background-position: -5px -313px;
+}
+
+span {
+  float: left;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  line-height: 18;
+  text-align: left;
+}
+
+.sorting-types {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sorting-types li {
+  float: left;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.sorting label {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.302);
+  line-height: 18px;
+  text-align: left;
+  cursor: pointer;
+}
+.sorting label:checked {
+  color: rgb(129, 179, 210);
+}
+.sorting label:not(:checked)::after {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: url("../img/dot.png") repeat-x 0 0;
+}
+.sorting {
+  display: block;
+}
+
+sorting h3 {
+  float: left;
+}
+
+.white {
+  color: rgb(255, 255, 255);
+  background: #81b3d2;
+  line-height: 1;
+}
+
+.main-form {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: left;
+}
+.main-form [type="number"] {
+  display: inline-block;
+  position: relative;
+  font: inherit;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  padding: 0px 38px;
+  border: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+.main-form [type="number"]::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 18px;
+  left: 14px;
+  width: 12px;
+  height: 3px;
+  background-position: -5px -382px;  
+}
+.main-form [type="number"]::before:hover {
+  background-position: -5px -408px;
+  
+}
+.main-form [type="number"]::before:active {
+  background-position: -5px -395px;
+  
+}
+.main-form [type="number"]::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 16px;
+  left: 16px;
+  width: 11px;
+  height: 11px;
+  background-position: -5px -447px;
+}
+.main-form [type="number"]::after:hover {
+  background-position: -5px -489px;
+}
+.main-form [type="number"]::after:active {
+  background-position: -5px -468px;
+}
+.main-form [type="date"] {
+  display: inline-block;
+  position: relative;
+  font: inherit;
+  width: 308px;
+  height: 38px;
+  padding-right: 38px;
+  border: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+.main-form [type="date"]::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 10px;
+  left: 10px;
+  width: 21px;
+  height: 22px;
+  background-position: -5px -5px;
+}
+.main-form [type="date"]::after:hover {
+  background-position: -5px -69px;
+}
+.main-form [type="date"]::after:active {
+  background-position: -5px -37px;
+}
+.main-form [type="submit"] {
+  display: inline-block;
+  width: 458px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: 0;
+  padding: 0;
+}
+.index-main button {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  width: 568px;
+  height: 86px;
+  background-color: #766357;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;  
+}
+.social li {
+  display: inline-block;
+}
+.social a {
+  display: flex;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  justify-content: center;
+  align-items: center;
+}
+.social span {
+  display: block;
+  background-image: url("/img/sprite.png");
+  background-repeat: no-repeat;  
+}
+.facebook span {
+  width: 10px;
+  height: 19px;
+  background-position: -5px -353px;
+}
+.social .play {
+  width: 20px;
+  height: 16px;
+  background-position: -5px -421px;
+}
+
+.social .twitter {
+  width: 17px;
+  height: 15px;
+  background-position: -5px -570px;
+}
+.ha-logo {
+  display: inline-block;
+  width: 113px;
+  height: 39px;
+}
+.ha-logo:hover {
+  background: url("/img/HA-logo-hover.png") no-repeat 0 0;
+  transition: background 0.6s ease-in;
+}
+.ha-logo:hover img {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+.ha-logo:active {
+  background: url("/img/HA-logo-active.png") no-repeat 0 0;
+  transition: background 0.6s ease-in;
+}
+.ha-logo:active img {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
 }
