@@ -1,0 +1,202 @@
+/* cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    url("../fonts/ptsans.woff2") format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: 
+    url("../fonts/ptsans.woff2")
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}/* cyrillic */
+@font-face {
+  font-family: "PT Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: 
+    url("../fonts/ptsansbold.woff2")
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+  font-family: "PT Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: 
+    url("../fonts/ptsansbold.woff2")
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-calendar {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -5px;
+}
+
+.sprite-calendar-active {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -37px;
+}
+
+.sprite-calendar-hover {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -69px;
+}
+
+.sprite-check {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -101px;
+}
+
+.sprite-check-dis {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -133px;
+}
+
+.sprite-check-hover {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -165px;
+}
+
+.sprite-check-ok {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -197px;
+}
+
+.sprite-check-ok-active {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -229px;
+}
+
+.sprite-check-ok-dis {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -261px;
+}
+
+.sprite-down {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -293px;
+}
+
+.sprite-down-active {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -313px;
+}
+
+.sprite-down-hover {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -333px;
+}
+
+.sprite-f {
+    width: 10px;
+    height: 19px;
+    background-position: -5px -353px;
+}
+
+.sprite-minus {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -382px;
+}
+
+.sprite-minus-active {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -395px;
+}
+
+.sprite-minus-hover {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -408px;
+}
+
+.sprite-play {
+    width: 20px;
+    height: 16px;
+    background-position: -5px -421px;
+}
+
+.sprite-plus {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -447px;
+}
+
+.sprite-plus-active {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -468px;
+}
+
+.sprite-plus-hover {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -489px;
+}
+
+.sprite-radio {
+    width: 20px;
+    height: 23px;
+    background-position: -5px -510px;
+}
+
+.sprite-star {
+    width: 18px;
+    height: 17px;
+    background-position: -5px -543px;
+}
+
+.sprite-t {
+    width: 17px;
+    height: 15px;
+    background-position: -5px -570px;
+}
+
+.sprite-up {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -595px;
+}
+
+.sprite-up-active {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -615px;
+}
+
+.sprite-up-hover {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -635px;
+}
+body {
+  font-family: "PT Sans"
+}
