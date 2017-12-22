@@ -7,7 +7,29 @@
     <title>Sedona</title>
   </head>
   <body>
-    <h1>Сайт по поиску гостиниц в Седоне</h1>
+<header class="main-header clearfix">
+  <nav>
+    <a href="index.html" class="logo-container">
+      <img src="img/logo.png" width="67" height="56" title="Sedona logo">
+    </a>   
+    <ul>
+      <li>
+        <a href="index.html" alt="Информация о Седоне">Информация</a>
+      </li>
+      <li>
+        <a href="fotos-videos.html" alt="Фото и Видео Седоны">Фото и видео</a>
+      </li>
+      <li>
+        <a href="map.html" alt="Карта штата">Карта штата</a>
+      </li>
+      <li>
+        <a href="hotels.html" alt="Гостиницы Седоны">Гостиницы</a>
+      </li>
+    </ul>
+  </nav>
+</header>   
+   <main>
+    <h1 class="visually-hidden">Сайт по поиску гостиниц в Седоне</h1>
     <h2>СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
     <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     <h3>Настоящий городок</h3>
@@ -46,11 +68,46 @@
       <input type="number" min="0" max="9" placeholder="0" id="children" name="children-number">
       <input type="submit" value="Найти">
     </form>
-    
+    </main>
+    <footer>
     <h3>#visitSEDONA</h3>
     <b>WEBSITE by</b>
     <img>
-
+    </footer>
+<article>
+  <header class="hotels-header">
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+        <legend>Инфраструктура:</legend>
+        <label for="swimming-pool">Бассейн</label>
+        <label for="parking">Парковка</label>
+        <label for="wifi">Wi-Fi</label>
+      </fieldset>
+      <fieldset>
+        <legend>Тип жилья:</legend>
+        <label for="hotel">Гостиница</label>
+        <label for="motel">Мотель</label>
+        <label for="apartment">Апартаменты</label>
+      </fieldset>
+      <fieldset>
+        <legend>Стоимость в сутки (р):</legend>
+        <div class="input-box">
+          <input type="text" placeholder="от 0" name="price-from">
+          <input type="text" placeholder="до 3000" name="price-to">
+        </div>
+        <div class="filter-range">
+          <div class="scale">
+            <div class="bar"></div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+        </div>
+        <button type="button">Показать</button>
+      </fieldset>
+      
+    </form>
+  </header>
+</article>
 <!--    Just sprite     -->
 <i class="sprite sprite-calendar"></i>
 <i class="sprite sprite-calendar-active"></i>

@@ -200,3 +200,84 @@
 body {
   font-family: "PT Sans"
 }
+h2 {
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+}
+
+input[type="submit"],
+button[type="button"] {
+  font-size: 21px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+}
+
+h2,
+h3 {
+  font-size: 21px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+}
+
+b,
+header a {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+}
+header a {
+  text-decoration: none;
+  display: block;
+}
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header li {
+  float: left;
+  display: inline-block;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo-container {
+  position: absolute;
+  display: flex;
+  width: 138px;
+  height: 70px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../img/logo-bg.png") no-repeat 0 0;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
