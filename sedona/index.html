@@ -76,7 +76,7 @@
     <div class="advantage">
       <h3>Красивая дорога</h3>
       <p>— №4 —</p>
-      <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем<br>НЕ СКУЧНО!</p>      
+      <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>      
     </div> 
     <div class="advantage">
       <h3>Мало туристов</h3>
@@ -84,20 +84,30 @@
       <p>Большинство едет в гранд каньон и толпится там</p>      
     </div> 
    </section>
-  <h2>Заинтересовались?</h2>
-  <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-  <button type="button">Поиск гостиницы в Седоне</button>
-  <form action="https://echo.htmlacademy.ru" method="post" class="main-form">
-    <label for="date-arrival">Дата заезда:</label>
-    <input type="date" value="2017-03-24" id="date-arrival" name="date-arr">
-    <label for="date-departure">Дата выезда:</label>
-    <input type="date" value="2017-07-04" id="date-departure" name="date-dep">
-    <label for="adults">Врослые:</label>
-    <input type="number" min="0" max="9" placeholder="2" value="2" id="adults" name="adults-number">
-    <label for="children">Дети:</label>
-    <input type="number" min="0" max="9" placeholder="0" id="children" name="children-number">
-    <input type="submit" value="Найти">
-  </form>
+  <section class="interested">
+    <h2>Заинтересовались?</h2>`
+    <p class="p-interested">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+  </section>
+  <section class="search-btn-container">
+    <div class="btn-container">
+      <button type="button" class="search-btn">Поиск гостиницы в Седоне</button>
+      <form action="https://echo.htmlacademy.ru" method="post" class="main-form">
+        <label for="date-arrival">Дата заезда:</label>
+        <input type="date" value="2017-03-24" id="date-arrival" name="date-arr">
+        <label for="date-departure">Дата выезда:</label>
+        <input type="date" value="2017-07-04" id="date-departure" name="date-dep">
+        <label for="adults">Врослые:</label>
+        <input type="number" min="0" max="9" placeholder="2" value="2" id="adults" name="adults-number">
+        <label for="children">Дети:</label>
+        <input type="number" min="0" max="9" placeholder="0" id="children" name="children-number">
+        <input type="submit" value="Найти">
+      </form>
+    </div>
+  </section>
+  <section class="map-container clearfix">
+    <div class="map-img"></div>
+  </section>
+
 </main>
 <footer>
 <h3>#visitSEDONA</h3>

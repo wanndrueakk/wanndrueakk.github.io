@@ -406,8 +406,14 @@ sorting h3 {
 }
 
 .main-form {
+  position: absolute;
+  left: 0px;
+  top: 86px;
+  
+  width: 568px;
   font-size: 14px;
   color: rgb(0, 0, 0);
+  background: white;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 26px;
@@ -497,14 +503,7 @@ sorting h3 {
   border: 0;
   padding: 0;
 }
-.index-main button {
-  display: inline-block;
-  border: 0;
-  padding: 0;
-  width: 568px;
-  height: 86px;
-  background-color: #766357;
-}
+
 
 .social {
   display: flex;
@@ -642,3 +641,47 @@ h4 {
 }
 
 
+
+.interested h2 {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.interested p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.search-btn-container {
+  text-align: center;
+}
+
+.search-btn {
+  display: block;
+  border: 0;
+  padding: 0;
+  width: 568px;
+  height: 86px;
+  
+  background-color: #766357;
+}
+.map-img {
+  display: inline-block;
+  height: 256px;
+  width: 100%;
+  background-repeat: no-repeat;
+  float: right;
+  background-image: url("/img/map.jpg");  
+  background-position: center;
+/*  background-size: cover;*/
+}
+
+.feature-block-4 {
+  background: #eee;  
+}
+
+.btn-container {
+  position: relative;  
+  display: inline-block;
+  width: 568px;
+}
