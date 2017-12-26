@@ -60,14 +60,15 @@
     <div class="fare">
       <b>Стоимость в сутки (р):</b>
       <div class="input-box">
-        <input type="text" placeholder="от 0" name="price-from">
-        <input type="text" placeholder="до 3000" name="price-to">
+        <label>от <input type="text" value="0" name="price-from"></label>
+        <label>до <input type="text" value="3000" name="price-to"></label>
       </div>
       <div class="filter-range">
         <div class="scale">
-          <div class="bar"></div>
-          <div class="toggle toggle-min"></div>
-          <div class="toggle toggle-max"></div>
+          <div class="bar">
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
         </div>
       </div>
       <button type="button">Показать</button>

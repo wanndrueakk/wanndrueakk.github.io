@@ -742,6 +742,7 @@ sorting h3 {
 .form-hotels {
   position: relative;
   height: 219px;
+  min-width: 768px;
   margin: 0 auto;
 }
 .infrastructure {
@@ -749,28 +750,21 @@ sorting h3 {
   display: inline-block;
   vertical-align: top;
   width: 240px;
-  margin-top: 34px;
+  margin-top: 26px;
   margin-left: 6%;
   border: 0;
 }
 .room-type {
   float: left;
   width: 150px;
-  margin-top: 34px;
+  margin-top: 26px;
   margin-left: 0;
   border: 0;
-}
-.fare {
-  float: right;
-  margin-top: 34px;
-  margin-right: 6%;
-  width: 222px;
-  height: 170px;
 }
 .form-hotels ul {
   list-style: none;
   padding: 0;
-  margin: 5px 0;
+  margin-top: 21px;
 }
 .form-hotels li {
   display: block;
@@ -780,15 +774,16 @@ label[for^="check-"] {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  margin-bottom: 23px;
 }
 label[for^="check-"]::before {
   content: "";
   position: absolute;
   display: inline-block;
   width: 35px;
-  height: 20px;
-  left: 0px;
-  top: 0px;
+  height: 22px;
+  left: -1px;
+  top: 1px;
   
   background-image: url("/img/check.png");
   background-repeat: no-repeat;
@@ -823,4 +818,106 @@ input[type="checkbox"] {
   background-size: cover;
   margin-bottom: -219px;
   z-index: -1;
+}
+.fare {
+  float: right;
+  margin-top: 26px;
+  margin-right: 6%;
+  width: 328px;
+  height: 170px;
+  text-align: center;
+}
+
+.fare input {
+  background: 0;
+  border: 0;
+  padding: 0;
+  width: 70px;
+  height: 30px;
+  font: inherit;
+  color: inherit;
+}
+.fare label {
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-right: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 157px;
+  height: 32px;
+  text-align: right;
+}
+.input-box {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 314px;
+  height: 32px;
+  border: 2px solid white;
+  border-radius: 2px;
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+.input-box::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 22px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.fare button {
+  display: inline-block;
+  width: 137px;
+  height: 37px;
+  background: transparent;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  border: 2px solid white;
+  border-radius: 2px;
+  margin-top:28px;
+}
+.fare button:hover {
+  background: white;
+  color: black;
+}
+.filter-range {
+  display: inline-block;
+}
+.scale {
+  position: relative;
+  width: 294px;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+}
+.bar {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: white;
+}
+.toggle {
+  position: absolute;
+  background: #ababab;
+  width: 4px;
+  height: 4px;
+  border: 8px solid white;
+  border-radius: 50%;
+  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.35);
+  top:-10px;
+  transform: translateX(-9px);
+}
+.toggle-min {
+  left:0;
+}
+.toggle-max {
+  left:100%;
+}
+.toggle:hover {
+  background: #1c4f80;
+  cursor: pointer;
 }
