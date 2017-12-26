@@ -32,100 +32,112 @@
 </header>   
 <main class="index-main container">
   <h1 class="img-main">Сайт по поиску гостиниц в Седоне</h1>
-  <h2>СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
-  <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+  <h2>Седона &ndash; небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+  <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   <section class="feature-block clearfix">
    <div class="feature white">
-  <h3 class="white">Настоящий городок</h3>
+  <h3 class="white">Настоящий<br>городок</h3>
     <p class="white">— №1 —</p>
-    <p class="white">Седона - не аттракцион для туристов, там течет своя жизнь</p>   
+    <p class="white">Седона  не аттракцион для туристов, там течет своя жизнь</p>   
   </div>
   <div class="feature-img feature-img-1"></div>
   </section>
   <section class="feature-bock-2 clearfix">
   <div class="advantage">
-    <img src="/img/house.png" width="75" height="72" title="Lodge">
+    <div class="lodge"></div>
     <h4>Жилье</h4>
-    <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>    
+    <p class="advantage-p">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>    
   </div>
   <div class="advantage">
-    <img src="/img/food.png" width="74" height="70" title="Food">
+    <div class="food"></div>
     <h4>Еда</h4>
-    <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>    
+    <p class="advantage-p">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>    
   </div>
   <div class="advantage">
-    <img src="/img/souvenirs.png" width="64" height="76" title="Souvenirs">
+    <div class="souvenirs"></div>
     <h4>Сувениры</h4>
-    <p>Не только китайского, но и местного производства!</p>    
+    <p class="advantage-p">Не только китайского, но и местного производства!</p>    
   </div>
   </section>
   <section class="feature-block-3 clearfix">
     <div class="feature-img feature-img-2"></div>
     <div class="feature white">
-      <h3 class="white">Там есть мост дьявола</h3>
+      <h3 class="white">Там есть<br>мост дьявола</h3>
       <p class="white">— №2 —</p>
       <p class="white">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
   </section>
    <section class="feature-block-4 clearfix">
     <div class="advantage">
-      <h3>Небольшая площадь</h3>
+      <h3>Небольшая<br>площадь</h3>
       <p>— №3 —</p>
-      <p>ВСЕ достопримечательности<br>находятся очень близко</p>      
+      <p>ВСЕ достопримеча-тельности находятся очень близко</p>      
     </div> 
     <div class="advantage">
-      <h3>Красивая дорога</h3>
+      <h3>Красивая<br>дорога</h3>
       <p>— №4 —</p>
-      <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>      
+      <p>ЕХАТЬ В СЕДОНУ ИЗ<br>ЛАС-ВЕГАСА совсем<br>НЕ СКУЧНО!</p>      
     </div> 
     <div class="advantage">
-      <h3>Мало туристов</h3>
+      <h3>Мало<br>туристов</h3>
       <p>— №5 —</p>
       <p>Большинство едет в гранд каньон и толпится там</p>      
     </div> 
    </section>
   <section class="interested">
     <h2>Заинтересовались?</h2>`
-    <p class="p-interested">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+    <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
   </section>
   <section class="search-btn-container">
     <div class="btn-container">
       <button type="button" class="search-btn">Поиск гостиницы в Седоне</button>
       <form action="https://echo.htmlacademy.ru" method="post" class="main-form">
         <label for="date-arrival">Дата заезда:</label>
-        <input type="date" value="2017-03-24" id="date-arrival" name="date-arr">
+        <input type="text" value="24 АПРЕЛЯ 2017" id="date-arrival" name="date-arr" class="calendar">
         <label for="date-departure">Дата выезда:</label>
-        <input type="date" value="2017-07-04" id="date-departure" name="date-dep">
-        <label for="adults">Врослые:</label>
-        <input type="number" min="0" max="9" placeholder="2" value="2" id="adults" name="adults-number">
-        <label for="children">Дети:</label>
-        <input type="number" min="0" max="9" placeholder="0" id="children" name="children-number">
-        <input type="submit" value="Найти">
+        <input type="text" value="4 ИЮЛЯ 2017" id="date-departure" name="date-dep" class="calendar">
+        <label for="adults">Взрослые:</label>
+          <button type="button" class="minus"></button>
+          <input type="text" min="0" max="9" placeholder="2" value="2" id="adults" name="adults-number" class="number">
+          <button type="button" class="plus"></button>
+        <label for="children" class="label-children">Дети:</label>
+          <button type="button" class="minus"></button>
+          <input type="text" min="0" max="9" placeholder="0" id="children" name="children-number" class="number">
+          <button type="button" class="plus"></button>
+        <input type="submit" value="Найти" class="main-btn">
       </form>
     </div>
   </section>
-  <section class="map-container clearfix">
+</main>
+  <section class="map-container">
     <div class="map-img"></div>
+    
   </section>
 
-</main>
-<footer>
-<h3>#visitSEDONA</h3>
-<h3 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h3>
-<ul class="social">
-  <li>
-    <a href="http://www.twitter.com/sedona/" class="twitter" alt="Твиттер">Твиттер<span></span></a>
-  </li>
-  <li>
-    <a href="http://www.facebook.com/sedona/" class="facebook" alt="Фейсбук">Фейсбук<span></span></a>
-  </li>
-  <li>
-    <a href="http://play.google.com/sedona/" class="play" alt="Скачать на Google Play">Скачать на Google Play<span></span></a>
-  </li>
-</ul>
-<b>WEBSITE by</b>
-<a href="#" class="ha-logo"><img src="/img/HA-logo.png" width="113" height="39" title="HTML Academy" ></a>
+<footer class="main-footer container">
+<div class="footer-column">
+  <h3>#visitSEDONA</h3>
+</div>
+<div class="footer-column">
+  <h3 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h3>
+  <ul class="social">
+    <li>
+      <a href="http://www.twitter.com/sedona/" class="twitter" alt="Твиттер">Твиттер<span></span></a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/sedona/" class="facebook" alt="Фейсбук">Фейсбук<span></span></a>
+    </li>
+    <li>
+      <a href="http://play.google.com/sedona/" class="play" alt="Скачать на Google Play">Скачать на Google Play<span></span></a>
+    </li>
+  </ul>
+</div>
+<div class="footer-column">
+  <b>WEBSITE by</b>
+  <a href="#" class="ha-logo"><img src="/img/HA-logo.png" width="113" height="39" title="HTML Academy" ></a>
+</div>
 </footer>
+<!--
 <article>
   <header class="hotels-header">
     <form action="https://echo.htmlacademy.ru" method="post">
@@ -180,7 +192,9 @@
     </div>
   </main>
 </article>
+-->
 <!--    Just sprite     -->
+<!--
 <i class="sprite sprite-calendar"></i>
 <i class="sprite sprite-calendar-active"></i>
 <i class="sprite sprite-calendar-hover"></i>
@@ -207,6 +221,8 @@
 <i class="sprite sprite-up"></i>
 <i class="sprite sprite-up-active"></i>
 <i class="sprite sprite-up-hover"></i>
+-->
 <!--    Just sprite end    -->
+ <script src="js/script.js"></script>
   </body>
 </html>
