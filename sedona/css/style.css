@@ -620,7 +620,7 @@ sorting h3 {
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.8px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .calendar:hover {
   background-image: url("../img/calendar-hover.png");
@@ -717,4 +717,110 @@ sorting h3 {
 
 .modal-show {
   display: block;
+}
+
+/*   h  o  t  e  l  s    */
+.form-hotels b {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+.form-hotels label {
+  display: block;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: white;  
+}
+.form-hotels {
+  position: relative;
+  height: 219px;
+  margin: 0 auto;
+}
+.infrastructure {
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  width: 240px;
+  margin-top: 34px;
+  margin-left: 6%;
+  border: 0;
+}
+.room-type {
+  float: left;
+  width: 150px;
+  margin-top: 34px;
+  margin-left: 0;
+  border: 0;
+}
+.fare {
+  float: right;
+  margin-top: 34px;
+  margin-right: 6%;
+  width: 222px;
+  height: 170px;
+}
+.form-hotels ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+.form-hotels li {
+  display: block;
+}
+
+label[for^="check-"] {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+label[for^="check-"]::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  left: 0px;
+  top: 0px;
+  
+  background-image: url("/img/check.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#check-1:checked ~ .form-hotels label[for="check-1"]::before, 
+#check-2:checked ~ .form-hotels label[for="check-2"]::before, 
+#check-3:checked ~ .form-hotels label[for="check-3"]::before, 
+#check-4:checked ~ .form-hotels label[for="check-4"]::before, 
+#check-5:checked ~ .form-hotels label[for="check-5"]::before, 
+#check-6:checked ~ .form-hotels label[for="check-6"]::before
+{
+  background-image: url("/img/check-ok-active.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+input[type="checkbox"] {
+  display: none;
+} 
+
+.img-hotels {
+  position: relative;
+  min-width: 768px;
+  max-width: 1200px;
+  height: 219px;
+  margin: 0 auto;
+  font-size: 0;
+  background-image:
+  url("/img/background-blur.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-bottom: -219px;
+  z-index: -1;
 }

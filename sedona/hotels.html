@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Sedona</title>
+  </head>
+
+<body>
+<input type="checkbox" id="check-1" name="infra" checked>
+<input type="checkbox" id="check-2" name="parking">
+<input type="checkbox" id="check-3" name="wifi">
+<input type="checkbox" id="check-4" name="hotel" checked>
+<input type="checkbox" id="check-5" name="motel" checked>
+<input type="checkbox" id="check-6" name="apartment" checked>
+
+<header class="main-header container">
+  <nav class="main-nav clearfix">
+    <div class="logo-block">
+      <a href="index.html" class="logo-container">
+        <img src="img/logo.png" width="67" height="56" title="Sedona logo">
+      </a>
+    </div>
+    <ul class="main-menu">
+      <li>
+        <a href="index.html" alt="Информация о Седоне">Информация</a>
+      </li>
+      <li>
+        <a href="fotos-videos.html" alt="Фото и Видео Седоны">Фото и видео</a>
+      </li>
+      <li>
+        <a href="hotels.html" alt="Гостиницы Седоны">Гостиницы</a>
+      </li>
+      <li>
+        <a href="map.html" alt="Карта штата">Карта штата</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="index-main container">
+  <h1 class="img-hotels">Сайт по поиску гостиниц в Седоне</h1>
+  </main> 
+  <form action="https://echo.htmlacademy.ru" method="post" class="form-hotels container">
+    <div class="infrastructure">
+      <b>Инфраструктура:</b>
+      <ul>
+        <li><label for="check-1">Бассейн</label></li>
+        <li><label for="check-2">Парковка</label></li>
+        <li><label for="check-3">Wi-Fi</label></li>
+      </ul>
+    </div>
+    <div class="room-type">
+      <b>Тип жилья:</b>
+      <ul>
+        <li><label for="check-4">Гостиница</label></li>
+        <li><label for="check-5">Мотель</label></li>
+        <li><label for="check-6">Апартаменты</label></li>  
+      </ul></div>
+    <div class="fare">
+      <b>Стоимость в сутки (р):</b>
+      <div class="input-box">
+        <input type="text" placeholder="от 0" name="price-from">
+        <input type="text" placeholder="до 3000" name="price-to">
+      </div>
+      <div class="filter-range">
+        <div class="scale">
+          <div class="bar"></div>
+          <div class="toggle toggle-min"></div>
+          <div class="toggle toggle-max"></div>
+        </div>
+      </div>
+      <button type="button">Показать</button>
+    </div>
+  </form>
+
+<!--
+ 
+<main class="hotels-main container">
+  <h1 class="visually-hidden">Выбор гостиниц в Седоне.</h1>
+
+  <div class="sorting">
+    <h3>Найдено: 3</h3>
+    <span>Сортировка:</span>
+    <ul class="sorting-types clearfix">
+      <li>
+        <label for="sort-price">По цене</label>
+      </li>
+      <li>
+        <label for="sort-type">По типу</label>
+      </li>
+      <li>
+-->
+<!--
+        <label for="sort-rank">По рейтингу</label>
+      </li>
+    </ul>
+    <ul class="triangles">
+      <li class="up"></li>
+      <li class="down active"></li>
+    </ul>
+  </div>
+</main>
+
+  <footer class="main-footer container">
+  <div class="footer-column">
+    <h3>#visitSEDONA</h3>
+  </div>
+  <div class="footer-column">
+    <h3 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h3>
+    <ul class="social">
+      <li>
+        <a href="http://www.twitter.com/sedona/" class="twitter" alt="Твиттер">Твиттер<span></span></a>
+      </li>
+      <li>
+        <a href="http://www.facebook.com/sedona/" class="facebook" alt="Фейсбук">Фейсбук<span></span></a>
+      </li>
+      <li>
+        <a href="http://play.google.com/sedona/" class="play" alt="Скачать на Google Play">Скачать на Google Play<span></span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <b>WEBSITE by</b>
+    <a href="#" class="ha-logo"><img src="/img/HA-logo.png" width="113" height="39" title="HTML Academy" ></a>
+  </div>
+  </footer>
+  <script src="js/script.js"></script>
+-->
+  </body>
+</html>
