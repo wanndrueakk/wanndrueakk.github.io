@@ -7,16 +7,15 @@
     <title>Sedona</title>
   </head>
   <body>
+<a href="index.html">
+  <img style="margin-left:50%;transform:translateX(-50%);" src="/img/logo-138-70.png" width="138" height="70">
+</a>
+    
 <header class="main-header container">
   <nav class="main-nav clearfix">
-    <div class="logo-block">
-      <a href="index.html" class="logo-container">
-        <img src="img/logo.png" width="67" height="56" title="Sedona logo">
-      </a>
-    </div>
     <ul class="main-menu">
       <li>
-        <a href="index.html" alt="Информация о Седоне">Информация</a>
+        <a alt="Информация о Седоне">Информация</a>
       </li>
       <li>
         <a href="fotos-videos.html" alt="Фото и Видео Седоны">Фото и видео</a>
@@ -29,7 +28,7 @@
       </li>
     </ul>
   </nav>
-</header>   
+</header> 
 <main class="index-main container">
   <h1 class="img-main">Сайт по поиску гостиниц в Седоне</h1>
   <h2>Седона &ndash; небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
@@ -98,7 +97,7 @@
         <input type="text" value="4 ИЮЛЯ 2017" id="date-departure" name="date-dep" class="calendar">
         <label for="adults">Взрослые:</label>
           <button type="button" class="minus"></button>
-          <input type="text" min="0" max="9" placeholder="2" value="2" id="adults" name="adults-number" class="number">
+          <input type="text" data-min="1" data-max="20" placeholder="2" value="2" id="adults" name="adults-number" class="number">
           <button type="button" class="plus"></button>
         <label for="children" class="label-children">Дети:</label>
           <button type="button" class="minus"></button>
@@ -109,6 +108,68 @@
     </div>
   </section>
 </main>
+    <script>
+    function catalogItemCounter(field){
+			
+			var fieldCount = function(el) {
+
+				var 
+					// Мин. значение
+					min = el.data("min") || false,
+
+					// Макс. значение
+					max = el.data("max") || false, 
+
+					// Кнопка уменьшения кол-ва
+					dec = el.prev(".dec"), 
+
+					// Кнопка увеличения кол-ва
+					inc = el.next(".inc");
+
+				function init(el) {
+					if(!el.attr("disabled")){
+						dec.on("click", decrement);
+						inc.on("click", increment);
+					}
+
+					// Уменьшим значение
+					function decrement() {
+						var value = parseInt(el[0].value);
+						value--;
+
+						if(!min || value >= min) {
+							el[0].value = value;
+						}
+					};
+
+					// Увеличим значение
+					function increment() {
+						var value = parseInt(el[0].value);
+							
+						value++;
+
+						if(!max || value <= max) {
+							el[0].value = value++;
+						}
+					};
+					
+				}
+
+				el.each(function() {
+					init($(this));
+				});
+			};
+
+			$(field).each(function(){
+				fieldCount($(this));
+			});
+		}
+    
+catalogItemCounter(".fieldCount");
+    
+    </script> 
+ 
+ 
   <section class="map-container">
     <div class="map-img"></div>
     

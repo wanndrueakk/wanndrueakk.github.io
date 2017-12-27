@@ -97,8 +97,17 @@ b,
   text-align: left;
   letter-spacing: 0.8px;
 }
+.main-menu a[href]:hover {
+  color: #81b3d2;
+}
+.main-menu a[href]:active {
+  color: rgba(0,0,0,0.3);
+}
+.main-menu a:not([href]) {
+  color: #766357;
+}
 .main-header {
-  position: relative;
+  margin-top:-73px;
 }
 
 .main-menu li:nth-child(n+3) a {
@@ -421,8 +430,8 @@ b,
 .social a:active {
   background-color: #5496bd;
 }
-.social a:active + span {
-    opacity: 0.3;
+.social a:active span {
+  opacity: 0.3;
 }
 
 
