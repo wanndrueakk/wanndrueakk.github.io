@@ -5,22 +5,26 @@
 </head>
 <body>
   <style>
-    input {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .flex-container {
+      display: flex;
+      width: 100%;
+      height: 70px;
+      background: rgba(0,0,0,0.5);
     }
-    input::before {
-      content: "2222";
-      position: absolute;
-      display: inline-block;
+    .f1 {
       width: 100px;
-      height: 100px;
       background: red;
+    }
+    .f2 {
+      background: blue;
+      width: 100%;
     }
   </style>
   
-  <input type="button">
+  <div class="flex-container">
+    <div class="f1"></div>
+    <div class="f2"></div>
+  </div>
   
 </body>
 </html>

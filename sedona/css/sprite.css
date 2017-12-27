@@ -1,0 +1,137 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-check {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -5px;
+}
+
+.sprite-check-dis {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -37px;
+}
+
+.sprite-check-hover {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -69px;
+}
+
+.sprite-check-ok {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -101px;
+}
+
+.sprite-check-ok-active {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -133px;
+}
+
+.sprite-check-ok-dis {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -165px;
+}
+
+.sprite-dot {
+    width: 2px;
+    height: 1px;
+    background-position: -5px -197px;
+}
+
+.sprite-down {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -208px;
+}
+
+.sprite-down-active {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -228px;
+}
+
+.sprite-down-hover {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -248px;
+}
+
+.sprite-f {
+    width: 10px;
+    height: 19px;
+    background-position: -5px -268px;
+}
+
+.sprite-minus {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -297px;
+}
+
+.sprite-minus-active {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -310px;
+}
+
+.sprite-minus-hover {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -323px;
+}
+
+.sprite-plus {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -336px;
+}
+
+.sprite-plus-active {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -357px;
+}
+
+.sprite-plus-hover {
+    width: 11px;
+    height: 11px;
+    background-position: -5px -378px;
+}
+
+.sprite-star {
+    width: 18px;
+    height: 17px;
+    background-position: -5px -399px;
+}
+
+.sprite-t {
+    width: 17px;
+    height: 15px;
+    background-position: -5px -426px;
+}
+
+.sprite-up {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -451px;
+}
+
+.sprite-up-active {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -471px;
+}
+
+.sprite-up-hover {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -491px;
+}

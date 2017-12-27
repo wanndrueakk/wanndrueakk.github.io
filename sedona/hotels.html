@@ -38,10 +38,9 @@
     </ul>
   </nav>
 </header>
-<main class="index-main container">
+<div class="hotels-form">
   <h1 class="img-hotels">Сайт по поиску гостиниц в Седоне</h1>
-  </main> 
-  <form action="https://echo.htmlacademy.ru" method="post" class="form-hotels container">
+  <form action="https://echo.htmlacademy.ru" method="post" class="form-hotels container clearfix">
     <div class="infrastructure">
       <b>Инфраструктура:</b>
       <ul>
@@ -56,7 +55,8 @@
         <li><label for="check-4">Гостиница</label></li>
         <li><label for="check-5">Мотель</label></li>
         <li><label for="check-6">Апартаменты</label></li>  
-      </ul></div>
+      </ul>
+    </div>
     <div class="fare">
       <b>Стоимость в сутки (р):</b>
       <div class="input-box">
@@ -74,59 +74,114 @@
       <button type="button">Показать</button>
     </div>
   </form>
-
-<!--
- 
-<main class="hotels-main container">
-  <h1 class="visually-hidden">Выбор гостиниц в Седоне.</h1>
-
-  <div class="sorting">
-    <h3>Найдено: 3</h3>
-    <span>Сортировка:</span>
-    <ul class="sorting-types clearfix">
-      <li>
-        <label for="sort-price">По цене</label>
-      </li>
-      <li>
-        <label for="sort-type">По типу</label>
-      </li>
-      <li>
--->
-<!--
-        <label for="sort-rank">По рейтингу</label>
-      </li>
+  </div>
+  
+  <main class="hotels-main container">
+    <nav class="hotels-nav">
+    
+    <ul class="sorting clearfix">
+      <li>Найдено: 3</li>
+      <li>Сортировка</li>
+      <li><a>По цене</a></li>
+      <li><a href="#" class="underscore">По типу</a></li>
+      <li><a href="#" class="underscore">По рейтингу</a></li>
+      <li class="triangle triangle-down triangle-selected"></li>
+      <li class="triangle triangle-up "></li>
     </ul>
-    <ul class="triangles">
-      <li class="up"></li>
-      <li class="down active"></li>
-    </ul>
-  </div>
-</main>
+    </nav>
+    <article class="hotels">
+      <section class="content-block clearfix">
+        <img src="img/preview-1.jpg">
+        <div class="hotel-description">
+          <b class="title">Amara Resort &amp; SPA</b>
+          <div class="inner-column-1">
+            <p>Гостиница</p>
+            <a href="#" class="more">Подробнее</a>
+          </div>
+          <div class="inner-column-2">
+            <p>От 4000 р.</p>
+            <a href="#" class="book">Забронировать</a>
+          </div>
+        </div>
+        <div class="right-column">
+          <ul class="stars">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <a href="#">Рейтинг: 8,5</a>
+        </div>
+      </section>
+      <section class="content-block clearfix">
+        <img src="img/preview-2.jpg">
+        <div class="hotel-description">
+          <b class="title">Desert Quail Inn</b>
+          <div class="inner-column-1">
+            <p>Мотель</p>
+            <a href="#" class="more">Подробнее</a>
+          </div>
+          <div class="inner-column-2">
+            <p>От 3000 р.</p>
+            <a href="#" class="book">Забронировать</a>
+          </div>
+        </div>
+        <div class="right-column">
+          <ul class="stars">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <a href="#">Рейтинг: 8,9</a>
+        </div>
+      </section>
+      <section class="content-block clearfix">
+        <img src="img/preview-3.jpg">
+        <div class="hotel-description">
+          <b class="title">Villas at Poco Diablo</b>
+          <div class="inner-column-1">
+            <p>Апартаменты</p>
+            <a href="#" class="more">Подробнее</a>
+          </div>
+          <div class="inner-column-2">
+            <p>От 2000 р.</p>
+            <a href="#" class="book">Забронировать</a>
+          </div>
+        </div>
+        <div class="right-column">
+          <ul class="stars">
+            <li></li>
+            <li></li>
+          </ul>
+          <a href="#">Рейтинг: 9,2</a>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="hotels-footer container">
+<div class="footer-column">
+  <h3>#visitSEDONA</h3>
+</div>
+<div class="footer-column">
+  <h3 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h3>
+  <ul class="social">
+    <li>
+      <a href="http://www.twitter.com/sedona/" class="twitter" alt="Твиттер">Твиттер<span></span></a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/sedona/" class="facebook" alt="Фейсбук">Фейсбук<span></span></a>
+    </li>
+    <li>
+      <a href="http://play.google.com/sedona/" class="play" alt="Скачать на Google Play">Скачать на Google Play<span></span></a>
+    </li>
+  </ul>
+</div>
+<div class="footer-column">
+  <b>WEBSITE by</b>
+  <a href="#" class="ha-logo"><img src="/img/HA-logo.png" width="113" height="39" title="HTML Academy" ></a>
+</div>
+</footer>
 
-  <footer class="main-footer container">
-  <div class="footer-column">
-    <h3>#visitSEDONA</h3>
-  </div>
-  <div class="footer-column">
-    <h3 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h3>
-    <ul class="social">
-      <li>
-        <a href="http://www.twitter.com/sedona/" class="twitter" alt="Твиттер">Твиттер<span></span></a>
-      </li>
-      <li>
-        <a href="http://www.facebook.com/sedona/" class="facebook" alt="Фейсбук">Фейсбук<span></span></a>
-      </li>
-      <li>
-        <a href="http://play.google.com/sedona/" class="play" alt="Скачать на Google Play">Скачать на Google Play<span></span></a>
-      </li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <b>WEBSITE by</b>
-    <a href="#" class="ha-logo"><img src="/img/HA-logo.png" width="113" height="39" title="HTML Academy" ></a>
-  </div>
-  </footer>
   <script src="js/script.js"></script>
--->
   </body>
 </html>
