@@ -63,7 +63,7 @@ input[type="radio"] {
   float:left;
   width: 161px;
   height: 65px;
-  background: url("/img/nerds-logo.png") no-repeat 0 0;
+  background: url("../img/nerds-logo.png") no-repeat 0 0;
 }
 .header-logo:hover {
   opacity: 0.8;
@@ -109,7 +109,7 @@ input[type="radio"] {
   left: 2px;
   width: 16px;
   height: 16px;
-  background: url("/img/cart-icon.png") no-repeat 0 0;
+  background: url("../img/cart-icon.png") no-repeat 0 0;
   opacity: 0.3;
 }
 .main-navigation a {
@@ -198,13 +198,13 @@ input[type="radio"] {
   height: 460px;
 }
 .slide-1 .slider-img {
-  background: url("/img/slide1.png") no-repeat 30px 21px;
+  background: url("../img/slide1.png") no-repeat 30px 21px;
 }
 .slide-2 .slider-img {
-  background: url("/img/slide2.png") no-repeat 95px 3px;
+  background: url("../img/slide2.png") no-repeat 95px 3px;
 }
 .slide-3 .slider-img {
-  background: url("/img/slide3.png") no-repeat 0 21px;
+  background: url("../img/slide3.png") no-repeat 0 21px;
 }
 [class^="slide-"] {
   display: none;
@@ -379,21 +379,21 @@ input[type="radio"] {
   margin-left: 0;
 }
 .htmlacademy div {
-  background-image: url("/img/logo-1.png");
+  background-image: url("../img/logo-1.png");
   background-position: 50% 65%;
 }
 .borodinski div {
-  background-image: url("/img/logo-2.png");  
+  background-image: url("../img/logo-2.png");  
 }
 .pink div {
-  background-image: url("/img/logo-3.png");
+  background-image: url("../img/logo-3.png");
   
 }
 .mishka {
   margin-right: 0px; 
 }
 .mishka div {
-  background-image: url("/img/logo-4.png");
+  background-image: url("../img/logo-4.png");
   background-position: 50% 65%;
 }
 .client:nth-child(-n+3)::after {
@@ -407,7 +407,7 @@ input[type="radio"] {
 }
 .map {
   position: relative;
-  background-image: url("/img/map.jpg");
+  background-image: url("../img/map.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -417,7 +417,7 @@ input[type="radio"] {
   height: 190px;
   top:90px;
   left:50%;
-  background: url("/img/map-marker.png") no-repeat 0 0;
+  background: url("../img/map-marker.png") no-repeat 0 0;
   -webkit-transform: translateX(100px);
       -ms-transform: translateX(100px);
           transform: translateX(100px);
@@ -476,13 +476,13 @@ input[type="radio"] {
   margin-right: 10px;
 }
 .vk {
-  background-image: url("/img/vk.png");
+  background-image: url("../img/vk.png");
 }
 .f {
-  background-image: url("/img/f.png");
+  background-image: url("../img/f.png");
 }
 .i {
-  background-image: url("/img/i.png");
+  background-image: url("../img/i.png");
 }
 
 
@@ -548,7 +548,7 @@ input[type="radio"] {
   content: "";
   width: 21px;
   height: 21px;
-  background: url("/img/close-cross.png") no-repeat 0 0;
+  background: url("../img/close-cross.png") no-repeat 0 0;
   opacity: 0.3;
   right: 88px;
   top: 75px;
@@ -786,7 +786,7 @@ textarea {
   width:9px;
   height:9px;
   margin-top: 17px;
-  background: url("/img/sort-down.png") no-repeat 0 0;
+  background: url("../img/sort-down.png") no-repeat 0 0;
   opacity: 0.2;
   margin-right: 20px;
 }
@@ -797,7 +797,7 @@ textarea {
   width:9px;
   height:9px;
   margin-top: 17px;
-  background: url("/img/sort-up.png") no-repeat 0 0;
+  background: url("../img/sort-up.png") no-repeat 0 0;
   opacity: 0.2;
   margin-right: 0px;
 }
@@ -887,7 +887,7 @@ textarea {
   top:-10px;
   width:20px;
   height:23px;
-  background:url("/img/slider-round.png") no-repeat 0 0;
+  background:url("../img/slider-round.png") no-repeat 0 0;
 }
 
 .range-toggle-min {
@@ -935,7 +935,7 @@ textarea {
   left:0px;
   width: 27px;
   height: 23px;
-  background-image: url("/img/sprite.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   width: 23px;
   height: 23px;
@@ -978,7 +978,7 @@ textarea {
   left:0px;
   width: 27px;
   height: 23px;
-  background-image: url("/img/sprite.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   width: 25px;
   height: 25px;
@@ -1127,7 +1127,7 @@ textarea {
   left:0;
   width: 360px;
   height: 40px;
-  background: url("/img/browser.png") no-repeat 0 0; 
+  background: url("../img/browser.png") no-repeat 0 0; 
   opacity: 0.12;
 }
 
