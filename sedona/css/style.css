@@ -218,6 +218,7 @@ b,
   background: #81b3d2;
 }
 .feature:first-of-type {
+  float: left;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,6 +285,7 @@ b,
   margin-top: 20px;
 }
 .feature:nth-of-type(2) {
+  float: right;
   display: flex;
   align-items: center;
   justify-content: center;
