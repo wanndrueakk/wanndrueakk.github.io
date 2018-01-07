@@ -1,16 +1,13 @@
 @font-face {
   font-weight: bold;
-  font-family: "Gilroy ExtraBold";
-  font-style: normal;
+  font-family: "Gilroy";
 
-  src: url("../fonts/gilroyextrabold.woff") format("woff"),
-  url("../fonts/gilroyextrabold.woff2") format("woff2");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
 @font-face {
-  font-weight: lighter;
-  font-family: "Gilroy Light";
-  font-style: normal;
+  font-weight: normal;
+  font-family: "Gilroy";
 
   src: url("../fonts/gilroylight.woff") format("woff"),
   url("../fonts/gilroylight.woff2") format("woff2");
@@ -27,7 +24,7 @@
 
 @font-face {
   font-weight: lighter;
-  font-family: "Open Sans Light";
+  font-family: "Open Sans";
   font-style: normal;
 
   src: url("../fonts/opensanslight.woff") format("woff"),
@@ -46,7 +43,8 @@ body {
 h1,
 h2 {
   font-size: 47px;
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
   color: black;
 }
 
@@ -420,7 +418,8 @@ h2 {
 .footer-links a {
   font-size: 18px;
   line-height: 22px;
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -872,7 +871,7 @@ section h1 {
 /*        Сортировка           */
 .sorting {
   display: inline-block;
-  width: 760px;
+  width: 750px;
   height: 70px;
   padding-left:66px;
   line-height: 70px;
@@ -1185,7 +1184,8 @@ section h1 {
   text-decoration: none;
   background-color: transparent;
   font-size: 18px;
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
   text-align: center;
   color: black;
   line-height: 18px;
@@ -1675,7 +1675,8 @@ label[for^="mn"] {
   background-color: transparent;
   color: black;
   font-size: 18px;
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
   text-align: center;
   color: black;
   line-height: 18px;
