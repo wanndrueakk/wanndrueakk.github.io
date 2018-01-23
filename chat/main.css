@@ -1,0 +1,22 @@
+
+.chat {
+  display: inline-block;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background: rgba(0,0,0,0.5);
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  background: rgba(0,255,0,0.3);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: rgba(0,0,255,0.3);
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Responsive</title>
+</head>
+<body>
+  <ul>
+    <li><a href="responsive1.html">Пример 1</a></li>
+    <li><a href="responsive2.html">Пример 2</a></li>
+    <li><a href="responsive3.html">Пример 3</a></li>
+    <li><a href="responsive4.html">Пример 4</a></li>
+    <li><a href="responsive5.html">Пример 5</a></li>
+  </ul>
+  <form oninput="result.value=(cm.value*1vw)">
+    <p>Введите длину в сантиметрах: 
+    <input type="number" name="cm" autofocus></p>
+    <p>Длина в дюймах: <output name="result">0</output></p>
+  </form>
+  
+  <style>
+    body {
+      margin: calc(100% - 500px);
+      background: rgba(calc(3 * 20),0,0,1);
+      font-size: 5vw;
+      background: hsl(calc(7*2),55%,70%);
+    }
+
+  </style>
+</body>
+</html>
