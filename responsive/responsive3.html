@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Responsive</title>
+</head>
+<body>
+
+  <style>
+    .f {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: stretch;
+      width: 50%;
+      height: 50%;
+      background: lightgray;
+    }
+    .f:before {
+      content: "";
+      width: 20px;
+      align-self: stretch;
+      background: transparent;
+      
+    }
+    [class^="d"] {
+      background: red;
+    }
+    .d2 {
+      flex-basis: 20px;
+      flex-grow: 0;
+    
+    }
+    .d1 {
+      flex-basis: 70px;
+      order: 0;
+      background: grey;
+      flex-grow: 0;
+/*      flex-shrink: 0;*/
+
+    }
+    
+  </style>
+        
+  <div class="f">
+    <div class="d1">11</div>
+    <div class="d2">22</div>
+  </div>
+  
+  
+  
+  
+</body>
+</html>

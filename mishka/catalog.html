@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка - интернет-магазин аксессуаров ручной работы для дома" width="86" height="35">
+      </a>
+      <nav class="page-header__navigation main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="index.html" class="site-list__link">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html" class="site-list__link">Форма</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="catalog">
+      <h2 class="catalog__title">Каталог товаров</h2>
+      <div class="catalog__item item">
+        <img class="item__image" src="./img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик">
+        <div class="item__text-block">
+          <h3 class="item__title">Зайчик-попрыгайчик</h3>
+          <p class="item__text">Рост 30 см, вес 200 г</p>
+          <div class="item__buy buy">
+            <div class="buy__price">1 200 руб.</div>
+            <button class="buy__button button" type="button">Купить</button>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__item item">
+        <img class="item__image" src="./img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+        <div class="item__text-block">
+          <h3 class="item__title">Корзинка для белья</h3>
+          <p class="item__text">Диаметр 15 см, высота 10 см</p>
+          <div class="item__buy buy">
+            <div class="buy__price">690 руб.</div>
+            <button class="buy__button button" type="button">Купить</button>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__item item">
+        <img class="item__image" src="./img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+        <div class="item__text-block">
+          <h3 class="item__title">Большая корзинка для игрушек</h3>
+          <p class="item__text">Диаметр 30 см, высота 30 см</p>
+          <div class="item__buy buy">
+            <div class="buy__price">1 500 руб.</div>
+            <button class="buy__button button" type="button">Купить</button>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__item video">
+        <div class="video__title-block">
+          <a href="#" class="video__icon video__icon--camera"></a>
+          <h2 class="video__title">Процесс производства</h2>
+        </div>
+        <div class="video__stream">
+          <img class="video-stream--bowl" src="./img/video-mobile@1x.jpg" alt="Видео с производства">
+          <img class="video-stream--play" src="./img/icon-play.svg" alt="Запустить">
+        </div>
+        <div class="video__text-box">
+          <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="video__button button">Сделать заказ</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях:</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__icon social__icon--instagram" href="instagram.html">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--facebook" href="facebook.html">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--twitter" href="twitter.html">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo" src="./img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
