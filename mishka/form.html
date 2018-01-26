@@ -78,39 +78,39 @@
         </fieldset>
         <fieldset class="filter-block">
           <legend class="filter-block__title">ФИО</legend>
-          <div class="filter-block__line">
+          <div class="filter-block__line filter-block__line--text">
             <label for="text-1" class="filter-block__label filter-block__label--name">Имя:</label>
             <input type="text" id="text-1" name="name" class="filter-block__input filter-block__input--text" placeholder="Введите ваше имя*">
           </div>
-          <div class="filter-block__line">
+          <div class="filter-block__line filter-block__line--text">
             <label for="text-2" class="filter-block__label filter-block__label--name">Фамилия:</label>
             <input type="text" id="text-2" name="surname" class="filter-block__input filter-block__input--text" placeholder="Укажите фамилию*">
           </div>
-          <div class="filter-block__line">
+          <div class="filter-block__line filter-block__line--text">
             <label for="text-3" class="filter-block__label filter-block__label--name">Отчество:</label>
             <input type="text" id="text-3" name="patronymic" class="filter-block__input filter-block__input--text" placeholder="Отчество, если желаете">
           </div>
         </fieldset>
         <fieldset class="filter-block">
           <legend class="filter-block__title">Тел</legend>
-          <div class="filter-block__line">
+          <div class="filter-block__line  filter-block__line--text filter-block__line--phone">
             <label for="text-phone" class="filter-block__label filter-block__label--phone-email">Телефон:</label>
-            <input type="text" id="text-phone" name="phone" class="filter-block__input filter-block__input--text icon icon--phone" placeholder="+7 ХХХ ХХ ХХ*">
+            <input type="text" id="text-phone" name="phone" class="filter-block__input filter-block__input--text filter-block__input--phone-email" placeholder="+7 ХХХ ХХ ХХ*">
           </div>
         </fieldset>
         <fieldset class="filter-block">
           <legend class="filter-block__title">E-mail</legend>
-          <div class="filter-block__line">
+          <div class="filter-block__line filter-block__line--text filter-block__line--email">
             <label for="text-phone" class="filter-block__label filter-block__label--phone-email">E-mail:</label>
-            <input type="text" id="text-phone" name="email" class="filter-block__input filter-block__input--text icon icon--envelope" placeholder="Ваш Email*">
+            <input type="text" id="text-phone" name="email" class="filter-block__input filter-block__input--text filter-block__input--phone-email" placeholder="Ваш Email*">
           </div>
         </fieldset>
 
         <fieldset class="filter-block">
           <legend class="filter-block__title">Доп</legend>
           <div class="filter-block__line">
-            <textarea id="comments" cols="30" rows="10" name="additional-comments" class="filter-block__textarea comments" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            <small class="comments__warning">*Поля обязательны для заполнения</small>
+            <textarea id="comments" cols="22" rows="10" name="additional-comments" class="filter-block__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <small class="filter-block__small">*Поля обязательны для заполнения</small>
           </div>
         </fieldset>
         <input type="submit" class="filter-block__button button" value="Отправить заказ">
