@@ -1,0 +1,23 @@
+:root {
+  background: red;
+}
+body {
+  margin: 0;
+  min-width: 0;
+}   
+
+@media (min-width: 320px) {
+  body { 
+    background: green url("mishka-index-mobile.jpg") no-repeat 50% 0; 
+  }
+}
+@media (min-width: 764px) {
+  body { 
+  background: blue url("mishka-index-tablet.jpg") no-repeat 50% 0;
+  }
+}
+@media (min-width: 1200px) {
+  body { 
+  background: blue url("mishka-index-desktop.jpg") no-repeat 50% 0;
+  }
+}

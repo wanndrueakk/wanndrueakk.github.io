@@ -1,0 +1,20 @@
+section {
+  display: flex;
+  flex-wrap:wrap-reverse;
+  flex-direction: row;
+  width: 260px;
+  height: 600px;
+  background: rgba(34,23,67,0.3);
+  justify-content:flex-start;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,244,233,0.7);
+}
+
+span {
+  margin-top: auto;
+}

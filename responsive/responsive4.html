@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Responsive</title>
+</head>
+<body>
+
+  <style>
+    
+/*    потянуть ширину экрана       */
+    
+    @media (min-width: 300px) {
+      body { 
+        background: hsl(100,50%,50%); 
+      }
+    }
+    @media (min-width: 500px) {
+      body { 
+      background: blue;
+      }
+    }
+    @media (min-width: 700px) {
+      body::before {
+        content: "300px";
+      }
+      body { 
+      background: olive;
+      }}
+    @media (min-width: 900px) {
+      body { 
+      background: darksteelgrey;
+      }}
+    @media (min-width: 1100px) {
+        body { 
+    background: cyan;
+    }
+      }
+    @media (min-width: 1300px) {
+      body { 
+      background: magenta;
+      }
+      }
+  </style>
+        
+  <div class="f">
+    <div class="d1">11</div>
+    <div class="d2">22</div>
+  </div>
+  
+  
+  
+  
+</body>
+</html>

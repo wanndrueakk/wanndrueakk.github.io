@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Grid layout</title>
+</head>
+  <style>
+    .sample {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 2fr 3fr;
+    }
+    .sample__item {
+/*      width: 100px;*/
+      height: 100px;
+      border-radius: 20%;
+      background: blue;
+    }
+    .sample__item:first-child {
+      background: #009900;
+    }
+    .sample__item:last-child {
+      background: red;
+    }
+    .sample__item:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+/*
+      grid-row-start: 6;
+      grid-row-end: 7;
+*/
+    }
+    .sample__item:last-child {
+      grid-column-start: 1;
+      grid-column-end: 4;
+/*
+      grid-row-start: 1;
+      grid-row-end: 2;
+*/
+    }
+  </style>
+<body>
+  <div class="sample">
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+    <div class="sample__item"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Мишка - интернет-магазин аксессуаров ручной работы для дома">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/all.css">
+    <title>HTML Academy: Мишка</title>
+    <base href="https://htmlacademy-adaptive.github.io/570683-mishka/4/">
+</head>
+  <body>
+    <header class="page-header">
+      <a href="#" class="page-header__logo">
+        <img src="img/logo-mobile.svg" alt="Logo" width="86" height="36">
+      </a>
+      <nav class="nav-mock">
+        <ul class="page-header__list page-header__list--main-nav">
+          <li class="page-header__item"><a class="page-header__link page-header__link--catalog" href="#">Каталог товаров</a></li>
+          <li class="page-header__item page-header__item--knotting"><a class="page-header__link page-header__link--knotting" href="#">Вязание на заказ</a></li>
+        </ul>
+      </nav>
+      <div class="user-block">
+        <ul class="page-header__list page-header__list--user-block">
+          <li class="page-header__item page-header__item--search"><a class="page-header__link page-header__link--search" href="#"><span class="page-header__item-icon page-header__item-icon--search"></span>Поиск по сайту</a></li>
+          <li class="page-header__item page-header__item--cart"><a class="page-header__link page-header__link--cart" href="#"><span class="page-header__item-icon page-header__item-icon--cart"></span>Корзина: пока пуста</a></li>
+        </ul>
+
+      </div>
+      <span class="announce">Бесплатная доставка по России</span>
+      <aside class="hot">
+        <ul>
+          <li><a href="#">Новые постуления</a></li>
+          <li><a href="#">Распродажа</a></li>
+        </ul>
+      </aside>
+    </header>
+
+    <main class="page-main">
+      <section class="page-main__promo">
+        <h1 class="page-main__header">Милые штуки ручной <br>работы для дома</h1>
+      </section>
+      <nav class="page-main__categories">
+        <h2 class="page-main__categories-title">Основные категории:</h2>
+        <ul class="page-main__categories-list">
+          <li class="page-main__categories-item page-main__categories-item--interior">
+            <a href="#" class="page-main__categories-link page-main__categories-link--interior">Предметы интерьера</a>
+          </li>
+          <li class="page-main__categories-item page-main__categories-item--toys">
+            <a href="#" class="page-main__categories-link page-main__categories-link--toys">Детские игрушки</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="page-main__featured featured">
+        <header class="featured__header-wrapper">
+          <h2 class="featured__header">Вязаные корзинки</h2>
+          <b class="featured__subheader">Товар <br>недели</b>
+        </header>
+        <div class="featured__columns">
+          <div class="featured__wrapper">
+            <p class="featured__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <div class="featured__table">
+              <div class="column-group">
+                <div class="column column-1"></div>
+                <div class="column column-2"></div>
+              </div>
+              <div class="featured__row">
+              <div class="featured__value">Цвет:</div>
+                <div class="featured__value">«Тиффани»/серый</div>
+              </div>
+              <div class="featured__row">
+                <div class="featured__value">Диаметр:</div>
+                <div class="featured__value">25 см</div>
+              </div>
+              <div class="featured__row">
+                <div class="featured__value">Высота:</div>
+                <div class="featured__value">15 см</div>
+              </div>
+            </div>
+            <div class="featured__price">Цена: 990 руб.</div>
+            <button class="featured__button button">Заказать</button>
+          </div>
+          <img class="featured__image" src="http://placehold.it/525x636" alt="triple-set-mobile" width="260" height="315">
+        </div>
+      </section>
+      <div class="page-main__about about">
+        <h2 class="about__header">Коротко о нас:</h2>
+        <div class="about__wrapper">
+          <ul class="about__list">
+            <li class="about__block about__block--materials">Экологически<br>чистые материалы</li>
+            <li class="about__block about__block--style">Скандинавский стиль<br>по российской цене</li>
+            <li class="about__block about__block--likes">Увеличивает лайки<br>на фотографиях</li>
+          </ul>
+          <ul class="about__list">
+            <li class="about__block about__block--love">Связано вручную с<br>любовью и умилением</li>
+            <li class="about__block about__block--local">Поддержка отечественного производителя</li>
+            <li class="about__block about__block--gift">Поставляется в<br>подарочной упаковке</li>
+          </ul>
+        </div>
+      </div>
+      <section class="page-main__reference reference">
+        <div class="reference__wrapper slider">
+          <h2 class="reference__title">Отзывы</h2>
+          <quote class="reference__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</quote>
+          <div class="reference__name-wrapper">
+            <name class="reference__name">Анастасия Красильникова</name>
+            <a class="reference__link" href="#">@misssssiskras</a>
+          </div>
+          <div class="reference__buttons">
+            <button type="button" class="reference__prev button">Предыдущий отзыв</button>
+            <button type="button" class="reference__next button">Следующий отзыв</button>
+          </div>
+          <button type="button" class="reference__button button">Написать</button>
+        </div>
+      </section>
+      <section class="page-main__contacts contacts">
+        <h2 class="contacts__header">Контакты</h2>
+        <div class="contacts__table">
+          <div class="contacts__row">
+            <div class="contacts__value">e-mail:</div>
+            <div class="contacts__value"><a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+          </div>
+          <div class="contacts__row">
+            <div class="contacts__value">адрес:</div>
+            <div class="contacts__value contacts__value--address">г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</div>
+          </div>
+        </div>
+        <div class="map__canvas">
+          <img class="map__img" src="./img/map-mobile@1x.jpg" alt="Карта" width="320" height="457">
+        </div>
+        <a class="map__button button" href="feedback.html">Напишите нам</a>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <h2 class="page-footer__title">Подписывайтесь на нас в соцсетях:</h2>
+      <a href="index.html" class="page-footer__logo">
+        <img src="img/logo-mobile.svg" alt="">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__icon social__icon--instagram" href="instagram.html">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--facebook" href="facebook.html">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--twitter" href="twitter.html">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo" src="./img/htmlacademy.svg" alt="HTML Academy" width="30" height="40">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
