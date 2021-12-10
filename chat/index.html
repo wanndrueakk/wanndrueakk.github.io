@@ -9,7 +9,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
         <link rel="icon" type="image/png" href="/static/img/favicon.png">
-        <style>
+		<style>
             code,tt {
                 font-family: Menlo,Consolas,"Courier New",monospace;
                 white-space: nowrap;
@@ -261,23 +261,500 @@
                 margin-top: 1.5em;
                 margin-bottom: .5em
             }
+			
+			
+				header, nav, ul, li, a, a[href], span, .active, .like {
+					transition: all 0.5s ease;
+				}
+
+				body,html,ul,p {
+					margin: 0;
+					padding: 0;
+					font-size: 14px;
+					line-height: 22px;
+					color: #333333;
+					font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+				}
+
+				a {
+					text-decoration: none;
+					color: white;
+					letter-spacing: 1px;
+					font-family: Consolas,monospace;
+				}
+
+				.logo {
+					float: left;
+					margin: 0 20px;
+					font-family: Georgia, 'Century Schoolbook L', Serif;
+					padding-top: 20px;
+				}
+
+				.logo span {
+					font-size: 20px;
+					color: #fff;
+					font-weight: bold;
+					font-style: italic;
+				}
+
+				.logo p {
+					color: #e5e4e2;
+					font-size: 13px
+				}
+
+				header {
+					position: fixed;
+					width: 100%;
+					height: 80px;
+					z-index: 1;
+					background: rgba(0,0,0,0.5);
+					z-index: 2;
+				}
+
+				label[for="cl1"] {
+					float: right;
+					width: 20px;
+					height: 20px;
+					margin-top: 70px;
+					margin-right: 10px;
+					background: red;
+					position: relative;
+				}
+
+				header nav {
+					margin-left: 270px;
+					z-index: 0;
+				}
+
+				header nav::after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+
+				header nav ul {
+					list-style: none;
+				}
+
+				header nav ul li {
+					float: left;
+				}
+
+				header nav ul li a {
+					display: block;
+					vertical-align: top;
+					height: 80px;
+					line-height: 5em;
+				}
+
+				header nav ul li a {
+					padding: 0 10px;
+				}
+
+				header nav ul li a[href] label {
+					border-bottom: 1px dotted white;
+				}
+
+				header nav ul li:hover a[href] label {
+					border-bottom: 1px dotted transparent;
+				}
+
+				header nav ul li:hover a[href] {
+					line-height: 8em;
+					color: #ccc9bf;
+				}
+
+				header nav ul .active {
+					position: relative;
+					line-height: 3em;
+					cursor: default;
+					color: #b4b3ad;
+				}
+
+				header nav ul .active::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 12px;
+				}
+
+				header nav ul .active::before, header nav ul li:hover a[href] {
+					background: rgba(0,0,0,0.3);
+				}
+
+				input[type="radio"] {
+					display: none;
+				}
+
+				input[type="checkbox"] {
+					display: none;
+				}
+
+				/*aside - color checker */
+				.new {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: yellow;
+					color: white;
+					display: block;
+					z-index: -1;
+				}
+
+				aside {
+					position: absolute;
+					width: 20px;
+					height: 220px;
+					right: 10px;
+					top: 30px;
+					z-index: 2;
+				}
+
+				aside label {
+					float: left;
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+					border-radius: 50%;
+					box-shadow: inset 1px 1px 1px 0 white;
+				}
+
+				aside label[for^="fabric"] {
+					width: 20px;
+					height: 20px;
+				}
+
+				aside label:nth-child(1) {
+					background: radial-gradient(circle at 7px 8px,white,purple);
+				}
+
+				aside label:nth-child(2) {
+					background: radial-gradient(circle at 7px 8px,white,crimson);
+				}
+
+				aside label:nth-child(3) {
+					background: radial-gradient(circle at 7px 8px,white,maroon);
+				}
+
+				aside label:nth-child(4) {
+					background: radial-gradient(circle at 7px 8px,white,darkslategrey);
+				}
+
+				aside label:nth-child(5) {
+					background: radial-gradient(circle at 7px 8px,white,darkgreen);
+				}
+
+				aside label:nth-child(6) {
+					background: darkgreen url(fabric.png);
+				}
+
+				aside label:nth-child(7) {
+					background: darkviolet url("fabric.png");
+				}
+
+				aside label:nth-child(8) {
+					background: darkblue url("fabric.png");
+				}
+
+				aside label:nth-child(9) {
+					background: darkslategray url("fabric.png");
+				}
+
+				aside label:nth-child(10) {
+					background: darkgoldenrod url("fabric.png");
+				}
+
+				aside label:nth-child(11) {
+					background: darkolivegreen url("fabric.png");
+				}
+
+				aside label:hover {
+					cursor: pointer;
+				}
+
+				#color-1:checked ~ .new {
+					background: radial-gradient(circle at 200px 0px, fuchsia,purple);
+				}
+
+				#color-2:checked ~ .new {
+					background: radial-gradient(circle at 200px 0px, salmon,crimson);
+				}
+
+				#color-3:checked ~ .new {
+					background: radial-gradient(circle at 200px 0px, sandybrown,maroon);
+				}
+
+				#color-4:checked ~ .new {
+					background: radial-gradient(circle at 200px 0px, darkslategrey,black);
+				}
+
+				#color-5:checked ~ .new {
+					background: radial-gradient(circle at 200px 0px, yellowgreen,darkgreen);
+				}
+
+				#fabric-1:checked ~ .new {
+					background: darkgreen url("fabric.png");
+				}
+
+				#fabric-2:checked ~ .new {
+					background: darkviolet url("fabric.png");
+				}
+
+				#fabric-3:checked ~ .new {
+					background: darkblue url("fabric.png");
+				}
+
+				#fabric-4:checked ~ .new {
+					background: darkslategray url("fabric.png");
+				}
+
+				#fabric-5:checked ~ .new {
+					background: darkgoldenrod url("fabric.png");
+				}
+
+				#fabric-6:checked ~ .new {
+					background: darkolivegreen url("fabric.png");
+				}
+
+				.slide {
+					display: none;
+					transition: 10s ease;
+				}
+
+				#btn-1:checked ~ .slides .slide:nth-child(1) {
+					display: block;
+					transition-delay: 10s;
+				}
+
+				#btn-2:checked ~ .slides .slide:nth-child(2) {
+					display: block;
+					transition: 10s ease;
+				}
+
+				#btn-3:checked ~ .slides .slide:nth-child(3) {
+					display: block;
+					transition: 10s ease;
+				}
+
+				section {
+					position: absolute;
+					top: 100%;
+					width: 100%;
+					height: 400px;
+					padding: 20px 0 20px 22px;
+					background: lightgrey;
+				}
+
+				section nav ul {
+					list-style: none;
+				}
+
+				section nav ul li {
+					float: left;
+					margin: 0 20px 0 0;
+				}
+
+				section nav ul li a {
+					color: #46a2c9;
+					border-bottom: 1px dotted #46a2c9;
+					text-decoration: none;
+				}
+
+				section nav ul li a:hover {
+					border-bottom: 1px dotted transparent
+				}
+
+				section nav ul li.active {
+					background: url("img/arrow_down.gif") no-repeat 0 0;
+				}
+
+				section nav ul li.active a {
+					color: #000;
+					border: 0;
+					font-weight: bold;
+					cursor: default
+				}
+
+				article {
+					float: left;
+					width: 63%;
+				}
+
+				.button-block {
+					position: absolute;
+					width: 65%;
+					margin-left: 20px;
+					margin-top: 200px;
+				}
+
+				.content-block {
+					position: absolute;
+					width: 65%;
+					margin-top: 60px;
+				}
+
+				.right-block {
+					float: right;
+					width: 30%;
+					margin: 50px 0 0 20px;
+				}
+
+				.clearfix::after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+
+				/*   only for JS         */
+				.hide {
+					display: none;
+				}
+
+				.show {
+					display: block;
+				}
+
+
         </style>
     </head>
     <body>
-        <header class="floor floor--header">
-            <div class="floor__max-width">
-                <nav>
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a href="/" class="menu__link is-current">Fotorama</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/docs/4/" class="menu__link">Docs</a>
-                        </li>
-                    </ul>
-                </nav>
+
+
+        <header>
+            <div class="logo">
+                <span>Зверева Татьяна</span>
+                <p>живопись, графика</p>
             </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <label class="slide-label" for="btn-1">Натюрморты</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <label class="slide-label" for="btn-2">Пейзажи</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <label class="slide-label" for="btn-3">Абстракции</label>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
+		
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+        <input type="radio" id="color-1" name="color-toggle">
+        <input type="radio" id="color-2" name="color-toggle">
+        <input type="radio" id="color-3" name="color-toggle">
+        <input type="radio" id="color-4" name="color-toggle" checked>
+        <input type="radio" id="color-5" name="color-toggle">
+        <input type="radio" id="fabric-1" name="color-toggle">
+        <input type="radio" id="fabric-2" name="color-toggle">
+        <input type="radio" id="fabric-3" name="color-toggle">
+        <input type="radio" id="fabric-4" name="color-toggle">
+        <input type="radio" id="fabric-5" name="color-toggle">
+        <input type="radio" id="fabric-6" name="color-toggle">
+        <input type="radio" id="about-1" name="about">
+        <input type="radio" id="about-2" name="about">
+        <input type="radio" id="about-3" name="about">
+        <div class="new"></div>
+        <aside class="hide">
+            <label for="color-1"></label>
+            <label for="color-2"></label>
+            <label for="color-3"></label>
+            <label for="color-4"></label>
+            <label for="color-5"></label>
+            <label for="fabric-1"></label>
+            <label for="fabric-2"></label>
+            <label for="fabric-3"></label>
+            <label for="fabric-4"></label>
+            <label for="fabric-5"></label>
+            <label for="fabric-6"></label>
+        </aside>
+
+        <script>
+			var labl = document.querySelectorAll("label:not(.slide-label)");
+			var i = document.querySelectorAll("input[name=color-toggle]");
+			var asi = document.querySelector("aside");
+			var nava = document.querySelectorAll("header nav ul li a")
+
+			nava[0].addEventListener("click", function(event) {
+				nava[0].classList.add("active");
+				nava[1].classList.remove("active");
+				nava[2].classList.remove("active");
+			});
+			nava[1].addEventListener("click", function(event) {
+				nava[1].classList.add("active");
+				nava[0].classList.remove("active");
+				nava[2].classList.remove("active");
+			});
+			nava[2].addEventListener("click", function(event) {
+				nava[2].classList.add("active");
+				nava[1].classList.remove("active");
+				nava[0].classList.remove("active");
+			});
+
+			labl[0].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 0);
+			});
+			labl[1].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 1);
+			});
+			labl[2].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 2);
+			});
+			labl[3].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 3);
+			});
+			labl[4].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 4);
+			});
+			labl[5].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 5);
+			});
+			labl[6].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 6);
+			});
+			labl[7].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 7);
+			});
+			labl[8].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 8);
+			});
+			labl[9].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 9);
+			});
+			labl[10].addEventListener("click", function(event) {
+				localStorage.setItem("color-number", 10);
+			});
+
+			window.addEventListener("load", function(event) {
+				var n = localStorage.getItem("color-number");
+				i[n].setAttribute("checked", "checked");
+			});
+
+			window.addEventListener("keydown", function(event) {
+				if (event.keyCode === 27) {
+					console.log("esc");
+					if (asi.classList.contains("hide")) {
+						asi.classList.remove("hide");
+					} else {
+						asi.classList.add("hide");
+					}
+				}
+			});
+
+		</script>
+
+		
         <main class="floor floor--main">
             <div class="floor__max-width">
                 <div class="lead">A simple yet powerful responsive jQuery image gallery.</div>
@@ -299,7 +776,8 @@
                             uuids: ['50097fc7-bdb4-4c39-b814-f465320a80ce',
 									'0fe915a1-b488-4394-beff-84840ab48c8d',
 									'181e1093-96b1-4797-8580-f2fc2fbc7e2c',
-									'69b19dfb-1495-45d8-ae89-5d49fd8bc2d6']                        };
+									'69b19dfb-1495-45d8-ae89-5d49fd8bc2d6']
+                        };
 
                         var data = $.map(album.uuids, function(uuid) {
                             var full = 'https://ucarecdn.com/' + uuid + '/';
@@ -341,132 +819,58 @@
                     , delivered &nbsp;by <a href="https://uploadcare.com/?utm_campaign=fotorama" class="js-analytics-click" data-action="uploadcare">Uploadcare</a>
                     <i class="uc"></i>
                 </div>
-                <br>
-                <h2>
-                    <a name="set-up" href="#set-up" class="anchor"></a>
-                    Set up
-                </h2>
-                <p>Just copy and paste the snippets below to integrate Fotorama.</p>
-                <p>
-                    <span class="num">1.</span>
-                    This goes to the <code>&lt;head &gt;</code>
-                    of your page:
-                </p>
-                <pre>
-                    <code class="lang-xml">
-                        <span class="xml">
-                            <span class="comment">&lt;!-- jQuery 1.8 or later, 33 KB --></span>
-                            <span class="tag">
-                                &lt;<span class="title">script</span>
-                                <span class="attribute">src</span>
-                                =<span class="value">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"</span>
-                                >
-                            </span>
-                            <span class="javascript"></span>
-                            <span class="tag">
-                                &lt;/<span class="title">script</span>
-                                >
-                            </span>
-                            <span class="comment">&lt;!-- Fotorama from CDNJS, 19 KB --></span>
-                            <span class="tag">
-                                &lt;<span class="title">link</span>
-                                <span class="attribute">href</span>
-                                =<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"</span>
-                                <span class="attribute">rel</span>
-                                =<span class="value">"stylesheet"</span>
-                                >
-                            </span>
-                            <span class="tag">
-                                &lt;<span class="title">script</span>
-                                <span class="attribute">src</span>
-                                =<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"</span>
-                                >
-                            </span>
-                            <span class="javascript"></span>
-                            <span class="tag">
-                                &lt;/<span class="title">script</span>
-                                >
-                            </span>
-                        </span>
-                    </code>
-                </pre>
-                <p>
-                    <span class="num">2.</span>
-                    Then, wherever you want the gallery in your page <code>&lt;body &gt;</code>
-                    :
-                </p>
-                <pre>
-                    <code class="lang-xml">
-                        <span class="xml">
-                            <span class="comment">&lt;!-- Add images to &lt;div class="fotorama">&lt;/div> --></span>
-                            <span class="tag">
-                                &lt;<span class="title">div</span>
-                                <span class="attribute">class</span>
-                                =<span class="value">"fotorama"</span>
-                                >
-                            </span>
-                            <span class="tag">
-                                &lt;<span class="title">img</span>
-                                <span class="attribute">src</span>
-                                =<span class="value">"https://s.fotorama.io/1.jpg"</span>
-                                >
-                            </span>
-                            <span class="tag">
-                                &lt;<span class="title">img</span>
-                                <span class="attribute">src</span>
-                                =<span class="value">"https://s.fotorama.io/2.jpg"</span>
-                                >
-                            </span>
-                            <span class="tag">
-                                &lt;/<span class="title">div</span>
-                                >
-                            </span>
-                        </span>
-                    </code>
-                </pre>
-                <p class="after-pre">
-                    <em>
-                        Example: <a href="/examples/basic/" target="_blank">Basic</a>
-                    </em>
-                </p>
-                <p>
-                    <span class="num">3.</span>
-                    Enjoy!
-                </p>
-                <h2></h2>
-                <p>
-                    Fotorama’s <abbr>CDN</abbr>
-                    is &nbsp;provided 
-                    <a href="https://cdnjs.com/libraries/fotorama/" target="_blank" class="js-analytics-click" data-action="outbound">
-                        by &nbsp;<abbr>CDNJS</abbr>
-                    </a>
-                    which is &nbsp;powered by &nbsp;24 &nbsp;data centers around the &nbsp;world, feel free to &nbsp;use &nbsp;it.
-                </p>
-                <p>
-                    Or &nbsp;download <abbr>ZIP</abbr>
-                    , unpack and host it &nbsp;on &nbsp;your server:
-                </p>
-                <p class="indent">
-                    <a href="https://github.com/artpolikarpov/fotorama/releases/download/4.6.4/fotorama-4.6.4.zip" class="download noise js-analytics-click" data-action="download">
-                        <strong>
-                            <i class="fa fa-cloud-download"></i>
-                            fotorama-4.6.4.zip
-                        </strong>
-                    </a>
-                </p>
-                <h2>
-                    <a href="/docs/4/">Configure Fotorama →</a>
-                </h2>
             </div>
         </main>
         <footer class="floor floor--footer">
             <div class="floor__max-width">
-                <p>© 2011—2019, Art Polikarpov</p>
+        <section class="about clearfix">
+            <div class="main-text">
+                <h1>Об авторе</h1>
                 <p>
-                    Supported by <a href="https://uploadcare.com/?utm_campaign=fotorama" target="_blank" class="js-analytics-click" data-action="uploadcare">Uploadcare</a>
-                    <i class="uc"></i>
+            </div>
+            <div class="main-photo"></div>
+        </section>
+        <section class="clearfix">
+            <article>
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a>Об авторе</a>
+                            <div class="content-block">
+                                <h2>Об авторе</h2>
+                                <p>Зверева Татьяна Ильинична родилась в России 27.01.1947.</p>
+                                <p>Окончила механико-математический факультет Московского Государственного Университета (МГУ) им. Ломоносова. Большую часть своей жизни занимается геофизикой – создает математические модели магнитного поля Земли. Десять лет назад увлеклась живописью, окончила студию дизайна в наукограде Троицке, расположенном на окраине Москвы. Предпочитает работать акварелью, пастелью, тушью. Участвовала в многочисленных выставках в Троицке, Моск. области. Работы находятся в частных коллекциях Санкт-Петербурга, Москвы, Франции.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Мой инструмент</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+            <div class="right-block">
+                <h3>Способы связи</h3>
+                <p>
+                    Телефон: <span class="tel">+7 926 180 01 49</span>
+                </p>
+                <p>
+                    Электронная почта: 
+                    <span class="email">
+                        <a href="mailto:titanessa@mail.ru">titanessa@mail.ru</a>
+                    </span>
+                </p>
+                <p>
+                    Skype: 
+                    <span class="skype">
+                        <a href="skype:zverevatatiana">zverevatatiana</a>
+                    </span>
                 </p>
             </div>
+        </section>
+		</div>
         </footer>
     </body>
 </html>
