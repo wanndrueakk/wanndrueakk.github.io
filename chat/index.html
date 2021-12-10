@@ -664,23 +664,6 @@
 			var labl = document.querySelectorAll("label:not(.slide-label)");
 			var i = document.querySelectorAll("input[name=color-toggle]");
 			var asi = document.querySelector("aside");
-			var nava = document.querySelectorAll("header nav ul li a")
-
-			nava[0].addEventListener("click", function(event) {
-				nava[0].classList.add("active");
-				nava[1].classList.remove("active");
-				nava[2].classList.remove("active");
-			});
-			nava[1].addEventListener("click", function(event) {
-				nava[1].classList.add("active");
-				nava[0].classList.remove("active");
-				nava[2].classList.remove("active");
-			});
-			nava[2].addEventListener("click", function(event) {
-				nava[2].classList.add("active");
-				nava[1].classList.remove("active");
-				nava[0].classList.remove("active");
-			});
 
 			labl[0].addEventListener("click", function(event) {
 				localStorage.setItem("color-number", 0);
