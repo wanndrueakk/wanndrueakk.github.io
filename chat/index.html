@@ -1,13 +1,470 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link href="main.css" rel="stylesheet">
-  <title>Chat</title>
-</head>
-<body>
-  <div class="chat">
-    <header class="header"></header>
-    <footer class="footer"></footer>
-  </div>
-</body>
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Fotorama — Simple and Powerful Responsive jQuery Image Gallery</title>
+        <meta name="description" content="Fotorama is a modern and natively responsive open source jQuery image gallery plugin. Intuitive controls, great browser compatibility, thumbnails, fullscreen, and serverless images options. Supported by Uploadcare.">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+        <link rel="icon" type="image/png" href="/static/img/favicon.png">
+        <style>
+            code,tt {
+                font-family: Menlo,Consolas,"Courier New",monospace;
+                white-space: nowrap;
+                padding: 1px 3px 2px;
+                border-radius: 3px;
+                color: #000;
+                background-color: #777;
+                font-size: .9em
+            }
+
+            pre {
+                margin-top: 0;
+                white-space: pre;
+                position: relative
+            }
+
+            pre code {
+                display: block;
+                color: #aaa;
+                background: #383235;
+                white-space: pre;
+                font-weight: 400;
+                overflow: auto;
+                padding: 18px 48px 24px;
+                margin-left: -8px;
+                margin-right: -8px;
+                font-size: .85em;
+                border-radius: 6px
+            }
+
+            pre code>span:before {
+                position: absolute;
+                right: 8px;
+                top: 2px;
+                font-family: sans-serif;
+                color: #777
+            }
+
+            pre code>span.html:before,pre code>span.xml:before {
+                content: 'HTML'
+            }
+
+            pre code>span.javascript:before {
+                content: 'JavaScript'
+            }
+
+            .apache .sqbracket,pre .comment,pre .deletion,pre .doctype,pre .javadoc,pre .pi,pre .shebang,pre .template_comment {
+                color: #fff
+            }
+
+            pre .apache .tag,pre .clojure .title,pre .css .tag,pre .flow,pre .http .title,pre .ini .title,pre .keyword,pre .lisp .title,pre .nginx .title,pre .request,pre .status,pre .tag .title,pre .tex .command,pre .winutils {
+                font-weight: 700
+            }
+
+            .download {
+                display: inline-block;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,.3);
+                font-size: 115%;
+                line-height: 3;
+                padding: 0 2em;
+                transition: .2s all;
+                border-radius: 6px
+            }
+
+            .download:hover {
+                border-color: #fff
+            }
+
+            .switch-group {
+                font-size: 14px
+            }
+
+            .switch {
+                color: #fff;
+                border: 1px dashed rgba(255,255,255,.3);
+                border-radius: 6px;
+                padding: 1px 5px 2px;
+                transition: .2s all;
+                cursor: pointer
+            }
+
+            .switch:hover {
+                color: #bbb;
+                border: 1px dashed #fff
+            }
+
+            .key,.switch.active {
+                color: #000;
+                background-color: #777;
+                border: 1px solid #777;
+                cursor: default
+            }
+
+            .key {
+                cursor: pointer;
+                margin: 0;
+                position: relative
+            }
+
+            .key:active {
+                top: 1px
+            }
+
+            body {
+                font-family: sans-serif;
+                line-height: 1.6;
+                background-color: #1e1f24;
+                color: #fff;
+                display: flex;
+                margin: 0;
+                flex-direction: column;
+                min-height: 100vh
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(255,255,255,.3);
+                transition: all .2s
+            }
+
+            a:hover {
+                border-bottom-color: #fff
+            }
+
+            .floor {
+                position: relative
+            }
+
+            .floor__max-width {
+                max-width: 760px;
+                padding: 0 1em;
+                margin: auto;
+                position: relative
+            }
+
+            .floor--header {
+                background-color: rgba(255,255,255,.06)
+            }
+
+            .floor--main {
+                padding: 2em 0 3em;
+                flex-grow: 1
+            }
+
+            .floor--footer {
+                padding: 2em 0;
+                flex-shrink: 0;
+                font-size: 14px;
+                opacity: .8;
+                transition: all .2s
+            }
+
+            .floor--footer:hover {
+                opacity: 1
+            }
+
+            .floor--footer .floor__max-width:before {
+                content: '';
+                position: absolute;
+                top: -2em;
+                width: 50%;
+                height: 1px;
+                background-image: linear-gradient(to right,rgba(255,255,255,.5),rgba(255,255,255,0))
+            }
+
+            .menu {
+                list-style: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 2px;
+                margin: 0;
+                padding: 0
+            }
+
+            .menu__item {
+                display: inline-block
+            }
+
+            a.menu__link {
+                border-bottom: none;
+                display: inline-block;
+                padding: 10px 1em 8px;
+                opacity: .7;
+                border-bottom: 1px solid transparent
+            }
+
+            a.menu__link.is-current {
+                background-color: rgba(255,255,255,.1)
+            }
+
+            a.menu__link.is-section {
+                border-bottom-color: #fff
+            }
+
+            a.menu__link:hover {
+                background-color: rgba(255,255,255,.1);
+                border-bottom-color: #fff;
+                opacity: 1
+            }
+
+            .lead {
+                margin-bottom: 1em
+            }
+
+            .photos-by {
+                margin-top: .5em;
+                font-size: 14px;
+                text-align: right;
+                opacity: .8;
+                transition: all .2s
+            }
+
+            .photos-by:hover {
+                opacity: 1
+            }
+
+            .num {
+                font-family: Georgia,serif;
+                font-size: 125%;
+                line-height: .5
+            }
+
+            pre+.after-pre {
+                margin-top: -1em
+            }
+
+            i.uc {
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                top: -.1em;
+                width: 1em;
+                height: 1em;
+                background-image: url(https://ucarecdn.com/6e7a7757-397f-4341-a61f-0223c5a5bd97/-/preview/80x80/-/inline/no/uc-logo-mark-80x80.png);
+                background-size: 100%
+            }
+
+            p {
+                margin-bottom: 1em
+            }
+
+            ol,pre,ul {
+                margin-bottom: 2em
+            }
+
+            h1,h2,h3,h4 {
+                margin-top: 1.5em;
+                margin-bottom: .5em
+            }
+        </style>
+    </head>
+    <body>
+        <header class="floor floor--header">
+            <div class="floor__max-width">
+                <nav>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="/" class="menu__link is-current">Fotorama</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/docs/4/" class="menu__link">Docs</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="floor floor--main">
+            <div class="floor__max-width">
+                <div class="lead">A simple yet powerful responsive jQuery image gallery.</div>
+                <script>
+                    $(function() {
+                        var $window = $(window)
+                          , $body = $('body')
+                          , $fotorama = $('#fotorama')
+                          , pixelRatio = window.devicePixelRatio || 1
+                          , width = Math.min(760 * pixelRatio, 1280)
+                          , ratio = 1.5
+                          , thumbHeight = 56
+                          , thumbWidth = thumbHeight * ratio
+                          , album = {
+                            by: {
+                                href: 'https://unsplash.com/',
+                                title: 'Unsplash'
+                            },
+                            uuids: ['05e7ff61-c1d5-4d96-ae79-c381956cca2e', 'cd8dfa25-2bc5-4546-995a-f3fd23809e1d', '382a5139-6712-4418-b25e-cc8ba69ab07f', '3ed25902-4a51-4628-a057-1e55fbca7856', '5b0b329d-050e-4143-bc92-7f40cdde46f5', '464f96db-6ae3-4875-ac6a-cbede40c4a51', '4facbe78-b4e8-4b7d-8fb0-d3659f46f1b4', '379c6c28-f726-48a3-b59e-1248e1e30443', '631479df-27a8-4047-ae59-63f9167001f2', '8e1e4402-84f0-4d78-b7d8-c48ec437b5af', 'f55e6755-198a-408d-8e82-a50370527aed', '5264c896-cf01-4ad9-9216-114c20a388cc', 'c6284eae-9be4-4811-b45b-17a5b6e99ad2', '40ff508f-01e5-4417-bee0-20633efc6147', 'eaaee377-f1b5-49d7-a7db-d7a1f86b2805', '584c29c8-b521-48ee-8104-6656d4faac97', '798aa641-01fe-4ed2-886b-bac818c5fdfc', 'f82be8f5-d517-4642-8fe1-8987b4e530d0', '23b818d0-07c3-40de-a070-c999c1323ff3', '7ca0e7f6-90eb-4254-82ea-58c77e74f6a0', '42dc8c54-2315-453f-9b40-07e332b8ee39', '8e62227c-5acb-4603-abb9-ac0643b7b478', '80713821-5d54-4819-810a-19991502ca56', '35ce83fa-eac1-4326-83e9-e445450b35ce', '3df9ac37-4e86-49e5-9095-28679ab37718', '9e7211c0-b73b-4b1d-8b47-4b1700f9a80f', '1cc3c44b-e4a9-4e37-96cf-afafeb3eb748', 'ab52465c-b3d8-4bf6-986a-a4bf815dfaed', '69e43c1d-9fac-4278-bec5-52291c1b1c2b', '0627c11f-522d-48b9-9f17-9ea05b769aaa']
+                        };
+
+                        var data = $.map(album.uuids, function(uuid) {
+                            var full = 'https://ucarecdn.com/' + uuid + '/';
+                            return {
+                                full: full,
+                                img: full + '-/stretch/off/-/resize/' + width + 'x/',
+                                thumb: full + '-/scale_crop/' + (thumbWidth * pixelRatio) + 'x' + (thumbHeight * pixelRatio) + '/center/',
+                                id: uuid
+                            }
+                        });
+
+                        $fotorama.fotorama({
+                            data: data,
+                            clicktransition: 'dissolve',
+                            width: '100%',
+                            ratio: ratio,
+                            hash: true,
+                            maxheight: '100%',
+                            nav: 'thumbs',
+                            margin: 2,
+                            shuffle: true,
+                            thumbmargin: 2,
+                            thumbwidth: thumbWidth,
+                            thumbheight: thumbHeight,
+                            allowfullscreen: 'native',
+                            keyboard: {
+                                space: true
+                            },
+                            shadows: false,
+                            fit: 'cover'
+                        });
+
+                        $('#photos-by').html('Photos by <a href="' + album.by.href + '">' + album.by.title + '</a>');
+                    });
+                </script>
+                <div id="fotorama"></div>
+                <div class="photos-by">
+                    <span id="photos-by">Photos by someone</span>
+                    , delivered &nbsp;by <a href="https://uploadcare.com/?utm_campaign=fotorama" class="js-analytics-click" data-action="uploadcare">Uploadcare</a>
+                    <i class="uc"></i>
+                </div>
+                <br>
+                <h2>
+                    <a name="set-up" href="#set-up" class="anchor"></a>
+                    Set up
+                </h2>
+                <p>Just copy and paste the snippets below to integrate Fotorama.</p>
+                <p>
+                    <span class="num">1.</span>
+                    This goes to the <code>&lt;head &gt;</code>
+                    of your page:
+                </p>
+                <pre>
+                    <code class="lang-xml">
+                        <span class="xml">
+                            <span class="comment">&lt;!-- jQuery 1.8 or later, 33 KB --></span>
+                            <span class="tag">
+                                &lt;<span class="title">script</span>
+                                <span class="attribute">src</span>
+                                =<span class="value">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"</span>
+                                >
+                            </span>
+                            <span class="javascript"></span>
+                            <span class="tag">
+                                &lt;/<span class="title">script</span>
+                                >
+                            </span>
+                            <span class="comment">&lt;!-- Fotorama from CDNJS, 19 KB --></span>
+                            <span class="tag">
+                                &lt;<span class="title">link</span>
+                                <span class="attribute">href</span>
+                                =<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"</span>
+                                <span class="attribute">rel</span>
+                                =<span class="value">"stylesheet"</span>
+                                >
+                            </span>
+                            <span class="tag">
+                                &lt;<span class="title">script</span>
+                                <span class="attribute">src</span>
+                                =<span class="value">"https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"</span>
+                                >
+                            </span>
+                            <span class="javascript"></span>
+                            <span class="tag">
+                                &lt;/<span class="title">script</span>
+                                >
+                            </span>
+                        </span>
+                    </code>
+                </pre>
+                <p>
+                    <span class="num">2.</span>
+                    Then, wherever you want the gallery in your page <code>&lt;body &gt;</code>
+                    :
+                </p>
+                <pre>
+                    <code class="lang-xml">
+                        <span class="xml">
+                            <span class="comment">&lt;!-- Add images to &lt;div class="fotorama">&lt;/div> --></span>
+                            <span class="tag">
+                                &lt;<span class="title">div</span>
+                                <span class="attribute">class</span>
+                                =<span class="value">"fotorama"</span>
+                                >
+                            </span>
+                            <span class="tag">
+                                &lt;<span class="title">img</span>
+                                <span class="attribute">src</span>
+                                =<span class="value">"https://s.fotorama.io/1.jpg"</span>
+                                >
+                            </span>
+                            <span class="tag">
+                                &lt;<span class="title">img</span>
+                                <span class="attribute">src</span>
+                                =<span class="value">"https://s.fotorama.io/2.jpg"</span>
+                                >
+                            </span>
+                            <span class="tag">
+                                &lt;/<span class="title">div</span>
+                                >
+                            </span>
+                        </span>
+                    </code>
+                </pre>
+                <p class="after-pre">
+                    <em>
+                        Example: <a href="/examples/basic/" target="_blank">Basic</a>
+                    </em>
+                </p>
+                <p>
+                    <span class="num">3.</span>
+                    Enjoy!
+                </p>
+                <h2></h2>
+                <p>
+                    Fotorama’s <abbr>CDN</abbr>
+                    is &nbsp;provided 
+                    <a href="https://cdnjs.com/libraries/fotorama/" target="_blank" class="js-analytics-click" data-action="outbound">
+                        by &nbsp;<abbr>CDNJS</abbr>
+                    </a>
+                    which is &nbsp;powered by &nbsp;24 &nbsp;data centers around the &nbsp;world, feel free to &nbsp;use &nbsp;it.
+                </p>
+                <p>
+                    Or &nbsp;download <abbr>ZIP</abbr>
+                    , unpack and host it &nbsp;on &nbsp;your server:
+                </p>
+                <p class="indent">
+                    <a href="https://github.com/artpolikarpov/fotorama/releases/download/4.6.4/fotorama-4.6.4.zip" class="download noise js-analytics-click" data-action="download">
+                        <strong>
+                            <i class="fa fa-cloud-download"></i>
+                            fotorama-4.6.4.zip
+                        </strong>
+                    </a>
+                </p>
+                <h2>
+                    <a href="/docs/4/">Configure Fotorama →</a>
+                </h2>
+            </div>
+        </main>
+        <footer class="floor floor--footer">
+            <div class="floor__max-width">
+                <p>© 2011—2019, Art Polikarpov</p>
+                <p>
+                    Supported by <a href="https://uploadcare.com/?utm_campaign=fotorama" target="_blank" class="js-analytics-click" data-action="uploadcare">Uploadcare</a>
+                    <i class="uc"></i>
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
